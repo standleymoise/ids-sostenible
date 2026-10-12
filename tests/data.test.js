@@ -58,10 +58,16 @@ test('mapeo a ODS: todo indicador está mapeado a ODS válidos (1–17)', () => 
   assert.ok(sdg.context_only.every((id) => ids.includes(id)));
 });
 
-test('cantones de Costa Rica: 7 provincias y 84 cantones únicos', () => {
-  const cr = load('../data/cr-cantones.json');
-  assert.equal(cr.provinces.length, 7);
-  const all = cr.provinces.flatMap((p) => p.cantons.map((c) => `${p.name}/${c}`));
-  assert.equal(all.length, 84);
-  assert.equal(new Set(all).size, 84);
+test('división territorial: 7 provincias, 84 cantones y 490 distritos con códigos coherentes', () => {
+  const geo = load('../data/cr-distritos.json');
+  assert.equal(geo.provinces.length, 7);
+  const cantons = geo.provinces.flatMap((p) => p.cantons.map((c) => ({ p, c })));
+  assert.equal(cantons.length, 84);
+  const districts = cantons.flatMap(({ p, c }) => c.districts.map((d) => ({ p, c, d })));
+  assert.equal(districts.length, 490);
+  assert.equal(new Set(districts.map((x) => x.d.code)).size, 490);
+  for (const { p, c, d } of districts) {
+    assert.equal(Math.floor(d.code / 100), c.code, `${d.name}`);
+    assert.equal(Math.floor(c.code / 100), p.code, `${c.name}`);
+  }
 });

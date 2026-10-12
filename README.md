@@ -18,7 +18,7 @@ asesorado por MSc. Victor Hugo Morales Peña.
 - **Rigor metodológico** (v1.1): análisis de sensibilidad de los pesos (Monte Carlo ±20 %), equilibrio entre dimensiones (la dimensión más débil), y contribución por ODS (mapeo propuesto).
 - **Fiabilidad**: compara evaluaciones de varias personas sobre la misma zona (κ de Fleiss, acuerdo por afirmación, consenso por mayoría) o de fechas distintas.
 - **Coherencia** (v1.2): no deja responder «Sí» a dos afirmaciones contradictorias (p. ej. clima húmedo y seco a la vez), exige las dependencias lógicas y copia las afirmaciones repetidas.
-- **Validación** (v1.3): compara el IDS con el IDS distrital de MIDEPLAN, el IDH cantonal y el IPS cantonal (Spearman, Kendall, CCC, Bland–Altman, rango de cercanía, quintiles, grupos conocidos) y mide fiabilidad (ICC, κ, α de Cronbach). Ver [`docs/VALIDACION.md`](docs/VALIDACION.md).
+- **Validación** (v1.3–1.4): compara el IDS con el **IDS 2023 de MIDEPLAN (incluido: 490 distritos, 84 cantones, con sus 5 dimensiones)** y, con tus propios CSV, con el IDH cantonal y el IPS cantonal (Spearman, Kendall, CCC, Bland–Altman, rango de cercanía, quintiles, grupos conocidos) y mide fiabilidad (ICC, κ, α de Cronbach). Ver [`docs/VALIDACION.md`](docs/VALIDACION.md).
 - Contexto geográfico: provincia y cantón de Costa Rica (84 cantones), rol de quien responde y fecha, para contrastar luego con otros índices.
 - Varias evaluaciones guardadas en el dispositivo; exportar a JSON/CSV, importar, e imprimir a PDF.
 - Español e inglés. Sin servidor, sin cuentas, sin rastreo: los datos no salen del dispositivo.
@@ -72,6 +72,6 @@ una muestra pequeña (ver el artículo); se recomienda un uso responsable.
 
 ## Licencia y cita
 
-Datos de cantones: geometrías de [geoBoundaries](https://www.geoboundaries.org/) (CC BY 4.0).
+Datos territoriales y del IDS 2023: MIDEPLAN / Registro Nacional (ver [`data/external/README.md`](data/external/README.md)).
 Código: [MIT](LICENSE). Artículo y documentación en `paper/` y `docs/`: [CC BY 4.0](paper/LICENSE).
 Para citar, usa [`CITATION.cff`](CITATION.cff) (botón «Cite this repository» de GitHub).

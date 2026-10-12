@@ -30,7 +30,7 @@ sería redundante; si no correlacionara con ninguno, no estaría midiendo desarr
 
 ## 3. Datos externos
 
-Al 12 de octubre de 2026: MIDEPLAN publica una hoja de cálculo (XLS) con el IDS 2023; el Atlas del PNUD se encontró solo como PDF y herramienta interactiva (sin CSV directo); del IPS cantonal no se encontró una tabla descargable. Hay que preparar un CSV con lo que se obtenga:
+**MIDEPLAN ya está incluido en la app** (`data/external/`, proporcionado como «Tablas - IDS 2023.xlsx»; ver su README): IDS de los 490 distritos y 84 cantones, con las 5 dimensiones y códigos oficiales. Para los otros dos índices: al 12 de octubre de 2026, MIDEPLAN publica una hoja de cálculo (XLS) con el IDS 2023; el Atlas del PNUD se encontró solo como PDF y herramienta interactiva (sin CSV directo); del IPS cantonal no se encontró una tabla descargable. Hay que preparar un CSV con lo que se obtenga:
 
 - **MIDEPLAN IDS 2023:** la página oficial publica el paquete de datos con valores distritales, cantonales y regionales (hoja de cálculo y PDF metodológico): https://www.mideplan.go.cr/indice-desarrollo-social
 - **Atlas de Desarrollo Humano Cantonal:** PDF e herramienta interactiva en https://www.undp.org/es/costa-rica/atlas-de-desarrollo-humano-cantonal ; para la base completa, solicitar a la Escuela de Estadística (UCR) o a Sinirube.
@@ -60,12 +60,28 @@ La presentación de la tesis define: «RC: −10 < Z < +10 y 80 %». Se interpre
 escala 0–100** y se exige que el 80 % de las zonas queden dentro de ±10 puntos. **Debe confirmarla la autora**: si Z se definió
 de otro modo (p. ej. diferencia de posiciones en el ranking), cambia el cálculo. La tolerancia (10) es configurable.
 
+## 4b. Qué esperar de la comparación con MIDEPLAN (validez convergente y discriminante)
+
+El IDS de MIDEPLAN tiene **5 dimensiones sociales y económicas** (económica 28,1 %, salud 25,5 %, educación 24,0 %, participación electoral 15,9 %, seguridad 6,5 %) y **no mide ambiente**. Por eso la pantalla muestra, además de la comparación global, una **matriz dimensión × dimensión**:
+
+| Dimensión de la escala | Debería correlacionar con (convergente) | Debería correlacionar poco (discriminante) |
+|---|---|---|
+| Social | salud, educación, seguridad | — |
+| Económica | económica | participación electoral |
+| Política | participación electoral | salud, educación |
+| Ambiental | — | todas (MIDEPLAN no mide ambiente) |
+
+Si la dimensión ambiental correlacionara fuerte con todo, sugeriría que el instrumento mide sobre todo «nivel de desarrollo general» (efecto halo) y no sostenibilidad ambiental.
+
+**Cruce por código.** Al crear la evaluación elegí provincia → cantón → distrito (lista oficial, 490 distritos). El cruce usa el código oficial; no los nombres, que se repiten («San Juan» existe en varios cantones). Evaluaciones de un distrito se comparan con el IDS distrital; las de un cantón completo, con el IDS cantonal. No se promedian distritos para obtener un cantón.
+
 ## 5. Plan de análisis previo (propuesta; fijarlo antes de ver los datos)
 
 - **H1.** ρ de Spearman ≥ 0,5 entre el IDS y cada índice externo (IC 95 % que excluya 0,3).
 - **H2.** κ ponderado (cuadrático) en quintiles ≥ 0,4 y ≥ 85 % de las zonas a ±1 quintil.
 - **H3.** ICC(2,k) entre evaluadores ≥ 0,75 y α de Cronbach ≥ 0,7.
 - **H4.** En el contraste de grupos conocidos, el IDS del quintil 5 es mayor que el del quintil 1 (p < 0,05).
+- **H5 (convergente/discriminante).** ρ ≥ 0,4 entre la dimensión social de la escala y salud, educación y seguridad de MIDEPLAN; ρ ≥ 0,4 entre económica y económica; ρ < 0,3 entre ambiental y cada dimensión de MIDEPLAN.
 - Analizar cada índice por separado; **corregir por comparaciones múltiples** (Holm) al declarar «significativo» en varios.
 - Reportar siempre n, intervalos y los resultados no favorables. Si H1 se cumple solo con un índice, decirlo.
 

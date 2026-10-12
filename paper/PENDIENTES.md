@@ -28,3 +28,10 @@ Cosas que no pude verificar con el material de la carpeta y que debe confirmar l
 16. **Revisar las reglas de coherencia** (`data/constraints.json`): ¿qué pares son realmente excluyentes? Decidir también si «Homicidios frecuentes» se deja una sola vez.
 17. **Conseguir los datos externos** (IDS distrital 2023, Atlas cantonal, IPS) y **hacer el estudio de seguimiento** siguiendo `docs/VALIDACION.md`: ≥ 29 zonas, 3+ evaluadores por zona. Hasta entonces el artículo no puede afirmar resultados.
 18. **Fijar las hipótesis H1–H4** antes de ver los datos (idealmente registrarlas en OSF).
+
+## Con los datos de MIDEPLAN (v1.4)
+
+19. ✅ IDS 2023 de MIDEPLAN integrado (distritos y cantones, 5 dimensiones). Falta el **estudio de campo**: evaluar distritos reales (≥ 29, idealmente cubriendo los 5 quintiles) con 3+ evaluadores cada uno.
+20. Decidir si la tesis comparó con el IDS **2017** o el de **2023**: no son comparables entre sí; el artículo debe decir cuál.
+21. **Atlas del PNUD (IDHc) e IPS cantonal**: siguen sin datos tabulares; pedirlos a la Escuela de Estadística (UCR)/Sinirube e INCAE-CLACDS. Con MIDEPLAN solo ya se puede hacer la validación principal.
+22. Citar la fuente de MIDEPLAN con el documento oficial (el repositorio reproduce solo valores numéricos; ver `data/external/README.md`).

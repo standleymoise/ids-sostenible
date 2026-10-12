@@ -358,3 +358,21 @@ export function compareIndices(rows, { scale = 'percentile', tol = 10, threshold
   }
   return { n: rows.length, indices: out };
 }
+
+/**
+ * Matriz de correlaciones de Spearman entre las dimensiones de la escala (rows[].dims) y las del índice externo
+ * (rows[].extDims). Sirve para validez convergente (lo que debería correlacionar) y discriminante (lo que no).
+ */
+export function dimensionMatrix(rows, extKeys) {
+  const ours = Object.keys(rows.find((r) => r.dims)?.dims || {});
+  const out = {};
+  for (const d of ours) {
+    out[d] = {};
+    for (const k of extKeys) {
+      const pairs = rows.filter((r) => Number.isFinite(r.dims?.[d]) && Number.isFinite(r.extDims?.[k]));
+      const rho = pairs.length >= 3 ? spearman(pairs.map((r) => r.dims[d]), pairs.map((r) => r.extDims[k])) : null;
+      out[d][k] = { rho, p: rho === null ? null : corrP(rho, pairs.length), n: pairs.length };
+    }
+  }
+  return out;
+}

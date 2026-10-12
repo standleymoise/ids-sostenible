@@ -7,6 +7,7 @@
 
 - **1.2** — Coherencia entre respuestas: bloqueo de contradicciones, dependencias y duplicados (`data/constraints.json`).
 - **1.3** — Kit de validación: Spearman/Kendall/Pearson con IC y permutación, CCC de Lin, Bland–Altman, rango de cercanía, quintiles (κ ponderado), grupos conocidos, ICC, α de Cronbach por ítem y dos mitades; pantalla *Validación*, CLI `tools/validate.js` y [protocolo](VALIDACION.md). Campo *distrito* para cruzar con el IDS de MIDEPLAN.
+- **1.4** — IDS 2023 de MIDEPLAN incluido (490 distritos, 84 cantones, 5 dimensiones) con cruce por código oficial, selector provincia › cantón › distrito y matriz de validez convergente/discriminante por dimensión.
 
 ## Siguiente (requiere decisiones o datos de la autora)
 

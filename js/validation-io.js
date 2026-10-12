@@ -45,6 +45,7 @@ export function parseCsv(text) {
 }
 
 const ZONE_KEYS = ['zona', 'zone', 'canton', 'cantón', 'distrito', 'district', 'nombre', 'name'];
+const CODE_KEYS = ['codigo', 'código', 'pcd', 'cod', 'code'];
 const IDS_KEYS = ['ids', 'ids_standley', 'ids_norm'];
 
 /**
@@ -57,13 +58,15 @@ export function buildRows(parsed, own = []) {
   const low = header.map((h) => h.toLowerCase());
   const zi = low.findIndex((h) => ZONE_KEYS.includes(h)) >= 0 ? low.findIndex((h) => ZONE_KEYS.includes(h)) : 0;
   const ii = low.findIndex((h) => IDS_KEYS.includes(h));
-  const extCols = header.map((h, i) => i).filter((i) => i !== zi && i !== ii && header[i]);
+  const codeIdx = low.findIndex((h) => CODE_KEYS.includes(h));
+  const extCols = header.map((h, i) => i).filter((i) => i !== zi && i !== ii && i !== codeIdx && header[i]);
   const byName = new Map(own.map((o) => [normalizeName(o.name), o]));
+  const byCode = new Map(own.filter((o) => o.code).map((o) => [String(o.code), o]));
   const out = []; const unmatched = []; const seen = new Set();
   for (const r of rows) {
     const name = (r[zi] || '').trim();
     if (!name) continue;
-    const key = normalizeName(name);
+    const key = codeIdx >= 0 && String(r[codeIdx]).trim() ? `#${String(r[codeIdx]).trim()}` : normalizeName(name);
     if (seen.has(key)) continue; // zona repetida: se conserva la primera
     seen.add(key);
     const ext = {};
@@ -71,7 +74,7 @@ export function buildRows(parsed, own = []) {
     let ids = ii >= 0 ? toNumber(r[ii], decimalComma) : NaN;
     let dims;
     if (ii < 0) {
-      const o = byName.get(key);
+      const o = (codeIdx >= 0 && byCode.get(String(r[codeIdx]).trim())) || byName.get(normalizeName(name));
       if (o) { ids = o.ids; dims = o.dims; } else unmatched.push(name);
     }
     out.push({ name, ids, dims, ext });
@@ -114,4 +117,25 @@ export function toMarkdown(result, { date = new Date().toISOString().slice(0, 10
   }
   L.push('---', '', 'Notas: correlaciones de rango (Spearman, Kendall) miden si las zonas se ordenan de forma parecida y no dependen de la escala; CCC, Bland–Altman, cercanía y error sí dependen de la escala común elegida. Una correlación alta no demuestra por sí sola que el IDS mida «desarrollo sostenible»: los índices de contraste miden constructos cercanos pero distintos (desarrollo humano, progreso social, desarrollo social).');
   return L.join('\n');
+}
+
+/**
+ * Lee un CSV de MIDEPLAN (data/external/mideplan-ids-2023-*.csv) y devuelve Map(código → {name, ids, dims}).
+ * `dims` son las 5 dimensiones del IDS de MIDEPLAN: salud, participacion, seguridad, educacion, economico.
+ */
+export function loadMideplan(text) {
+  const p = parseCsv(text);
+  const col = (n) => p.header.indexOf(n);
+  const dimKeys = ['salud', 'participacion', 'seguridad', 'educacion', 'economico'];
+  const map = new Map();
+  for (const r of p.rows) {
+    const code = String(r[col('codigo')]).trim();
+    const nm = (r[col('distrito')] ?? r[col('canton')] ?? '').trim();
+    map.set(code, {
+      name: nm,
+      ids: toNumber(r[col('ids')], false),
+      dims: Object.fromEntries(dimKeys.map((k) => [k, toNumber(r[col(k)], false)])),
+    });
+  }
+  return map;
 }
