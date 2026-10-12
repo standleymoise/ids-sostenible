@@ -5,6 +5,9 @@
 - **1.0** — Portado desde Excel y Android: motor, pruebas contra el Excel, PWA offline, es/en, exportar/importar, PDF.
 - **1.1** — Rigor metodológico y fiabilidad: análisis de sensibilidad de pesos, equilibrio entre dimensiones, acuerdo entre evaluadores (κ de Fleiss, consenso), mapeo propuesto a ODS, provincia/cantón/fecha/rol, versión del instrumento, estadísticas de validación (α de Cronbach, Spearman).
 
+- **1.2** — Coherencia entre respuestas: bloqueo de contradicciones, dependencias y duplicados (`data/constraints.json`).
+- **1.3** — Kit de validación: Spearman/Kendall/Pearson con IC y permutación, CCC de Lin, Bland–Altman, rango de cercanía, quintiles (κ ponderado), grupos conocidos, ICC, α de Cronbach por ítem y dos mitades; pantalla *Validación*, CLI `tools/validate.js` y [protocolo](VALIDACION.md). Campo *distrito* para cruzar con el IDS de MIDEPLAN.
+
 ## Siguiente (requiere decisiones o datos de la autora)
 
 1. **Decidir «Inflación»** y los puntos de [AUDITORIA-CONTENIDO.md](AUDITORIA-CONTENIDO.md).

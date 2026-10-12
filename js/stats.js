@@ -84,7 +84,7 @@ export function cronbachAlpha(matrix) {
   return (k / (k - 1)) * (1 - cols.reduce((s, c) => s + variance(c), 0) / total);
 }
 
-const ranks = (xs) => {
+export const ranks = (xs) => {
   const idx = xs.map((x, i) => [x, i]).sort((a, b) => a[0] - b[0]);
   const r = new Array(xs.length);
   for (let i = 0; i < idx.length;) {

@@ -16,8 +16,15 @@ Cosas que no pude verificar con el material de la carpeta y que debe confirmar l
 
 ## Añadidos con la versión 1.1
 
-10. **Confirmar la hipótesis sobre «IDSD»**: ¿es el Índice de Desarrollo Social (IDS) distrital de MIDEPLAN? (ver `docs/INVESTIGACION-INDICES.md`).
+10. ~~Confirmar «IDSD»~~ — confirmado por la autora: Índice de Desarrollo Social Distrital (MIDEPLAN). Falta indicar qué edición se usó en 2020 (la actual es 2023 y no es comparable con 2017).
 11. **Validar el mapeo a ODS** (`data/sdg-map.json`) con la autora o un panel; hoy es una propuesta.
 12. **Verificar las referencias nuevas** (PNUD 2026, MIDEPLAN 2024, INCAE-CLACDS, IDSC-BR, ONU-Hábitat UMF): varias se tomaron de la prensa o de páginas que no se pudieron abrir completas; sustituirlas por el documento oficial.
 13. **Decidir los puntos de `docs/AUDITORIA-CONTENIDO.md`** antes de hablar de una versión 2.0 en el artículo.
 14. **Probar con datos reales** el acuerdo entre evaluadores y la sensibilidad: hoy solo se probaron con respuestas simuladas.
+
+## Añadidos con las versiones 1.2 y 1.3
+
+15. **Confirmar la definición de «rango de cercanía» (Z)**: se interpretó como diferencia en escala 0–100 con tolerancia ±10 y umbral 80 % (`docs/VALIDACION.md`).
+16. **Revisar las reglas de coherencia** (`data/constraints.json`): ¿qué pares son realmente excluyentes? Decidir también si «Homicidios frecuentes» se deja una sola vez.
+17. **Conseguir los datos externos** (IDS distrital 2023, Atlas cantonal, IPS) y **hacer el estudio de seguimiento** siguiendo `docs/VALIDACION.md`: ≥ 29 zonas, 3+ evaluadores por zona. Hasta entonces el artículo no puede afirmar resultados.
+18. **Fijar las hipótesis H1–H4** antes de ver los datos (idealmente registrarlas en OSF).

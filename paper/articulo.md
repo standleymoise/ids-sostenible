@@ -94,13 +94,31 @@ Siguiendo la guía de la OCDE y el JRC para índices compuestos (Nardo et al., 2
 
 El código incluye además el α de Cronbach y la correlación de Spearman, previstos para la validación externa contra índices cantonales.
 
+### 2.7 Coherencia de las respuestas (versión 1.2)
+
+Un instrumento de afirmaciones Sí/No es vulnerable a respuestas contradictorias (por ejemplo, declarar a la vez un clima tropical húmedo y uno seco). La aplicación incorpora reglas de coherencia en `data/constraints.json`, de cuatro tipos: *exclusión* (a lo más una afirmación del grupo puede ser «Sí»), *exactamente una* (el clima), *dependencia* (p. ej. «mantenimiento de espacios verdes» exige que existan espacios verdes) e *igualdad* (una afirmación que aparece en dos indicadores —«Homicidios frecuentes»— se responde una sola vez). Las reglas lógicamente inevitables **bloquean** la respuesta; las probables pero no imposibles (p. ej. ríos limpios y contaminados a la vez) piden confirmación y dejan una advertencia en el informe. Estas reglas son una propuesta no validada por la autora.
+
 ## 3. Validación reportada
 
 La validación se realizó durante la tesis (Moïse, 2020) y se resume aquí tal como se presentó; **los datos crudos no se incluyen en este repositorio** [CONFIRMAR si pueden publicarse, anonimizados].
 
-**Comparación con otros índices.** El IDS se comparó con el Índice de Progreso Social (IPS), el Índice de Desarrollo Humano Cantonal (IDHC) y el IDSD [CONFIRMAR nombre completo de cada índice]. Se definió un *rango de cercanía* (RC): dos resultados se consideran equivalentes si su diferencia está en el intervalo −10 < Z < +10, y la validación se consideró aceptable cuando al menos el 80 % de las comparaciones cumplía el criterio. Resultados reportados: IDS vs. IDHC, 90 %; IDS vs. IPS, 100 %; IDS vs. IDSD, 65 %. Los dos primeros superan el umbral de 80 %; **el tercero no**.
+**Comparación con otros índices.** El IDS se comparó con el Índice de Progreso Social (IPS), el Índice de Desarrollo Humano Cantonal (IDHC) [CONFIRMAR ediciones usadas] y el Índice de Desarrollo Social Distrital (IDSD) de MIDEPLAN. Se definió un *rango de cercanía* (RC): dos resultados se consideran equivalentes si su diferencia está en el intervalo −10 < Z < +10, y la validación se consideró aceptable cuando al menos el 80 % de las comparaciones cumplía el criterio. Resultados reportados: IDS vs. IDHC, 90 %; IDS vs. IPS, 100 %; IDS vs. IDSD, 65 %. Los dos primeros superan el umbral de 80 %; **el tercero no**.
 
 **Confiabilidad.** Se calculó el alfa de Cronbach (Cronbach, 1951), que mide la consistencia interna: cuanto más cercano a 1, más confiable el instrumento. Con 10 ciudades evaluadas por 10 personas se obtuvo α = 0,87 [CONFIRMAR cómo se construyó la matriz: personas como ítems y ciudades como observaciones, o viceversa].
+
+### 3.3 Protocolo de validación del estudio de seguimiento (propuesto)
+
+La validación de la tesis es limitada (§5). Para el estudio de seguimiento se fija un plan de análisis previo, implementado y probado en el repositorio (`docs/VALIDACION.md`, `js/validation.js`; las funciones estadísticas se verificaron contra scipy):
+
+- **Validez convergente:** correlación de Spearman, con IC al 95 % (Fisher con error de Bonett y Wright y bootstrap) y prueba de permutación, entre el IDS de cada zona (distrito o cantón) y el IDSD, el IDHC y el IPS; además τ-b de Kendall y, para el acuerdo en valor, el coeficiente de concordancia de Lin y los límites de Bland–Altman sobre una escala común 0–100.
+- **Clasificación:** κ ponderado en quintiles (MIDEPLAN clasifica en quintiles) y proporción de zonas a ±1 quintil.
+- **Rango de cercanía** de la tesis (diferencia < 10 puntos en ≥ 80 % de las zonas), con la interpretación explícita del estadístico Z [CONFIRMAR definición original].
+- **Grupos conocidos:** el IDS de las zonas del quintil externo más alto debe superar al del más bajo (Mann–Whitney).
+- **Fiabilidad:** ICC(2,1) e ICC(2,k) (Shrout y Fleiss, 1979) y κ de Fleiss entre evaluadores independientes; α de Cronbach y análisis de ítems de los 41 indicadores.
+- **Tamaño de muestra:** unas 29 zonas permiten detectar ρ = 0,5 con 80 % de potencia (α = 0,05); se recomienda cubrir todo el rango del índice externo.
+- **Hipótesis previas:** H1 ρ ≥ 0,5 con cada índice; H2 κ ponderado ≥ 0,4 y ≥ 85 % a ±1 quintil; H3 ICC(2,k) ≥ 0,75 y α ≥ 0,7; H4 IDS mayor en el quintil externo 5 que en el 1; con corrección de Holm por comparaciones múltiples.
+
+Una correlación alta indicaría validez convergente, no que el instrumento mida «sostenibilidad» en sentido estricto, pues los índices de contraste miden conceptos cercanos pero distintos (desarrollo humano, progreso social y desarrollo social). **Este borrador no contiene todavía resultados del estudio de seguimiento.**
 
 ## 4. Discusión
 
@@ -139,6 +157,8 @@ A mi asesor, MSc. Victor Hugo Morales Peña; a los profesores; a Kellogg Foundat
 - Cendrero Uceda, A. (1997). Indicadores de desarrollo sostenible para la toma de decisiones. *Naturzale*, 12, 5–25. ISSN 1137-8603.
 - Costanza, R., Daly, H. E., & Bartholomew, J. A. (1991). *Goals, agenda, and policy recommendations for ecological economics*. Columbia University Press, New York.
 - Cronbach, L. J. (1951). Coefficient alpha and the internal structure of tests. *Psychometrika*, 16(3), 297–334. https://doi.org/10.1007/BF02310555
+- Bland, J. M., & Altman, D. G. (1986). Statistical methods for assessing agreement between two methods of clinical measurement. *The Lancet*, 327(8476), 307–310.
+- Bonett, D. G., & Wright, T. A. (2000). Sample size requirements for estimating Pearson, Kendall and Spearman correlations. *Psychometrika*, 65(1), 23–28.
 - Fleiss, J. L. (1971). Measuring nominal scale agreement among many raters. *Psychological Bulletin*, 76(5), 378–382.
 - Instituto Cidades Sustentáveis (s. f.). *Metodologia do IDSC-BR*. https://www.cidadessustentaveis.org.br/arquivos/idsc-br/Metodologia.pdf [CONFIRMAR edición y fecha]
 - INCAE-CLACDS (s. f.). *Índice de Progreso Social cantonal de Costa Rica*. [CONFIRMAR documento oficial; la descripción se tomó de fuentes secundarias]
@@ -150,10 +170,12 @@ A mi asesor, MSc. Victor Hugo Morales Peña; a los profesores; a Kellogg Foundat
 - García Vílchez, E. J., & Sánchez Báscones, I. (2011). Medida del desarrollo sostenible mediante el uso de indicadores e índices. *Técnica Industrial*.
 - Hammond, A., et al. (1995). *Environmental indicators: a systematic approach to measuring and reporting on the environment in the context of sustainable development*. World Resources Institute. ISBN 1-56973-026-1.
 - Hickel, J. (2020). The Sustainable Development Index: Measuring the ecological efficiency of human development in the Anthropocene. *Ecological Economics*, 167. https://www.sciencedirect.com/science/article/pii/S0921800919303386 [CONFIRMAR DOI]
+- Lin, L. I.-K. (1989). A concordance correlation coefficient to evaluate reproducibility. *Biometrics*, 45(1), 255–268.
 - Moïse, S. (2020). *Diseño de una aplicación Android para calcular el Índice de Desarrollo Sostenible (IDS)*. Proyecto de Graduación, Licenciatura en Ciencias Agrícolas, Universidad EARTH, Guácimo, Costa Rica.
 - Naciones Unidas (1987). *Informe de la Comisión Mundial sobre el Medio Ambiente y el Desarrollo (Informe Brundtland)*.
 - Organización de las Naciones Unidas (2015). *Objetivos de Desarrollo Sostenible*. https://www.un.org/sustainabledevelopment/es/
 - OCDE (1993). *Core set of indicators for environmental performance reviews*. Environment Monographs No. 83. París.
+- Shrout, P. E., & Fleiss, J. L. (1979). Intraclass correlations: uses in assessing rater reliability. *Psychological Bulletin*, 86(2), 420–428.
 - Sachs, J., Schmidt-Traub, G., Kroll, C., Lafortune, G., & Fuller, G. (2019). *Sustainable Development Report 2019*. Bertelsmann Stiftung y SDSN, New York.
 - Sepúlveda, S. (2008). *Biograma: metodología para estimar el nivel de desarrollo sostenible de territorios*. IICA, San José, Costa Rica.
 - Sepúlveda, S., et al. (2001). *Metodología para estimar el nivel de desarrollo sostenible en espacios territoriales*. IICA.

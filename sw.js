@@ -1,7 +1,7 @@
 // Service worker: cachea la "app shell" y los datos para uso sin conexión.
-const CACHE = 'ids-v1.1.0';
-const ASSETS = ['./', 'index.html', 'css/style.css', 'js/app.js', 'js/engine.js', 'js/i18n.js', 'js/stats.js', 'js/sensitivity.js',
-  'data/indicators.json', 'data/i18n.es.json', 'data/i18n.en.json', 'data/cr-cantones.json', 'data/sdg-map.json', 'manifest.webmanifest',
+const CACHE = 'ids-v1.3.0';
+const ASSETS = ['./', 'index.html', 'css/style.css', 'js/app.js', 'js/engine.js', 'js/i18n.js', 'js/stats.js', 'js/consistency.js', 'js/validation.js', 'js/validation-io.js', 'js/sensitivity.js',
+  'data/indicators.json', 'data/i18n.es.json', 'data/i18n.en.json', 'data/cr-cantones.json', 'data/sdg-map.json', 'data/constraints.json', 'manifest.webmanifest',
   'icons/icon-192.png', 'icons/icon-512.png', 'icons/icon-maskable-512.png'];
 
 self.addEventListener('install', (e) => {

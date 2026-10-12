@@ -29,6 +29,7 @@ Otras dudas de contenido (Clima, Minería, especies exóticas, etc.) están en [
 
 ## Observaciones menores (no cambian el cálculo)
 
+- «Homicidios frecuentes» aparece en dos indicadores (`soc06_5` y `soc09_5`) y cuenta doble; la web las responde a la vez (ver AUDITORIA-CONTENIDO).
 - La política tiene un solo indicador con peso interno 1,0; su peso en el IDS es 0,1.
 - Erratas en los textos originales de la app y el Excel («Servicos», «alfatadas»,
   «Organuismos», «delagación», «cazamiento»…). Los textos de `data/` provienen de los
