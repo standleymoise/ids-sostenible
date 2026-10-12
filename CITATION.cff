@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "Si usas este software o el artículo, por favor cítalo así. / If you use this software or the article, please cite it as below."
+title: "Calculadora IDS: Escala de Standley para el Índice de Desarrollo Sostenible de zonas locales"
+type: software
+authors:
+  - family-names: "Moïse"
+    given-names: "Standley"
+    affiliation: "Universidad EARTH, Guácimo, Limón, Costa Rica"
+version: 1.0.0
+date-released: "2026-10-12"
+license: MIT
+repository-code: "https://github.com/standleymoise/ids-sostenible"
+url: "https://standleymoise.github.io/ids-sostenible/"
+keywords:
+  - sustainable development index
+  - índice de desarrollo sostenible
+  - local indicators
+  - progressive web app
+  - Costa Rica
+abstract: "Progressive web app que calcula el Índice de Desarrollo Sostenible (IDS) de zonas locales con 41 indicadores en cuatro dimensiones (ambiental, social, económica y política), derivada del Proyecto de Graduación de Standley Moïse (EARTH, 2020)."

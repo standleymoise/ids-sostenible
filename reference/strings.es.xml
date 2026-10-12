@@ -1,0 +1,522 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Global -->
+    <string name="app_name">Cálculo-IDS</string>
+    <string name="yes">Sí</string>
+    <string name="no">No</string>
+    <string name="info">Información</string>
+    <string name="erasemessage">¿Deseás borrar los valores de la dimensión?</string>
+    <string name="exitmessage">¿Deseás salir de la aplicación?</string>
+    <string name="aboutIDS">¿Qué es el IDS?</string>
+    <string name="valuesAllowed">Los valores permitidos son 0 y 1</string>
+    <string name="fillValues">Complete todos los campos</string>
+    <string name="indice">Índice</string>
+    <string name="saveData">Guardar datos</string>
+    <string name="calculeIDS">Cálculo de índice de desarrollo sostenible</string>
+    <string name="userGuide">Guía de Usuario</string>
+    <string name="savePDF">Guardar PDF</string>
+    <string name="completeAllDimensions">Complete todas la secciones para calcular el IDS</string>
+    <string name="completeAllSection">Completa todas las subsecciones para ver el índice de la dimensión</string>
+    <string name="errorPDFGen">Error al crear el pdf</string>
+    <string name="pdfName">Nombre del pdf</string>
+    <string name="pdfNameText">Datos del informe</string>
+    <string name="pdfCreate">Crear</string>
+    <string name="pdfPlace">Ubicación del informe</string>
+    <string name="pdfFirm">Firma de la institución</string>
+
+    <!-- PreMain -->
+    <string name="title_preMain">¿Qué es el IDS?</string>
+    <string name="subTitle_preMain">IDS (Índice de desarrollo sostenible) es un valor específico que sirve para medir el desarrollo sostenible de una zona en específico. Internacionalmente se usa un sistema de IDS para países y no tiene tanta precisión no solo por no considerar la Política como una dimensión, sino también por usar solo 10 factores para cada una de las tres dimensiones que ellos usan: la dimensión ambiental, social y económica. En cambio, este IDS que la app permite calcular es para ciudades, departamentos o provincias, es por ello que lleva más factores para aportar más precisión. El resultado es aproximativo.</string>
+
+    <!-- Results -->
+    <string name="res_worst">Colapso</string>
+    <string name="res_bad">Deficiente</string>
+    <string name="res_regular">Regular</string>
+    <string name="res_good">Bueno</string>
+    <string name="res_best">Excelente</string>
+
+    <!-- Dimension -->
+    <string name="n_politica">Política</string>
+    <string name="n_social">Social</string>
+    <string name="n_economic">Económica</string>
+    <string name="n_enviroment">Ambiental</string>
+
+    <string name="i_politica">Índice político</string>
+    <string name="i_social">Índice social</string>
+    <string name="i_economica">Índice económico</string>
+    <string name="i_ambiental">Índice ambiental</string>
+
+    <string name="d_politica">Dimensión política</string>
+    <string name="d_social">Dimensión social</string>
+    <string name="d_ambiental">Dimensión ambiental</string>
+    <string name="d_economica">Dimensión económica</string>
+
+    <!-- Guide -->
+    <string name="userGuide_text">Esta app está creada específicamente para calcular el índice de Desarrollo Sostenible de zonas que no sean grandes extensiones o países. Por ello, se consideran un montón de factores y hasta 4 dimensiones. Además, esto también hace que el resultado final sea casi preciso. Cabe recordar que el resultado que arroja la app es aproximativo y orientativo. Es de uso offline y gratis para cualquier persona. Para un buen uso de la app, se deben de seguir estas instrucciones siguientes:</string>
+    <string name="userGuide_text1">1- Esta app es una herramienta, primera en su estilo, para efectuar el cálculo del Índice de Desarrollo Sostenible considerando muchos factores bien precisos. Servirá para decir cuán desarrollado sosteniblemente está una zona y cuáles medidas se deben tomar para mejorarlo.</string>
+    <string name="userGuide_text2">2- Se usa la fórmula del promedio ponderado para realizar este cálculo. Ello hace que cada factor tenga un peso en el resultado. Las afirmaciones que representan factores negativos, como ejemplo: delincuencia, tienen pesos negativos, -15%. De ser un Sí, este porcentaje tendrá un peso negativo reduciendo automáticamente el resultado.</string>
+    <string name="userGuide_text3">3- El uso debe de ser profesional en el sentido de que solo profesionales (empleados de organizaciones u oficiales trabajando para una zona en específico) e instituciones oficiales (municipalidad, jefe de provincia, universidad y estales) deben de usar la app. Esto es para que haya resultados oficiales y fiables de las zonas por las que se calcularía el IDS. Es una manera para que los resultados sean más objetivos.</string>
+    <string name="userGuide_text4">4- Se trata prácticamente de una entrevista estructurada con afirmaciones que solo aceptan respuestas SI-NO. Por lo que se debe de realizar esta entrevista a personas que sepan bien de la zona seleccionada. Esto para evitar subjetividad en las respuestas.</string>
+    <string name="userGuide_text5">5- Solo se debe responder por 0 y 1, los cuales corresponden respectivamente a NO y SI. Siempre cliquear en GUARDAR después de que se arroje el resultado de una dimensión. No se puede entrar ningún valor que no sea 0 o 1.</string>
+    <string name="userGuide_text6">6- Cada vez que terminás de llenar una subsección, sale en Verde, esto es para que no vuelvas por error a una que ya habías respondido</string>
+    <string name="userGuide_text7">7- Las sugerencias que salen dependiendo del rango de resultado son aproximativas. Es decir, puede que no correspondan a tal zona como solución a problemas específicos. Pueden servir como referencia u orientación para buscar solución a problemas que son específicos a zonas.</string>
+    <string name="userGuide_text8">8- Es un Proyecto de Graduación realizado por el estudiante Moïse Standley (2020), candidato a Licenciatura en Ciencias Agrícolas de la Universidad EARTH, Costa Rica. Es asesorado por el MSc. Victor Hugo Morales Peña, Profesor y consultor en silvicultura tropical y teledetección con drones en la Universidad EATH.</string>
+    <string name="userGuide_text9">9- Se recomienda un uso responsable de la aplicación.</string>
+    <string name="userGuide_end">¡Gracias por usar la aplicación!</string>
+
+    <!-- About -->
+    <string name="about_title">Escala de Standley para cálculo de IDS</string>
+    <string name="about_subtitle">¿QUE ES EL ÍNDICE DE DESARROLLO SOSTENIBLE (IDS)?</string>
+    <string name="about_subtitle2">Objetivos del índice de desarrollo sostenible</string>
+    <string name="about_body">
+        Es un valor específico de desempeño del desarrollo sostenible, con el cual se puede comparar la evolución de una unidad de análisis en el tiempo. Existe un índice global, el cual remite el valor promedio de desempeño del conjunto de dimensiones que se han tomado en cuenta. De igual forma, se obtienen índices específicos para cada dimensión, determinando el desempeño de cada una de éstas.\n\n
+        El IDS varía entre 0 y 1, siendo el valor de 1 la mejor situación alcanzable y 0 lo contrario.
+    </string>
+    <string name="about_body2">
+        • Representar de manera didáctica una situación determinada, mediante un índice aproximado de desarrollo. Este índice simboliza el estado de sostenibilidad y permite una primera aproximación al desempeño de una determinada unidad de análisis.\n\n
+        • Visualizar el desarrollo general de la unidad de análisis y de  cada  una  de  las dimensiones individuales en  un  momento  determinado.  Esta  imagen  permitirá determinar  la  existencia  o carencia  de  equilibrio  entre  dimensiones  como  la contribución de cada una a nivel general.\n\n
+        N.B: Es una serie de afirmaciones positivas y negativas a las que el usuario tiene que responder por sí o no. Numéricamente el sí será un 1 y el no un 0 y este paso es exclusivo.
+    </string>
+
+    <!-- Advices -->
+    <string name="advice_politic">Consejos para la dimensión política</string>
+    <string name="advice_social">Consejos para la dimensión social</string>
+    <string name="advice_economic">Consejos para la dimensión económica</string>
+    <string name="advice_environemt">Consejos para la dimensión medio ambiental</string>
+
+    <!-- Dimension environment subtitles -->
+    <string name="d_ambient_sub1">Compostaje</string>
+    <string name="d_ambient_sub2">Educación ambiental</string>
+    <string name="d_ambient_sub3">Uso de energía renovable</string>
+    <string name="d_ambient_sub4">Parques o reservas nacionales</string>
+    <string name="d_ambient_sub5">Protección de árboles</string>
+    <string name="d_ambient_sub6">Buen Consumo de energía</string>
+    <string name="d_ambient_sub7">Forestación</string>
+    <string name="d_ambient_sub8">Protección de especies</string>
+    <string name="d_ambient_sub9">Protección de hábitats</string>
+    <string name="d_ambient_sub10">Mitigación de Emisiones de Nox</string>
+    <string name="d_ambient_sub11">Mitigación de Emisiones de CO2</string>
+    <string name="d_ambient_sub12">Agua Potable</string>
+    <string name="d_ambient_sub13">Clima</string>
+    <string name="d_ambient_sub14">Estado de ríos</string>
+    <string name="d_ambient_sub15">Espacios verdes</string>
+    <string name="d_ambient_sub16">Consumo de agua</string>
+    <string name="d_ambient_sub17">Uso de químicos</string>
+    <string name="d_ambient_sub18">Reciclaje</string>
+
+    <!-- Dimension politic subtitles -->
+    <string name="d_politic_sub1">Politica</string>
+
+    <!-- Dimension social subtitles -->
+    <string name="d_social_sub1">Inversión en proyectos</string>
+    <string name="d_social_sub2">Igualdad social</string>
+    <string name="d_social_sub3">Actividades de integración</string>
+    <string name="d_social_sub4">Zonas de diversión</string>
+    <string name="d_social_sub5">Centros médicos</string>
+    <string name="d_social_sub6">Bienestar del pueblo</string>
+    <string name="d_social_sub7">Protección a la gente</string>
+    <string name="d_social_sub8">Educación</string>
+    <string name="d_social_sub9">Seguridad</string>
+
+    <!-- Dimension economic subtitles -->
+    <string name="d_economic_sub1">Tasa de empleo</string>
+    <string name="d_economic_sub2">Exportación</string>
+    <string name="d_economic_sub3">Pymes</string>
+    <string name="d_economic_sub4">Descentralización</string>
+    <string name="d_economic_sub5">Inflación</string>
+    <string name="d_economic_sub6">Minería</string>
+    <string name="d_economic_sub7">Agricultura mecanizada</string>
+    <string name="d_economic_sub8">Infraestructuras viales</string>
+    <string name="d_economic_sub9">Aerolínea Nacional</string>
+    <string name="d_economic_sub10">Bancos</string>
+    <string name="d_economic_sub11">Fábricas</string>
+    <string name="d_economic_sub12">Turismo</string>
+    <string name="d_economic_sub13">Demografía</string>
+
+    <!-- Politics Values -->
+    <string name="pol_value1_1">Estabilidad Política</string>
+    <string name="pol_value1_2">Transición pacífica</string>
+    <string name="pol_value1_3">Metas políticas claras</string>
+    <string name="pol_value1_4">Corrupción</string>
+    <string name="pol_value1_5">Satisfacción de la población</string>
+    <string name="pol_value1_6">Políticos electos contribuyen a progreso de la zona</string>
+    <string name="pol_value1_7">Existencia de diálogo entre políticos y el pueblo</string>
+
+    <!-- Social Values1 -->
+    <string name="soc_value1_1">La población propone proyectos sociales al gobierno</string>
+    <string name="soc_value1_2">Se realizan los proyectos propuestos</string>
+    <string name="soc_value1_3">Gobierno propone proyectos sociales</string>
+    <string name="soc_value1_4">Los proyectos realizados contribuyen al progreso social de la zona</string>
+    <string name="soc_value1_5">Corrupción en la inversión de los proyectos sociales apropiados</string>
+
+    <!-- Social Values2 -->
+    <string name="soc_value2_1">Misma oportunidad de trabajo para ambos géneros</string>
+    <string name="soc_value2_2">Salario independientemente del género</string>
+    <string name="soc_value2_3">Violencia contra mujeres</string>
+    <string name="soc_value2_4">Violencia contra hombres</string>
+    <string name="soc_value2_5">Misma oportunidad de educación para ambos géneros</string>
+
+    <!-- Social Values3 -->
+    <string name="soc_value3_1">Organización de fiestas patronales (Carnaval, etc.)</string>
+    <string name="soc_value3_2">Violencia en estas actividades</string>
+    <string name="soc_value3_3">Satisfacción del pueblo</string>
+    <string name="soc_value3_4">Se logra que el la población se integre</string>
+
+    <!-- Social Values4 -->
+    <string name="soc_value4_1">Existencia Instalaciones deportivas</string>
+    <string name="soc_value4_2">Existencia de plazas o parques</string>
+    <string name="soc_value4_3">Buen manejo de las intalaciones deportivas</string>
+    <string name="soc_value4_4">Buen manejo de las plazas o parques</string>
+    <string name="soc_value4_5">Inseguridad en esos lugares</string>
+
+    <!-- Social Values5 -->
+    <string name="soc_value5_1">Existencia de ebais o alguna clínica privada</string>
+    <string name="soc_value5_2">Existencia de centros médicos avanzados alejados</string>
+    <string name="soc_value5_3">Se atiende sin discriminación</string>
+    <string name="soc_value5_4">Mucho tiempo de espera de ser atendido</string>
+    <string name="soc_value5_5">Presenciad de una farmacia</string>
+    <string name="soc_value5_6">Oficina de Cruz roja</string>
+    <string name="soc_value5_7">Médicos disponibles 24/7</string>
+
+    <!-- Social Values6 -->
+    <string name="soc_value6_1">El pueblo se siente bien viviendo en la zona</string>
+    <string name="soc_value6_2">Los nuevos llegados se sienten bien en la zona</string>
+    <string name="soc_value6_3">Seguridad</string>
+    <string name="soc_value6_4">Existencia de grupos de personas que ensucian la fama de la zona</string>
+    <string name="soc_value6_5">Homicidios frecuentes</string>
+
+    <!-- Social Values7 -->
+    <string name="soc_value7_1">Seguro social accesible para todos</string>
+    <string name="soc_value7_2">Protección a los ancianos</string>
+    <string name="soc_value7_3">Protección a personas discapacitadas</string>
+    <string name="soc_value7_4">Protección a la niñez</string>
+    <string name="soc_value7_5">Organismos contra agresiones físicas y sexuales a personas</string>
+    <string name="soc_value7_6">Seguro médico accesible para todos</string>
+    <string name="soc_value7_7">Delegación policial suficiente</string>
+    <string name="soc_value7_8">Presencia de indigentes en las calles</string>
+
+    <!-- Social Values8 -->
+    <string name="soc_value8_1">Hay Establecimiento escolar mínimo</string>
+    <string name="soc_value8_2">Escuela técnica en la zona</string>
+    <string name="soc_value8_3">Título permite inserción en la vida laboral</string>
+    <string name="soc_value8_4">Educación se ve reflejada en la vida de los que viven en la zona</string>
+    <string name="soc_value8_5">Corrupción en los proyectos escolares</string>
+    <string name="soc_value8_6">Sistema de becas para personas incapaces económicamente</string>
+    <string name="soc_value8_7">Los estudiantes continuan sus estudios tras salir del colegio</string>
+
+    <!-- Social Values9 -->
+    <string name="soc_value9_1">Presencia de delagación policial</string>
+    <string name="soc_value9_2">Cuerpos policiales contrubuye a la seguridad del lugar</string>
+    <string name="soc_value9_3">Tasa alta de delincuencia</string>
+    <string name="soc_value9_4">Comercio de droga o cosas casi del mismo estilo</string>
+    <string name="soc_value9_5">Homicidios frecuentes</string>
+
+    <!-- - - - - - - - - - - -->
+
+    <!-- Economic Values1 -->
+    <string name="eco_value1_1">Trabajos accesibles para todos</string>
+    <string name="eco_value1_2">Garantía laboral</string>
+    <string name="eco_value1_3">Feria de empleos</string>
+    <string name="eco_value1_4">Salario minímo insuficiente</string>
+    <string name="eco_value1_5">Oferta de empleos</string>
+
+    <!-- Economic Values2 -->
+    <string name="eco_value2_1">Exportación de productos locales a otras zonas</string>
+    <string name="eco_value2_2">No se exporta porque solo se produce para autoconsumo</string>
+    <string name="eco_value2_3">Se importa  mucho desde otras zonas</string>
+    <string name="eco_value2_4">Exportación aporta a ingresos de los hogares</string>
+
+    <!-- Economic Values3 -->
+    <string name="eco_value3_1">Existencia de empresas familiares</string>
+    <string name="eco_value3_2">Dificultad de emprender en la zona</string>
+    <string name="eco_value3_3">Pymes aportan a los ingresos familiares</string>
+    <string name="eco_value3_4">Pymes se autosustentan económicamente</string>
+
+    <!-- Economic Values4 -->
+    <string name="eco_value4_1">Servicios estatales importantes descentralizados</string>
+    <string name="eco_value4_2">Servicos estatales importantes en zonas cercanas</string>
+    <string name="eco_value4_3">Servicios estatales importantes concentrado en ciudades lejanas</string>
+    <string name="eco_value4_4">Facilidad de acceder a estos servicios cuando están descentralizados</string>
+
+    <!-- Economic Values5 -->
+    <string name="eco_value5_1">Aumento constante</string>
+    <string name="eco_value5_2">Acciones para pararla o reducir su aumento</string>
+    <string name="eco_value5_3">Afecta la calidad de vida de las personas</string>
+
+    <!-- Economic Values6 -->
+    <string name="eco_value6_1">Explotación del subsuelo</string>
+    <string name="eco_value6_2">Poca explotación minera</string>
+    <string name="eco_value6_3">Políticas que impiden explotación minera</string>
+    <string name="eco_value6_4">Explotación minera aporta a los ingresos de la zona</string>
+
+    <!-- Economic Values7 -->
+    <string name="eco_value7_1">Mecanización de la agricultura</string>
+    <string name="eco_value7_2">Dificultad de adquirir maquinarias agrícolas</string>
+    <string name="eco_value7_3">Mecanización de la agricultura afecta a la mano de obra de la zona</string>
+    <string name="eco_value7_4">Ella aporta a que la zona progrese en términos de economía local</string>
+
+    <!-- Economic Values8 -->
+    <string name="eco_value8_1">Conexión vial con ciudades importantes</string>
+    <string name="eco_value8_2">Rutas alfatadas</string>
+    <string name="eco_value8_3">Embotellamiento a menudo</string>
+    <string name="eco_value8_4">Reparación a menudo de rutas dañadas</string>
+    <string name="eco_value8_5">Rutas alternas en caso de problemas viales</string>
+
+    <!-- Economic Values9 -->
+    <string name="eco_value9_1">Conexión aérea con otras ciudades del país</string>
+    <string name="eco_value9_2">Plan para construir un aeropuerto local</string>
+    <string name="eco_value9_3">Ausencia del mismo afecta el progreso de la zona</string>
+
+    <!-- Economic Values10 -->
+    <string name="eco_value10_1">Banco nacional en la zona</string>
+    <string name="eco_value10_2">Cajero</string>
+    <string name="eco_value10_3">Otros bancos</string>
+    <string name="eco_value10_4">Dificultad de préstamo en estos bancos</string>
+    <string name="eco_value10_5">Genera empleos</string>
+
+    <!-- Economic Values11 -->
+    <string name="eco_value11_1">Genera empleos en la zona</string>
+    <string name="eco_value11_2">Descentralización de las fábricas</string>
+    <string name="eco_value11_3">Contribuye al progreso de la zona</string>
+    <string name="eco_value11_4">Contamina la zona</string>
+    <string name="eco_value11_5">Se aprovecha de las producciones locales</string>
+
+    <!-- Economic Values12 -->
+    <string name="eco_value12_1">Existencia de atracción turística</string>
+    <string name="eco_value12_2">Turismo aporta a los ingresos de la zona</string>
+    <string name="eco_value12_3">Turismo seguro</string>
+    <string name="eco_value12_4">Acceso  vial para turismo</string>
+
+    <!-- Economic Values13 -->
+    <string name="eco_value13_1">Alta densidad de habitantes</string>
+    <string name="eco_value13_2">Control de natalidad</string>
+    <string name="eco_value13_3">Tasa alta de adolescentes padres</string>
+    <string name="eco_value13_4">Afecta disponibilidad de servicios</string>
+
+    <!-- - - - - - - - - - - -->
+
+    <!-- Environment Values1 -->
+    <string name="env_value1_1">Se usan las buenas técnicas de compostaje</string>
+    <string name="env_value1_2">Se compostea todo el material orgánico que se genera</string>
+    <string name="env_value1_3">El compostaje se usa para el fin por el cual se lo hizo</string>
+    <string name="env_value1_4">Se dispone de lugares para compostajes</string>
+
+    <!-- Environment Values2 -->
+    <string name="env_value2_1">Se dan clases de educación ambiental en las escuelas</string>
+    <string name="env_value2_2">Se hacen prácticas de lo que se enseña en las escuelas</string>
+    <string name="env_value2_3">Se vio una mejora en cuanto a protección ambiental local</string>
+
+    <!-- Environment Values3 -->
+    <string name="env_value3_1">Paneles solares</string>
+    <string name="env_value3_2">Eólica</string>
+    <string name="env_value3_3">Biomasa</string>
+    <string name="env_value3_4">Caídas de agua</string>
+
+    <!-- Environment Values4 -->
+    <string name="env_value4_1">Comunidad dentro del parque</string>
+    <string name="env_value4_2">Abierto al turismo</string>
+    <string name="env_value4_3">Protección adecuada del parque</string>
+    <string name="env_value4_4">Políticas de renovación del parque</string>
+
+    <!-- Environment Values5 -->
+    <string name="env_value5_1">Tala de árboles sin reemplazarlos</string>
+    <string name="env_value5_2">Renovación de árboles</string>
+    <string name="env_value5_3">Siembra de árboles después de talar</string>
+
+    <!-- Environment Values6 -->
+    <string name="env_value6_1">Se apagan luces caseras después de dormidos</string>
+    <string name="env_value6_2">Luces de las calles encendidas</string>
+    <string name="env_value6_3">Uso de bombillas de pocos watts</string>
+    <string name="env_value6_4">Uso de aparatos de pocos watts (lavadoras, refri y hornos)</string>
+
+    <!-- Environment Values7 -->
+    <string name="env_value7_1">Buena cobertura forestal</string>
+    <string name="env_value7_2">Políticas de protección de las selvas</string>
+    <string name="env_value7_3">Resiembra de árboles</string>
+    <string name="env_value7_4">Incendios forestales</string>
+
+    <!-- Environment Values8 -->
+    <string name="env_value8_1">Buena presencia de especies locales</string>
+    <string name="env_value8_2">Buena presencia de especies exóticas</string>
+    <string name="env_value8_3">Políticas de protección de especies animales</string>
+    <string name="env_value8_4">Alta actividad de cazamiento</string>
+
+    <!-- Environment Values9 -->
+    <string name="env_value9_1">Políticas de protección de hábitats naturales</string>
+    <string name="env_value9_2">Rehabilitación de hábitats</string>
+    <string name="env_value9_3">Destrucción de hábitats naturales</string>
+    <string name="env_value9_4">Existencia de hábitats naturales</string>
+
+    <!-- Environment Values10 -->
+    <string name="env_value10_1">Acciones para mitigar emisiones de Nox</string>
+    <string name="env_value10_2">Medición de Nox emitidos</string>
+    <string name="env_value10_3">Acciones para prevenir muchas emisiones de Nox</string>
+
+    <!-- Environment Values11 -->
+    <string name="env_value11_1">Acciones para mitigar emisiones de CO2</string>
+    <string name="env_value11_2">Medición de CO2 emitidos</string>
+    <string name="env_value11_3">Acciones para prevenir muchas emisiones de CO2</string>
+
+    <!-- Environment Values12 -->
+    <string name="env_value12_1">Acceso fácil para todos</string>
+    <string name="env_value12_2">Baja presión del agua</string>
+    <string name="env_value12_3">Clorificaicón del agua</string>
+    <string name="env_value12_4">Protección del reservorio</string>
+
+    <!-- Environment Values13 -->
+    <string name="env_value13_1">Tropical húmedo</string>
+    <string name="env_value13_2">Tropical seco</string>
+    <string name="env_value13_3">Ni uno ni otro</string>
+
+    <!-- Environment Values14 -->
+    <string name="env_value14_1">Ríos intermitentes</string>
+    <string name="env_value14_2">Ríos permanentes</string>
+    <string name="env_value14_3">Ríos limpios</string>
+    <string name="env_value14_4">Ríos contaminados</string>
+    <string name="env_value14_5">Protección de nacientes</string>
+
+    <!-- Environment Values15 -->
+    <string name="env_value15_1">Existencia de Espacios verdes</string>
+    <string name="env_value15_2">Espacio verde mal usado</string>
+    <string name="env_value15_3">Mantenimiento constante</string>
+    <string name="env_value15_4">Mantenimiento con intervalo de tiempo grande</string>
+
+    <!-- Environment Values16 -->
+    <string name="env_value16_1">Uso de la cantidad exacta de agua que se necesita</string>
+    <string name="env_value16_2">Cañería averiada</string>
+    <string name="env_value16_3">Reúso de las aguas usadas</string>
+    <string name="env_value16_4">Medición del caudal del agua que recibe cada hogar</string>
+
+    <!-- Environment Values17 -->
+    <string name="env_value17_1">Aplicación de productos de etiqueta verde</string>
+    <string name="env_value17_2">Aplicación de productos de etiqueta roja</string>
+    <string name="env_value17_3">Aplicación de productos orgánicos</string>
+    <string name="env_value17_4">Chapea mecánica en vez de la química</string>
+
+    <!-- Environment Values18 -->
+    <string name="env_value18_1">Existencia de centro de acopio</string>
+    <string name="env_value18_2">Recolección de desechos plásticos</string>
+    <string name="env_value18_3">Presencia de desechos plásticos fuera de basureros</string>
+    <string name="env_value18_4">Incentivos hacia el reciclar</string>
+
+    <!-- Results advice politic -->
+    <string name="res_politic_worst">
+        • No interferás en la vida personal de tus ciudadanos.\n\n
+        • No busqués cercenar los derechos de propiedad, y no te aferrés a la tendencia de las expropiaciones.\n\n
+        • No olvidés los incentivos de la propiedad privada, y tampoco olvidés que lo que es de todos, al fin y al cabo, termina siendo de nadie.\n\n
+        • No querás controlar los medios de comunicación. La libertad necesita de diversidad de medios y de información independiente que circule sin intervenciones gubernamentales.\n\n
+        • No encarcelés por pensar diferente. De las distintas opiniones se crece, y por ellas se enriquece la cultura.\n\n
+        • No busqués un enemigo o algún chivo expiatorio para culparlo de todos los males. Dejá de culpar a EE.UU., al imperialismo, al capitalismo o a la globalización. Aceptá los errores que han cometido los gobiernos de tu país y no fomentés las medidas populistas de empobrecimiento.\n\n
+        • Reducí los puestos públicos. El empleo público es improductivo ya que fomenta la pobreza y estanca a la sociedad.\n\n
+        • Recordá que si la pobreza disminuyera con planes sociales, los mismos deberían ser cada vez menos, y no deberían aumentar descomunalmente tal como sucede en los países donde se aplican estas medidas clientelistas y de corto plazo. En cambio, sí podrás disminuir la pobreza con educación de calidad, con apertura de la economía, con inversión privada, lo que llevará a la creación de un buen número de empleos productivos y gente pensante.\n\n
+        • No interferás en la justicia, la misma debe ser independiente para que el Estado de Derecho pueda llevarse a cabo de modo correcto.\n\n
+        • Recordá que el Estado no cuenta con ninguna naturaleza empresaria. No pongás a los burócratas del Estado a manejar empresas, porque a la larga tendrás empresas sin empresarios y llenas de parásitos dependientes del dinero del contribuyente.\n\n
+        • Levantá la voz ante los atropellos a las libertades civiles, económicas y políticas en el mundo. No te quedés callado y no seás cómplice del populismo del siglo XXI.\n\n
+        • No le quités a algunos para darles a otros. No olvidés: la riqueza no tiene un tope. Se trata de aumentar el tamaño de la torta, no de repartirla cada vez más en trozos más pequeños.\n\n
+        • Fomentá el comercio, ésta es la gran clave. Abrí los mercados, ningún país crece bajo el proteccionismo o encerrando a su gente. Jamás te tentés, porque una vez que caés no hay vuelta atrás.\n\n
+        • No utilicés los planes sociales para conseguir votos. Esta medida populista hará que los ciudadanos se hagan dependientes del gobierno, y sólo crearás una sociedad parasitaria que te demandará cada vez más necesidades.\n\n
+        • Dale libertad a la educación.Poné a los colegios y a las universidades a competir. Fomentá la educación privada, la libertad de programas de estudio y la libre elección de los estudiantes y los padres sobre su educación.\n\n
+    </string>
+
+    <string name="res_politic_bad">
+        • No aumentés los impuestos, ya que estos siempre recaerán fuerte sobre los más pobres, y a la larga crearás improductividad en la sociedad. Déjalos ahorrar.\n\n
+        • No aumentés el gasto público. No despilfarrés el dinero de los individuos para fomentar planes que los empobrecerán cada vez más, ni utilicés aquel dinero para enriquecerte junto a tu séquito.\n\n
+        • Dejá de lado la emisión monetaria, ya que la misma sólo generará más inflación.\n\n
+        • Fomentá la inversión privada, deja que aumente la riqueza en la sociedad. Los empresarios son los que generan empleo productivo, no les pongás más trabas a sus actividades comerciales.\n\n
+        • Ponele pausa a las barreras burocráticas y a los interminables trámites. El tiempo de un individuo vale mucho.\n\n
+        • No utilicés al Estado como fuente de trabajo para tus familiares y amigos.\n\n
+        • No pongás a tu cuerpo de economistas a fijar precios en el mercado. Los precios son señales, y cuando interferís en tal proceso, distorsionás la vida diaria de la sociedad. Dejalo en manos de la oferta y la demanda.\n\n
+        • No dividás a la sociedad y tampoco impongás tu manera de pensar. Sería lamentable que tus políticas dividan familias, terminen amistades o arruinen una cena de domingo.\n\n
+        • Protegé a tus ciudadanos del narcotráfico, no lo dejés ingresar, y jamás cedás ante el terrorismo.\n\n
+        • No descuidés la seguridad de los ciudadanos. Si alguien roba, mata, o viola no debe quedar impune. Las leyes están para cumplirse. Que la cárcel no se convierta en un lugar transitorio de una o dos noches para la gente que comete este tipo de crímenes.\n\n
+        • Olvidate de las cadenas nacionales, quitate esa necesidad de ser visto y adorado.\n\n
+        • Recordá que el “dinero estatal” no existe. El Estado no produce nada, sólo existe el dinero de los individuos.\n\n
+        • No jugués con el nacionalismo, es un camino peligroso.\n\n
+        • No manipulés las elecciones. Como llegaste te vas a tener que ir. El asiento presidencial no es para siempre, así que olvidá tu tentación de perpetuarte en el poder bajo las típicas re-reelecciones indefinidas del populismo latinoamericano.\n\n
+        • No cambiés las reglas de juego. Esto es crucial tanto para las relaciones con distintos actores, inversores, ciudadanos y otras naciones.\n\n
+        • Escuchá a los tanques de pensamiento, interactuá con ellos, tené en cuenta las distintas opiniones, nutrite del ambiente intelectual y nunca impongás una línea de pensamiento en la opinión pública.\n\n
+    </string>
+
+    <!-- Results advice social -->
+    <string name="res_social_worst">
+        1. Contextualizar los problemas ambientales con las políticas sociales y económicas y con los modelos de desarrollo.\n\n
+        2. Conjugar, para un desarrollo sostenible, el crecimiento económico, la protección del medio ambiente, el desarrollo social y la gobernabilidad.\n\n
+        3. Tomar con ciencia entre los y las jóvenes y trasladar al resto de la sociedad que el medio ambiente y el crecimiento económico deben ir de la mano, no puede haber crecimiento económico sin tener en cuenta las consecuencias ambientales.\n\n
+        4. Lograr que la participación de la juventud nos capacite para tomar parte en la resolución colectiva de los problemas que en materia medioambiental se plantean.\n\n
+    </string>
+
+    <string name="res_social_bad">
+        5. Cambiar la forma de relacionarnos con el medio, ya que la forma de interactuar consigue cambiar la forma de pensar (pensamiento holístico).\n\n
+        6. Reivindicar una política integral de costas.\n\n
+        7. Reivindicar la práctica de una agricultura sostenible, priorizando el cuidado del medio ambiente a la productividad, ya que los cultivos agrarios pueden llegar a empobrecer el suelo.\n\n
+        8. Fomentar el cooperativismo juvenil en cuanto a la explotación de la agricultura y ganadería ecológica.\n\n
+    </string>
+
+    <string name="res_social_mid">
+        9. Reivindicar una política de ordenación integral del territorio, que tenga en cuenta el desarrollo sostenible y el cuidado del medio ambiente, el impacto ambiental, los propios ecosistemas, cadenas tróficas… utilizando racionalmente el suelo y protegiendo las zonas según las especies que en ellas habitan.\n\n
+        10. Demandar una política que limite el número de playas artificiales y campos de golf.\n\n
+        11. Solicitar la revisión de las prácticas tradicionales adaptándolas y obteniendo información para lograr soluciones ambientales, contando en todo momento con las comunidades cercanas en las que está el problema medioambiental.\n\n
+        12. Intervenir activamente en la aplicación de las normas jurídicas de protección de los intereses colectivos que representamos, entre los que el medio ambiente es uno de esos intereses colectivos que hay que proteger.\n\n
+        13. Considerar el desarrollo sostenible como una estrategia política aplicable y no como una mera declaración de intenciones. Hablar de desarrollo sostenible significa situarse ante una panorámica de mejora de la calidad de vida a escala global que, favoreciendo el desenvolvimiento endógeno de las comunidades humanas, sea acorde con las posibilidades de renovación de los recursos naturales y con la capacidad del sistema para absorber residuos, en un adecuado marco económico y tecnológico donde cada proyecto resulte viable y oportuno.\n\n
+    </string>
+
+    <!-- Results advice economic -->
+    <string name="res_economic_worst">
+        1. Garantizar el derecho a un aprendizaje a lo largo de la vida que permita adquirir competencias, perfeccionarlas y reciclarse profesionalmente: Esto incluye el aprendizaje formal e informal desde la primera infancia y hasta la vida adulta. Los Gobiernos, los trabajadores y los empleadores, así como las instituciones educativas, tienen responsabilidades que se complementan a la hora de generar un entorno de aprendizaje que sea efectivo y cuente con financiación.\n\n
+        2. Incrementar las inversiones en las instituciones, las políticas y las estrategias que apoyen a los trabajadores a lo largo de las transformaciones del futuro laboral: La OIT asegura que especialmente los jóvenes necesitarán ayuda para la cada vez más complicada transición de la escuela al trabajo. También se deben aumentar las posibilidades de los trabajadores mayores para que puedan permanecer en el mundo laboral mientras lo deseen.\n\n
+        3. Aplicar un programa transformador para lograr la igualdad de género: Las políticas deben promover que se comparta el trabajo de cuidados no remunerados en el hogar para crear una auténtica igualdad de oportunidades en el lugar de trabajo. Para esto se debe fortalecer la voz de las mujeres y su liderazgo, la eliminación de la violencia y el acoso, y la aplicación de transparencia salarial.\n\n
+    </string>
+
+    <string name="res_economic_bad">
+        4. Proporcionar protección social universal desde el nacimiento hasta la vejez: El futuro del trabajo necesita un sistema de protección social sólido y con capacidad de respuesta que asegure cobertura para todas las personas vulnerables.\n\n
+        5. Establecer una Garantía Laboral Universal: Significa que todos los trabajadores sin importar su acuerdo contractual o situación laboral deben disfrutar de los derechos fundamentales del trabajo, tales como un salario adecuado, límites máximos respecto a las horas de trabajo, seguridad social y cobertura de salud.\n\n
+        6. Ampliar la soberanía sobre el tiempo: La Comisión asegura que los trabajadores necesitan una mayor autonomía sobre su tiempo de trabajo, sin dejar de satisfacer las necesidades de la empresa, e invita a aprovechar la tecnología para ampliar las oportunidades y conciliar la vida profesional con la personal. Esto se traduce en opciones reales de flexibilidad y control sobre los horarios de trabajo.\n\n
+    </string>
+
+    <string name="res_economic_mid">
+        7. Garantizar la representación colectiva de los trabajadores y los empleadores: “Todos los trabajadores deberán disfrutar del reconocimiento de su libertad sindical y del derecho de negociación colectiva, con el Estado como garante de esos derechos”, asegura el informe.\n\n
+        8. Administrar la tecnología a favor del trabajo decente: Los avances tecnológicos deben incluir una reglamentación del uso de datos y de la responsabilidad sobre el control de los algoritmos en el mundo del trabajo. También debe establecerse un sistema de gobernanza internacional de las plataformas digitales que exijan el respeto a determinados derechos y protecciones de los usuarios y clientes. La OIT resalta además que, en el caso de la inteligencia artificial, se debe garantizar que las decisiones definitivas que afectan el trabajo “sean tomadas por personas”.
+        9. Dar incentivos para promover inversiones en áreas claves en favor del trabajo decente y sostenible: Este tipo de inversiones impulsará la igualdad de género y podrían crear millones de puestos de trabajo y nuevas oportunidades para las microempresas y las pequeñas y medianas empresas. También el desarrollo de la economía rural, del cual depende el futuro de muchos de los trabajadores del mundo, debería convertirse en una prioridad.\n\n
+        10. Remodelar las estructuras de incentivos empresariales en pro de sus estrategias de inversión a largo plazo: Esto incluye políticas fiscales justas, la revisión de las normativas contables empresariales y nuevos modos para medir el desarrollo de los países para que den cuenta de las dimensiones de su crecimiento, el valor del trabajo no remunerado que se realiza en el servicio doméstico en las comunidades.\n\n
+    </string>
+
+    <!-- Results advice environment -->
+    <string name="res_environment_worst">
+        1. Frenar el consumo de recursos naturales conjugando los cuatro principios de crecimiento económico, protección del medio ambiente, desarrollo social y gobernabilidad.\n\n
+        2. Cambiar el actual modelo de producción y consumo llamando a la responsabilidad de los consumidores y de las consumidoras haciendo que cobre mayor valor el coste ecológico que el económico.\n\n
+        3. Favorecer la realización de estudios sobre los costes de productos ecológicos frente a los no-ecológicos.\n\n
+        4. Organizar procesos de obtención y tratamiento de datos de la información y documentación en materia de consumo juvenil y realizar propuestas y puesta en marcha de alternativas relacionadas con esta realidad.\n\n
+        5. Analizar la situación actual en el ámbito de consumo juvenil, a través de seminarios, foros, etc… dotando de las herramientas necesarias para tomar conciencia del consumo desmesurado, las causas que lo provocan y consecuencias que conlleva.\n\n
+        6. Demandar el freno de los intereses de las grandes compañías energéticas basadas en el petróleo, ya que no permiten el desarrollo de las energías renovables.\n\n
+        7. Solicitar a la industria española el paso de energía no renovable a energía renovable en su producción.\n\n
+        8. Demandar la implantación del impuesto ecológico, a todos los niveles.\n\n
+        9. Continuar profundizando sobre las diferentes formas de producción de energía, prestando especial atención a la producción de energía nuclear por el peligro que supone y el coste de los planes de seguridad necesarios.\n\n
+    </string>
+
+    <string name="res_environment_bad">
+        10. Defender el uso del transporte colectivo y público, para evitar la contaminación y preservar el medio ambiente.\n\n
+        11.	Pedir un uso racional del agua, ya que es un recurso imprescindible que no puede ser tratado como un producto y cuyo uso industrial y doméstico debe tener el compromiso de devolución correcto para ser utilizado por otros y otras y se continúe sacando beneficio.\n\n
+        12.	Demandar un mayor número de ayudas para que la implantación de la energía solar sea mayor, más rápida y más efectiva.\n\n
+        13.	Luchar contra la desertificación, priorizando la lucha contra la extensión del fenómeno y no contra las propias zonas desérticas.\n\n
+        14.	Sensibilizar sobre la importancia del reciclaje como medio para preservar los recursos existentes y la utilización racional de los mismos.\n\n
+        15.	Favorecer el desarrollo en los y las jóvenes de capacidades para la vida en sociedad y en armonía con el medio ambiente contribuyendo a la creación de una verdadera conciencia medioambiental en la juventud.\n\n
+        16.	Trasladar la necesidad de la responsabilidad ambiental a las personas y las entidades.\n\n
+        17.	Sensibilizar al movimiento asociativo de las consecuencias del aumento del efecto invernadero y la responsabilidad que tenemos sobre este hecho.\n\n
+        18.	Concienciar a los y las jóvenes y a la sociedad en su conjunto sobre la necesidad de proteger la atmósfera.\n\n
+    </string>
+
+    <string name="res_environment_mid">
+        19. Defender la implantación de las Agendas 21 como herramienta para el trabajo medioambiental a nivel local.\n\n
+        20.	Potenciar la educación ambiental, entendida como un proceso permanente en el que las personas y la colectividad cobran conciencia de su medio y adquieren los conocimientos, los valores, las competencias, la experiencia y, también, la voluntad capaz de hacerlos actuar, individual y colectivamente, para resolver los problemas actuales y futuros del medio ambiente.\n\n
+        21.	Desarrollar políticas de educación medioambiental, destacando la importancia de incluir contenidos de desarrollo sostenible en la formación universitaria.\n\n
+        22.	Potenciar en la educación todos los factores que aluden a la diversidad (biodiversidad, diversidad cultural..) y a la utilización racional del suelo, la ordenación territorial y la protección de zonas.\n\n
+        23.	Reivindicar que en enseñanzas medias se dedique un tiempo a la semana específicamente a la educación ambiental.\n\n
+        24.	Mejorar la información y formación de los y las jóvenes en medio ambiente a través de programas de acción coordinada orientados a la mejora de las conductas ciudadanas en relación con el uso de los recursos.\n\n
+        25.	Favorecer la formación para el consumo responsable y sustentable en la educación reglada y no reglada mediante la elaboración de planes de formación y campañas de información.\n\n
+        26.	Desarrollar, por parte de movimiento asociativo, una actitud crítica en cuestiones medioambientales, que los lleve a actuar como órganos de presión política y con un posicionamiento público claro de defensa del medio ambiente.\n\n
+        27.	Informar e implicar al movimiento asociativo en la importancia del trabajo en temas medioambientales, apoyando acciones e iniciativas de asociaciones y consejos de juventud en materia de educación ambiental.\n\n
+        28.	Luchar por lograr un impacto sobre las decisiones, acciones y actitudes de las distintas instituciones y Administraciones, promocionando y fomentando las opiniones y preocupaciones de los y las jóvenes respecto al medio ambiente.\n\n
+        29.	Apostar por el ecologismo como cauce de participación real en la defensa del medio ambiente y en una apuesta social por el desarrollo sostenible.\n\n
+    </string>
+
+</resources>
