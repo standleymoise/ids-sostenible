@@ -9,7 +9,7 @@ import { UI, DIM_ORDER, DIM_ADVICE, SDG_NAMES } from './i18n.js';
 
 const STORE = 'ids.v1';
 const $app = document.getElementById('app');
-let model, models = {}, geo, sdgMap, cIndex, texts = {}, state = { lang: 'es', evals: [] }, deferredInstall = null, cmpSel = new Set(), valState = { source: 'mideplan', text: '', scale: 'percentile', tol: 10, result: null, info: null, demo: false, sections: null };
+let model, models = {}, geo, sdgMap, cIndex, texts = {}, state = { lang: 'es', evals: [] }, deferredInstall = null, cmpSel = new Set(), valState = { edition: '2017', instrument: '1.1', source: 'mideplan', text: '', scale: 'percentile', tol: 10, result: null, info: null, demo: false, sections: null };
 
 // ---------- utilidades ----------
 const h = (tag, attrs = {}, ...kids) => {
@@ -383,9 +383,10 @@ const ciText = (c) => (c ? `[${f2(c[0])}; ${f2(c[1])}]` : '–');
 const pc0 = (x) => (x === null || x === undefined ? '–' : `${(x * 100).toFixed(0)} %`);
 
 /** Zonas con evaluaciones completas; si hay varias del mismo distrito/cantón/nombre se promedia el IDS. */
-function ownZones() {
+function ownZones(version = valState.instrument) {
   const zones = new Map();
   for (const e of state.evals) {
+    if (version !== 'all' && (e.instrument || '1.0') !== version) continue;
     const r = compute(modelFor(e), e.answers);
     if (!r.complete) continue;
     const name = e.district || e.canton || e.name;
@@ -418,7 +419,8 @@ async function runValidation() {
   if (valState.source === 'mideplan') {
     const zones = ownZones();
     const text = (u) => fetch(u).then((r) => r.text());
-    const [d, c] = await Promise.all([text('data/external/mideplan-ids-2023-distritos.csv'), text('data/external/mideplan-ids-2023-cantones.csv')]);
+    const ed = valState.edition;
+    const [d, c] = await Promise.all([text(`data/external/mideplan-ids-${ed}-distritos.csv`), text(`data/external/mideplan-ids-${ed}-cantones.csv`)]);
     const build = (level, map) => zones.filter((z) => z.level === level && map.has(String(z.code))).map((z) => {
       const m = map.get(String(z.code));
       return { name: z.name, ids: z.ids, dims: z.dims, ext: { ids_mideplan: m.ids }, extDims: m.dims };
@@ -426,7 +428,7 @@ async function runValidation() {
     const sections = [['levelDistrict', build('district', loadMideplan(d))], ['levelCanton', build('canton', loadMideplan(c))]]
       .filter(([, rows]) => rows.length)
       .map(([title, rows]) => ({ title, n: rows.length, result: rows.length >= 3 ? compareIndices(rows, opts) : null,
-        matrix: rows.length >= 3 ? dimensionMatrix(rows, ['salud', 'participacion', 'seguridad', 'educacion', 'economico']) : null }));
+        matrix: rows.length >= 3 && rows.some((r) => Object.values(r.extDims).some(Number.isFinite)) ? dimensionMatrix(rows, ['salud', 'participacion', 'seguridad', 'educacion', 'economico']) : null }));
     valState.sections = sections;
     valState.info = { n: sections.reduce((a, s) => a + s.n, 0), unmatched: [], indices: ['ids_mideplan'] };
     valState.result = null;
@@ -523,7 +525,16 @@ function viewValidate() {
     h('label', {}, t('sourceLabel'), h('select', { onchange: (e) => { valState.source = e.target.value; valState.result = null; valState.sections = null; valState.info = null; viewValidate(); } },
       h('option', { value: 'mideplan', selected: valState.source === 'mideplan' }, t('sourceMideplan')),
       h('option', { value: 'csv', selected: valState.source === 'csv' }, t('sourceCsv')))),
+    valState.source === 'mideplan' ? h('div', { class: 'two' },
+      h('label', {}, t('editionLabel'), h('select', { onchange: (e) => { valState.edition = e.target.value; valState.sections = null; valState.info = null; viewValidate(); } },
+        h('option', { value: '2017', selected: valState.edition === '2017' }, t('ed2017')),
+        h('option', { value: '2023', selected: valState.edition === '2023' }, t('ed2023')))),
+      h('label', {}, t('instrumentFilter'), h('select', { onchange: (e) => { valState.instrument = e.target.value; valState.sections = null; valState.info = null; viewValidate(); } },
+        h('option', { value: '1.1', selected: valState.instrument === '1.1' }, t('inst11')),
+        h('option', { value: '1.0', selected: valState.instrument === '1.0' }, t('inst10')),
+        h('option', { value: 'all', selected: valState.instrument === 'all' }, t('instAll'))))) : null,
     valState.source === 'mideplan' ? h('p', { class: 'muted' }, t('mideplanHint')) : h('p', { class: 'muted' }, t('validateHow')),
+    valState.source === 'mideplan' && valState.edition === '2017' ? h('p', { class: 'muted' }, t('mideplan2017Note')) : null,
     h('div', { class: 'card' },
       valState.source === 'csv' ? h('div', { class: 'row' },
         h('label', { class: 'btn' }, t('loadCsv'), h('input', { type: 'file', accept: '.csv,text/csv,text/plain', hidden: true, onchange: async (e) => {
@@ -549,7 +560,7 @@ function viewValidate() {
       if (!sec.result) { content.push(h('p', { class: 'muted' }, t('noZones'))); continue; }
       for (const [key, r] of Object.entries(sec.result.indices)) content.push(indexCard(key, r));
       if (sec.matrix) content.push(h('div', { class: 'card' }, matrixTable(sec.matrix)));
-      content.push(h('div', { class: 'row' }, h('button', { class: 'btn', type: 'button', onclick: () => download(`validacion-mideplan-${sec.title}.md`, toMarkdown(sec.result, { scale: valState.scale, tol: valState.tol, threshold: 0.8, version: '1.5.0' }), 'text/markdown') }, t('downloadReport'))));
+      content.push(h('div', { class: 'row' }, h('button', { class: 'btn', type: 'button', onclick: () => download(`validacion-mideplan-${sec.title}.md`, toMarkdown(sec.result, { scale: valState.scale, tol: valState.tol, threshold: 0.8, version: '1.6.0' }), 'text/markdown') }, t('downloadReport'))));
     }
     content.push(h('p', { class: 'muted' }, t('validateNote')));
   }
@@ -559,7 +570,7 @@ function viewValidate() {
   }
   if (result) {
     for (const [key, r] of Object.entries(result.indices)) content.push(indexCard(key, r));
-    content.push(h('div', { class: 'row' }, h('button', { class: 'btn', type: 'button', onclick: () => download('validacion-ids.md', toMarkdown(result, { scale: valState.scale, tol: valState.tol, threshold: 0.8, version: '1.5.0' }), 'text/markdown') }, t('downloadReport'))));
+    content.push(h('div', { class: 'row' }, h('button', { class: 'btn', type: 'button', onclick: () => download('validacion-ids.md', toMarkdown(result, { scale: valState.scale, tol: valState.tol, threshold: 0.8, version: '1.6.0' }), 'text/markdown') }, t('downloadReport'))));
     content.push(h('p', { class: 'muted' }, t('validateNote')));
   }
   content.push(h('h2', {}, t('reliabilityTitle')), reliabilityBlock(), h('h2', {}, t('internalTitle')), internalBlock());

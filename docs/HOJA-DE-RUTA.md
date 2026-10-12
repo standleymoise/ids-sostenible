@@ -9,6 +9,7 @@
 - **1.3** — Kit de validación: Spearman/Kendall/Pearson con IC y permutación, CCC de Lin, Bland–Altman, rango de cercanía, quintiles (κ ponderado), grupos conocidos, ICC, α de Cronbach por ítem y dos mitades; pantalla *Validación*, CLI `tools/validate.js` y [protocolo](VALIDACION.md). Campo *distrito* para cruzar con el IDS de MIDEPLAN.
 - **1.4** — IDS 2023 de MIDEPLAN incluido (490 distritos, 84 cantones, 5 dimensiones) con cruce por código oficial, selector provincia › cantón › distrito y matriz de validez convergente/discriminante por dimensión.
 - **1.5** — Instrumento 1.1: dimensión política ampliada de 1 a 6 indicadores (30 afirmaciones; propuesta). La 1.0 de la tesis se conserva; cada evaluación guarda su versión.
+- **1.6** — IDS 2017 de MIDEPLAN incluido (482 distritos, 82 cantones; la edición de la tesis); selector de edición y filtro por versión del instrumento (1.1 por defecto) en la validación.
 
 ## Siguiente (requiere decisiones o datos de la autora)
 

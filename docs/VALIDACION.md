@@ -30,7 +30,7 @@ sería redundante; si no correlacionara con ninguno, no estaría midiendo desarr
 
 ## 3. Datos externos
 
-**MIDEPLAN ya está incluido en la app** (`data/external/`, proporcionado como «Tablas - IDS 2023.xlsx»; ver su README): IDS de los 490 distritos y 84 cantones, con las 5 dimensiones y códigos oficiales. Para los otros dos índices: al 12 de octubre de 2026, MIDEPLAN publica una hoja de cálculo (XLS) con el IDS 2023; el Atlas del PNUD se encontró solo como PDF y herramienta interactiva (sin CSV directo); del IPS cantonal no se encontró una tabla descargable. Hay que preparar un CSV con lo que se obtenga:
+**MIDEPLAN ya está incluido en la app** (`data/external/`, ver su README), en dos ediciones: **2017** (la que usó la tesis; 482 distritos y 82 cantones) y **2023** (490 y 84), con las 5 dimensiones por distrito y códigos oficiales. La pantalla *Validación* usa por defecto la **2017**; ambas ediciones **no son comparables entre sí**, y conviene reportar los resultados con la edición más cercana a la fecha de las evaluaciones. Para los otros dos índices: al 12 de octubre de 2026, MIDEPLAN publica una hoja de cálculo (XLS) con el IDS 2023; el Atlas del PNUD se encontró solo como PDF y herramienta interactiva (sin CSV directo); del IPS cantonal no se encontró una tabla descargable. Hay que preparar un CSV con lo que se obtenga:
 
 - **MIDEPLAN IDS 2023:** la página oficial publica el paquete de datos con valores distritales, cantonales y regionales (hoja de cálculo y PDF metodológico): https://www.mideplan.go.cr/indice-desarrollo-social
 - **Atlas de Desarrollo Humano Cantonal:** PDF e herramienta interactiva en https://www.undp.org/es/costa-rica/atlas-de-desarrollo-humano-cantonal ; para la base completa, solicitar a la Escuela de Estadística (UCR) o a Sinirube.
@@ -78,6 +78,13 @@ Si la dimensión ambiental correlacionara fuerte con todo, sugeriría que el ins
 ## 4c. Versión del instrumento
 
 Cada evaluación guarda la versión del instrumento (1.0 tesis; 1.1 con la política ampliada). La validación contra MIDEPLAN usa el IDS normalizado de cada evaluación calculado con **su** versión; las dimensiones ambiental, social y económica son idénticas en ambas, pero el IDS global y la dimensión política **no** son estrictamente comparables entre versiones. Para un estudio de campo, use **una sola versión** para todas las zonas y repórtela. Para fiabilidad entre evaluadores, todas las evaluaciones comparadas deben usar la misma versión.
+
+## 4d. Decisión de diseño del estudio de campo
+
+- **Instrumento:** versión **1.1** (dimensión política ampliada). La pantalla *Validación* filtra por defecto las evaluaciones 1.1; las de la 1.0 se excluyen para no mezclar versiones (se puede cambiar el filtro).
+- **Índice de contraste principal:** IDS distrital de MIDEPLAN **2017** (el de la tesis) y, como análisis de sensibilidad, **2023**.
+- **Limitaciones del 2017:** el cantonal no trae dimensiones; 3 distritos sin dimensiones; 2 códigos que ya no existen.
+- Las evaluaciones guardan el código oficial del distrito, así que el cruce funciona con ambas ediciones.
 
 ## 5. Plan de análisis previo (propuesta; fijarlo antes de ver los datos)
 

@@ -32,8 +32,12 @@ Cosas que no pude verificar con el material de la carpeta y que debe confirmar l
 ## Dimensión política 1.1 (v1.5)
 
 23. **Revisar la dimensión política ampliada** (`docs/DIMENSION-POLITICA.md`, `data/src/political-1.1.json`): afirmaciones, pesos provisionales y si se reconsidera el 10 % de la dimensión. Verificar la base legal de las instituciones mencionadas (concejos de distrito, comités cantonales de la persona joven, planes reguladores, comisiones de emergencia).
-24. **Elegir la versión para el estudio de campo** (1.0 para reproducir la tesis o 1.1 con la política ampliada) y usar solo una en todas las zonas.
+24. ✅ **Versión para el estudio de campo: instrumento 1.1** (decidido por la autora); usar solo esa versión en todas las zonas.
 25. **Obtener el nivel del IGSM de la Contraloría** por municipalidad para validar la dimensión política (H6).
+
+## IDS 2017 de MIDEPLAN (v1.6)
+
+26. ✅ IDS 2017 integrado (482 distritos, 82 cantones; 3 distritos sin dimensiones). Es la edición de la tesis. Para el artículo: reportar el contraste principal con **2017** y la sensibilidad con **2023**; los pesos 2017 de MIDEPLAN no vienen en el libro (conseguirlos del documento metodológico 2017 para citarlos).
 
 ## Con los datos de MIDEPLAN (v1.4)
 

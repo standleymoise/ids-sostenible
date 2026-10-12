@@ -1,7 +1,7 @@
 // Service worker: cachea la "app shell" y los datos para uso sin conexión.
-const CACHE = 'ids-v1.5.0';
+const CACHE = 'ids-v1.6.0';
 const ASSETS = ['./', 'index.html', 'css/style.css', 'js/app.js', 'js/engine.js', 'js/i18n.js', 'js/stats.js', 'js/consistency.js', 'js/validation.js', 'js/validation-io.js', 'js/sensitivity.js',
-  'data/indicators.json', 'data/indicators-1.1.json', 'data/i18n-1.1.es.json', 'data/i18n-1.1.en.json', 'data/i18n.es.json', 'data/i18n.en.json', 'data/cr-distritos.json', 'data/external/mideplan-ids-2023-distritos.csv', 'data/external/mideplan-ids-2023-cantones.csv', 'data/sdg-map.json', 'data/constraints.json', 'manifest.webmanifest',
+  'data/indicators.json', 'data/indicators-1.1.json', 'data/i18n-1.1.es.json', 'data/i18n-1.1.en.json', 'data/i18n.es.json', 'data/i18n.en.json', 'data/cr-distritos.json', 'data/external/mideplan-ids-2017-distritos.csv', 'data/external/mideplan-ids-2017-cantones.csv', 'data/external/mideplan-ids-2023-distritos.csv', 'data/external/mideplan-ids-2023-cantones.csv', 'data/sdg-map.json', 'data/constraints.json', 'manifest.webmanifest',
   'icons/icon-192.png', 'icons/icon-512.png', 'icons/icon-maskable-512.png'];
 
 self.addEventListener('install', (e) => {
