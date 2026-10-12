@@ -37,7 +37,7 @@ Cosas que no pude verificar con el material de la carpeta y que debe confirmar l
 
 ## IDS 2017 de MIDEPLAN (v1.6)
 
-26. ✅ IDS 2017 integrado (482 distritos, 82 cantones; 3 distritos sin dimensiones). Es la edición de la tesis. Para el artículo: reportar el contraste principal con **2017** y la sensibilidad con **2023**; los pesos 2017 de MIDEPLAN no vienen en el libro (conseguirlos del documento metodológico 2017 para citarlos).
+26. ✅ IDS 2017 integrado (483 distritos, 82 cantones) con el **informe oficial** (pesos 0,279/0,266/0,216/0,116/0,123, 19 indicadores, 14 índices, 5 distritos imputados excluidos). Para el artículo: contraste principal con **2017** y sensibilidad con **2023**; citar MIDEPLAN (2018).
 
 ## Con los datos de MIDEPLAN (v1.4)
 

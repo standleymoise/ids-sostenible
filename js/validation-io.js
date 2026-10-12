@@ -121,7 +121,7 @@ export function toMarkdown(result, { date = new Date().toISOString().slice(0, 10
 
 /**
  * Lee un CSV de MIDEPLAN (data/external/mideplan-ids-2023-*.csv) y devuelve Map(código → {name, ids, dims}).
- * `dims` son las 5 dimensiones del IDS de MIDEPLAN: salud, participacion, seguridad, educacion, economico.
+ * `imputed` marca distritos cuyo IDS MIDEPLAN imputó en lugar de medir (se excluyen de la validación). `dims` son las 5 dimensiones del IDS de MIDEPLAN: salud, participacion, seguridad, educacion, economico.
  */
 export function loadMideplan(text) {
   const p = parseCsv(text);
@@ -133,6 +133,7 @@ export function loadMideplan(text) {
     const nm = (r[col('distrito')] ?? r[col('canton')] ?? '').trim();
     map.set(code, {
       name: nm,
+      imputed: col('imputado') >= 0 && String(r[col('imputado')]).trim() === '1',
       ids: toNumber(r[col('ids')], false),
       dims: Object.fromEntries(dimKeys.map((k) => [k, toNumber(r[col(k)], false)])),
     });

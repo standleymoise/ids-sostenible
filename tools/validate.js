@@ -32,6 +32,6 @@ if (!built.hadIds) {
 }
 const rows = built.rows.filter((r) => Number.isFinite(r.ids));
 const result = compareIndices(rows, { scale, tol, threshold: 0.8, runs, seed: 1 });
-const md = toMarkdown(result, { scale, tol, threshold: 0.8, version: '1.6.0' });
+const md = toMarkdown(result, { scale, tol, threshold: 0.8, version: '1.6.1' });
 const out = opt('out', '');
 if (out) { writeFileSync(out, md, 'utf8'); console.log(`Informe escrito en ${out}`); } else console.log(md);

@@ -65,16 +65,16 @@ test('dimensionMatrix: detecta correlación convergente y discriminante', () => 
 const dist17 = loadMideplan(read('../data/external/mideplan-ids-2017-distritos.csv'));
 const cant17 = loadMideplan(read('../data/external/mideplan-ids-2017-cantones.csv'));
 
-test('MIDEPLAN 2017: 482 distritos y 82 cantones; casi todos siguen existiendo en la división actual', () => {
-  assert.equal(dist17.size, 482);
+test('MIDEPLAN 2017: 483 distritos (incl. Río Cuarto del informe) y 82 cantones; casi todos siguen en la división actual', () => {
+  assert.equal(dist17.size, 483);
   assert.equal(cant17.size, 82);
   const d23 = new Set(geo.provinces.flatMap((p) => p.cantons.flatMap((c) => c.districts.map((d) => String(d.code)))));
   const c23 = new Set(geo.provinces.flatMap((p) => p.cantons.map((c) => String(c.code))));
-  assert.ok([...dist17.keys()].filter((c) => d23.has(c)).length >= 478); // 480 en la última comprobación
+  assert.ok([...dist17.keys()].filter((c) => d23.has(c)).length >= 479); // 481: salvo Monteverde y Puerto Jiménez, que hoy son cantones
   assert.ok([...cant17.keys()].every((c) => c23.has(c)));
   for (const m of [...dist17.values(), ...cant17.values()]) assert.ok(m.ids >= 0 && m.ids <= 100, m.name);
   const sinDims = [...dist17.entries()].filter(([, m]) => Object.values(m.dims).some(Number.isNaN)).map(([c]) => c);
-  assert.deepEqual(sinDims.sort(), ['11912', '20214', '51105']); // distritos nuevos: el libro 2017 trae su IDS pero no sus dimensiones
+  assert.deepEqual(sinDims.sort(), ['11912', '20214', '21601', '51105']); // el libro trae su IDS pero no sus dimensiones (21601 Río Cuarto viene del informe en PDF)
   for (const m of dist17.values()) for (const v of Object.values(m.dims)) assert.ok(Number.isNaN(v) || (v >= 0 && v <= 100));
 });
 
@@ -88,6 +88,7 @@ test('2017: el IDS se reproduce desde sus 5 dimensiones con pesos ajustados (R²
   // Los pesos 2017 no vienen en el libro; se estiman por mínimos cuadrados y deben ser positivos y plausibles.
   const ms = [...dist17.values()].filter((m) => Object.values(m.dims).every(Number.isFinite));
   assert.equal(ms.length, 479);
+  assert.ok(ms.length > 470);
   const keys = ['economico', 'participacion', 'salud', 'educacion', 'seguridad'];
   const X = ms.map((m) => [...keys.map((k) => m.dims[k]), 1]); const y = ms.map((m) => m.ids);
   const p = keys.length + 1;
@@ -112,4 +113,19 @@ test('2017 y 2023 no son idénticos: los rankings difieren (las ediciones no son
   const common = [...dist17.keys()].filter((c) => dist.has(c));
   const a = common.map((c) => dist17.get(c).ids); const b = common.map((c) => dist.get(c).ids);
   assert.ok(pearson(a, b) > 0.8 && pearson(a, b) < 0.999);
+});
+
+test('2017: 5 distritos con IDS imputado (informe oficial, Tabla 1) y Río Cuarto del informe', () => {
+  const imp = [...dist17.entries()].filter(([, m]) => m.imputed).map(([c]) => c).sort();
+  assert.deepEqual(imp, ['10707', '11912', '20214', '51105', '60206']);
+  assert.ok([...dist.values()].every((m) => m.imputed === false)); // el CSV 2023 no tiene la columna
+  assert.equal(dist17.get('21601').ids, 44.75); // Río Cuarto, posición 434, nivel «muy bajo»
+});
+
+test('2017: los pesos oficiales del informe (Ecuación 2) reproducen el IDS con error pequeño', () => {
+  // IDS 2017 = 0,279·Eco + 0,266·Edu + 0,216·Sal + 0,116·Par + 0,123·Seg, luego estandarizado a 0–100 (informe, p. 25)
+  const w = { economico: 0.279, educacion: 0.266, salud: 0.216, participacion: 0.116, seguridad: 0.123 };
+  const ms = [...dist17.values()].filter((m) => !m.imputed && Object.values(m.dims).every(Number.isFinite));
+  const raw = ms.map((m) => Object.entries(w).reduce((s, [k, v]) => s + v * m.dims[k], 0));
+  assert.ok(pearson(raw, ms.map((m) => m.ids)) > 0.9999);
 });

@@ -1,483 +1,484 @@
-codigo,distrito,canton,provincia,ids,posicion,area,salud,participacion,seguridad,educacion,economico
-10101,Carmen,San José,San José,81.1583,57,Mayor,78.15,41.11,36.94,90.67,68.48
-10102,Merced,San José,San José,67.7308,196,Medio,76.35,39.93,76.23,68.9,41.7
-10103,Hospital,San José,San José,62.5015,250,Medio,74.53,36.12,70.54,63.08,40.26
-10104,Catedral,San José,San José,76.174,89,Medio,83.26,43.0,84.17,73.79,47.08
-10105,Zapote,San José,San José,82.8575,44,Mayor,82.95,49.73,91.9,73.15,57.68
-10106,San Francisco Dos Ríos,San José,San José,82.8684,43,Mayor,82.56,51.82,92.2,64.52,65.22
-10107,Uruca,San José,San José,63.8655,229,Medio,73.96,39.8,85.07,58.98,39.92
-10108,Mata Redonda,San José,San José,93.1604,8,Mayor,91.35,49.94,85.89,74.56,77.02
-10109,Pavas,San José,San José,73.7229,113,Medio,83.23,39.71,90.07,62.57,50.73
-10110,Hatillo,San José,San José,68.7081,178,Medio,72.17,39.99,90.06,66.98,42.98
-10111,San Sebastián,San José,San José,76.1861,88,Medio,82.77,42.8,87.39,73.68,46.26
-10201,Escazú,Escazú,San José,91.5388,11,Mayor,82.76,65.58,90.55,71.27,74.32
-10202,San Antonio,Escazú,San José,80.8998,58,Mayor,83.24,58.38,95.19,64.7,55.75
-10203,San Rafael,Escazú,San José,100.0,1,Mayor,92.91,57.34,86.98,62.58,100.0
-10301,Desamparados,Desamparados,San José,81.4162,54,Mayor,86.62,44.2,89.83,79.48,48.59
-10302,San Miguel,Desamparados,San José,68.4475,183,Medio,73.27,37.67,93.87,68.33,39.51
-10303,San Juan de Dios,Desamparados,San José,68.6561,180,Medio,78.06,32.65,95.61,69.41,36.61
-10304,San Rafael Arriba,Desamparados,San José,75.6397,95,Medio,83.16,37.38,95.11,70.66,46.4
-10305,San Antonio,Desamparados,San José,86.6614,29,Mayor,85.01,50.94,95.84,79.0,57.35
-10306,Frailes,Desamparados,San José,55.8183,322,Bajo,43.79,50.35,97.03,73.23,20.77
-10307,Patarrá,Desamparados,San José,69.2291,172,Medio,70.16,41.35,93.4,74.19,36.87
-10308,San Cristóbal,Desamparados,San José,63.8393,231,Medio,60.74,65.38,97.13,69.18,24.34
-10309,Rosario,Desamparados,San José,55.0944,332,Bajo,63.91,49.85,96.33,56.09,20.33
-10310,Damas,Desamparados,San José,78.7939,70,Mayor,83.1,46.1,94.74,72.39,48.85
-10311,San Rafael Abajo,Desamparados,San José,74.6043,102,Medio,77.04,37.71,89.37,76.39,45.59
-10312,Gravilias,Desamparados,San José,84.8369,32,Mayor,86.07,53.35,97.57,72.28,56.81
-10313,Los Guido,Desamparados,San José,60.5083,267,Bajo,76.55,24.0,93.07,65.31,26.96
-10401,Santiago,Puriscal,San José,74.4056,104,Medio,77.5,59.35,96.83,72.1,36.49
-10402,Mercedes Sur,Puriscal,San José,61.4612,260,Bajo,82.79,64.85,93.35,49.95,21.79
-10403,Barbacoas,Puriscal,San José,63.4821,234,Medio,64.11,56.18,97.6,71.5,22.31
-10404,Grifo Alto,Puriscal,San José,55.2813,328,Bajo,49.76,76.89,100.0,54.12,20.63
-10405,San Rafael,Puriscal,San José,54.6768,336,Bajo,49.58,65.25,100.0,57.01,21.47
-10406,Candelaria,Puriscal,San José,62.5115,249,Medio,77.67,56.12,100.0,63.44,16.14
-10407,Desamparaditos,Puriscal,San José,62.5682,248,Medio,68.5,78.05,100.0,53.04,24.1
-10408,San Antonio,Puriscal,San José,63.0458,240,Medio,77.82,44.74,91.03,61.73,27.66
-10409,Chires,Puriscal,San José,43.5359,442,Muy bajo,70.35,46.57,96.24,33.86,10.32
-10501,San Marcos,Tarrazú,San José,59.2874,287,Bajo,57.28,55.93,96.11,62.88,26.55
-10502,San Lorenzo,Tarrazú,San José,36.2832,468,Muy bajo,26.87,45.48,98.05,44.11,16.53
-10503,San Carlos,Tarrazú,San José,36.7846,465,Muy bajo,36.34,48.98,88.96,46.93,10.24
-10601,Aserrí,Aserrí,San José,69.5452,165,Medio,71.57,40.47,94.44,75.48,35.21
-10602,Tarbaca,Aserrí,San José,57.9277,296,Bajo,68.18,53.25,61.79,55.11,38.52
-10603,Vuelta de Jorco,Aserrí,San José,60.5022,268,Bajo,61.41,52.57,99.28,67.07,22.26
-10604,San Gabriel,Aserrí,San José,55.2471,329,Bajo,58.74,47.19,96.75,59.71,22.17
-10605,Legua,Aserrí,San José,45.7002,423,Muy bajo,48.33,64.8,92.24,51.73,9.61
-10606,Monterrey,Aserrí,San José,50.075,387,Bajo,34.29,56.37,100.0,73.66,10.15
-10607,Salitrillos,Aserrí,San José,62.0454,255,Medio,69.73,39.78,97.47,60.79,31.67
-10701,Colón,Mora,San José,77.2457,81,Mayor,77.03,62.53,90.89,66.68,50.09
-10702,Guayabo,Mora,San José,66.3195,207,Medio,70.83,47.44,93.1,77.14,24.16
-10703,Tabarcia,Mora,San José,59.0189,290,Bajo,62.91,52.9,96.76,65.28,20.24
-10704,Piedras Negras,Mora,San José,47.7343,405,Bajo,54.35,81.37,82.27,47.81,11.0
-10705,Picagres,Mora,San José,64.5928,224,Medio,89.64,70.66,100.0,49.91,18.65
-10706,Jaris,Mora,San José,56.1153,317,Bajo,66.26,46.91,100.0,62.24,14.7
-10707,Quitirrisí,Mora,San José,60.029,277,Bajo,55.63,59.37,100.0,71.09,18.61
-10801,Guadalupe,Goicoechea,San José,79.6837,63,Mayor,82.2,44.99,83.19,75.97,53.81
-10802,San Francisco,Goicoechea,San José,77.5428,78,Mayor,75.22,64.3,77.68,80.66,43.97
-10803,Calle Blancos,Goicoechea,San José,78.3491,73,Mayor,82.33,47.13,94.05,66.55,53.82
-10804,Mata de Plátano,Goicoechea,San José,79.3172,67,Mayor,70.59,43.93,98.39,74.69,56.89
-10805,Ipís,Goicoechea,San José,72.5246,130,Medio,69.7,35.73,91.86,74.77,47.59
-10806,Rancho Redondo,Goicoechea,San José,71.0981,144,Medio,65.83,44.38,91.89,76.49,41.9
-10807,Purral,Goicoechea,San José,67.5061,199,Medio,70.25,38.23,93.0,71.39,36.83
-10901,Santa Ana,Santa Ana,San José,90.2177,14,Mayor,75.6,68.28,88.76,69.58,77.97
-10902,Salitral,Santa Ana,San José,70.2742,155,Medio,64.52,65.43,90.28,61.23,47.37
-10903,Pozos,Santa Ana,San José,95.3234,6,Mayor,87.08,59.73,89.28,65.2,88.82
-10904,Uruca,Santa Ana,San José,82.016,50,Mayor,64.82,62.15,97.45,63.58,71.17
-10905,Piedades,Santa Ana,San José,84.62,35,Mayor,77.2,63.87,92.7,74.19,59.07
-10906,Brasil,Santa Ana,San José,74.8873,99,Medio,73.34,61.58,84.82,63.81,53.12
-11001,Alajuelita,Alajuelita,San José,79.1759,69,Mayor,88.16,52.4,87.66,75.8,43.08
-11002,San Josecito,Alajuelita,San José,70.2646,157,Medio,82.53,48.89,93.03,63.18,37.27
-11003,San Antonio,Alajuelita,San José,62.685,247,Medio,73.29,54.17,94.05,56.21,30.27
-11004,Concepción,Alajuelita,San José,68.519,182,Medio,82.17,36.22,95.6,66.17,34.7
-11005,San Felipe,Alajuelita,San José,68.0988,190,Medio,78.88,44.49,93.97,64.39,35.18
-11101,San Isidro,Vazquez de Coronado,San José,84.7469,34,Mayor,87.48,54.72,93.06,69.69,59.38
-11102,San Rafael,Vazquez de Coronado,San José,79.8796,62,Mayor,76.33,57.37,92.69,76.79,48.67
-11103,Dulce Nombre de Jesús,Vazquez de Coronado,San José,79.3847,66,Mayor,86.45,48.82,79.84,78.37,47.38
-11104,Patalillo,Vazquez de Coronado,San José,82.1895,47,Mayor,76.14,46.14,97.48,76.86,56.86
-11105,Cascajal,Vazquez de Coronado,San José,64.9141,220,Medio,67.92,48.83,97.3,56.67,40.13
-11201,San Ignacio,Acosta,San José,67.9615,193,Medio,66.97,62.03,93.83,76.79,24.97
-11202,Guaitil,Acosta,San José,53.333,346,Bajo,66.3,52.28,98.06,54.82,13.68
-11203,Palmichal,Acosta,San José,59.8518,280,Bajo,67.11,56.63,100.0,64.74,16.51
-11204,Cangrejal,Acosta,San José,50.3331,384,Bajo,81.89,42.62,100.0,46.07,5.99
-11205,Sabanillas,Acosta,San José,42.8632,445,Muy bajo,60.01,52.7,94.98,42.19,6.76
-11301,San Juan,Tibás,San José,81.3069,55,Mayor,80.8,42.82,94.81,74.42,56.04
-11302,Cinco Esquinas,Tibás,San José,64.8094,221,Medio,73.26,37.22,83.25,65.24,38.65
-11303,Anselmo Llorente,Tibás,San José,83.6063,39,Mayor,81.83,42.8,87.04,68.78,69.55
-11304,León XIII,Tibás,San José,59.358,286,Bajo,67.02,38.7,82.94,68.99,26.38
-11305,Colima,Tibás,San José,76.1195,91,Medio,83.13,46.47,93.19,61.99,52.88
-11401,San Vicente,Moravia,San José,90.0372,16,Mayor,87.08,53.48,96.09,73.87,67.54
-11402,San Jerónimo,Moravia,San José,70.0597,159,Medio,66.11,51.33,86.53,72.96,42.0
-11403,Trinidad,Moravia,San José,76.3661,86,Medio,74.95,46.41,95.23,70.53,50.78
-11501,San Pedro,Montes de oca,San José,88.3866,22,Mayor,86.31,54.17,94.97,70.92,67.2
-11502,Sabanilla,Montes de oca,San José,89.2435,17,Mayor,82.83,60.55,92.27,72.2,69.24
-11503,Mercedes,Montes de oca,San José,90.8482,12,Mayor,97.2,58.51,96.45,65.78,67.08
-11504,San Rafael,Montes de oca,San José,77.43,79,Mayor,72.84,51.18,96.73,66.78,55.87
-11601,San Pablo,Turrubares,San José,65.0892,218,Medio,82.26,92.03,93.43,45.21,23.96
-11602,San Pedro,Turrubares,San José,54.6275,337,Bajo,78.68,97.91,62.67,35.79,21.8
-11603,San Juan de Mata,Turrubares,San José,49.0956,396,Bajo,63.42,71.15,94.22,40.61,13.11
-11604,San Luis,Turrubares,San José,50.5277,381,Bajo,78.46,88.32,100.0,26.87,8.24
-11605,Carara,Turrubares,San José,51.7773,363,Bajo,65.81,81.94,100.0,36.41,14.6
-11701,Santa María,Dota,San José,54.2067,341,Bajo,33.77,76.68,87.81,62.14,28.26
-11702,Jardín,Dota,San José,54.5663,338,Bajo,84.88,25.05,80.89,61.92,14.48
-11703,Copey,Dota,San José,51.6869,366,Bajo,38.83,76.6,83.95,53.61,28.2
-11801,Curridabat,Curridabat,San José,84.3934,37,Mayor,80.29,56.96,92.23,68.06,65.09
-11802,Granadilla,Curridabat,San José,86.4451,30,Mayor,81.58,49.29,96.55,66.09,72.18
-11803,Sánchez,Curridabat,San José,99.4736,2,Mayor,90.9,68.98,88.19,64.53,93.03
-11804,Tirrases,Curridabat,San José,66.3707,206,Medio,72.74,42.94,90.99,65.73,36.49
-11901,San Isidro de El General,Pérez Zeledón,San José,69.9405,161,Medio,89.52,51.19,94.18,63.27,29.52
-11902,General,Pérez Zeledón,San José,67.1203,202,Medio,83.12,53.09,98.11,67.08,21.57
-11903,Daniel Flores,Pérez Zeledón,San José,71.4454,141,Medio,90.86,47.22,91.07,72.25,26.56
-11904,Rivas,Pérez Zeledón,San José,52.7045,354,Bajo,58.44,64.86,96.45,53.15,15.3
-11905,San Pedro,Pérez Zeledón,San José,52.8273,351,Bajo,69.45,42.41,94.25,58.75,12.11
-11906,Platanares,Pérez Zeledón,San José,55.7986,323,Bajo,73.63,56.92,96.4,55.94,11.62
-11907,Pejibaye,Pérez Zeledón,San José,46.9451,408,Muy bajo,68.51,46.13,92.8,46.27,9.76
-11908,Cajón,Pérez Zeledón,San José,52.1128,362,Bajo,71.03,45.02,90.2,55.62,12.85
-11909,Barú,Pérez Zeledón,San José,49.8204,391,Bajo,78.45,45.75,89.02,33.84,22.6
-11910,Río Nuevo,Pérez Zeledón,San José,42.3541,449,Muy bajo,57.54,48.26,97.11,40.36,10.11
-11911,Páramo,Pérez Zeledón,San José,47.4489,407,Bajo,56.38,62.8,87.19,48.87,13.36
-11912,La Amistad,Pérez Zeledón,San José,51.3719,371,Bajo,,,,,
-12001,San Pablo,León Cortés,San José,56.4946,309,Bajo,31.84,64.04,91.58,80.11,21.73
-12002,San Andrés,León Cortés,San José,44.2454,436,Muy bajo,46.09,47.01,92.16,57.32,10.03
-12003,Llano Bonito,León Cortés,San José,40.0821,458,Muy bajo,40.11,55.6,91.72,49.17,9.07
-12004,San Isidro,León Cortés,San José,44.8564,433,Muy bajo,35.41,52.79,95.37,61.52,11.92
-12005,Santa Cruz,León Cortés,San José,48.2306,400,Bajo,33.44,61.45,95.95,68.09,11.37
-12006,San Antonio,León Cortés,San José,56.1378,316,Bajo,59.84,61.79,95.79,66.39,11.37
-20101,Alajuela,Alajuela,Alajuela,77.8167,75,Mayor,78.32,49.4,90.12,77.44,46.05
-20102,San José,Alajuela,Alajuela,70.7205,153,Medio,73.09,44.46,90.5,69.15,42.94
-20103,Carrizal,Alajuela,Alajuela,64.3771,228,Medio,64.01,56.22,91.14,68.21,30.5
-20104,San Antonio,Alajuela,Alajuela,72.3171,131,Medio,82.01,41.98,89.83,73.3,37.23
-20105,Guácima,Alajuela,Alajuela,69.7946,162,Medio,75.97,48.91,91.24,67.04,38.31
-20106,San Isidro,Alajuela,Alajuela,63.5664,233,Medio,68.94,43.35,93.27,64.39,32.84
-20107,Sabanilla,Alajuela,Alajuela,61.7992,259,Bajo,57.7,51.57,97.62,72.55,24.17
-20108,San Rafael,Alajuela,Alajuela,69.033,174,Medio,63.1,35.72,88.56,75.09,45.5
-20109,Río Segundo,Alajuela,Alajuela,66.6506,205,Medio,75.56,45.02,82.52,64.24,39.27
-20110,Desamparados,Alajuela,Alajuela,68.5649,181,Medio,68.89,46.52,93.96,66.85,40.84
-20111,Turrúcares,Alajuela,Alajuela,68.7062,179,Medio,75.76,52.14,79.65,71.82,35.07
-20112,Tambor,Alajuela,Alajuela,68.0326,192,Medio,73.59,47.68,93.41,71.8,30.97
-20113,Garita,Alajuela,Alajuela,73.4845,116,Medio,75.5,48.83,81.63,70.68,48.31
-20114,Sarapiquí,Alajuela,Alajuela,56.0755,318,Bajo,63.59,60.82,97.25,55.91,18.08
-20201,San Ramón,San Ramón,Alajuela,89.0843,18,Mayor,85.68,64.26,84.3,95.83,46.09
-20202,Santiago,San Ramón,Alajuela,61.2127,263,Bajo,67.31,59.77,78.12,60.62,31.86
-20203,San Juan,San Ramón,Alajuela,75.8946,93,Medio,88.6,48.21,94.25,72.96,36.45
-20204,Piedades Norte,San Ramón,Alajuela,72.7108,125,Medio,87.66,54.76,94.68,69.38,30.03
-20205,Piedades Sur,San Ramón,Alajuela,59.0598,289,Bajo,69.96,70.56,96.94,55.08,17.12
-20206,San Rafael,San Ramón,Alajuela,70.8798,150,Medio,76.3,54.5,94.03,68.02,36.14
-20207,San Isidro,San Ramón,Alajuela,72.1789,133,Medio,75.53,59.2,97.28,74.7,30.07
-20208,Ángeles,San Ramón,Alajuela,60.4373,270,Bajo,73.17,52.97,93.96,56.94,24.84
-20209,Alfaro,San Ramón,Alajuela,73.5198,115,Medio,86.94,53.3,96.63,65.26,36.2
-20210,Volio,San Ramón,Alajuela,56.3026,311,Bajo,65.58,61.98,98.03,45.43,26.24
-20211,Concepción,San Ramón,Alajuela,64.9833,219,Medio,72.21,66.31,90.3,73.15,17.02
-20212,Zapotal,San Ramón,Alajuela,46.2157,417,Muy bajo,64.03,90.67,100.0,27.13,7.88
-20213,Peñas Blancas,San Ramón,Alajuela,57.9094,298,Bajo,71.07,68.75,92.32,53.54,17.77
-20214,San Lorenzo,San Ramón,Alajuela,60.4373,271,Bajo,,,,,
-20301,Grecia,Grecia,Alajuela,76.6512,85,Medio,67.9,62.65,92.03,76.95,45.39
-20302,San Isidro,Grecia,Alajuela,70.9012,149,Medio,62.25,62.39,98.06,73.96,36.33
-20303,San José,Grecia,Alajuela,73.0542,119,Medio,70.13,66.54,100.0,76.36,30.49
-20304,San Roque,Grecia,Alajuela,74.9499,96,Medio,66.78,72.37,99.6,76.4,35.3
-20305,Tacares,Grecia,Alajuela,71.0732,145,Medio,73.17,56.21,98.03,73.92,30.93
-20307,Puente de Piedra,Grecia,Alajuela,68.9063,175,Medio,69.49,60.12,92.83,70.22,32.78
-20308,Bolívar,Grecia,Alajuela,68.3399,187,Medio,70.64,57.52,97.82,71.93,27.79
-20401,San Mateo,San Mateo,Alajuela,74.2611,107,Medio,100.0,86.45,94.05,49.37,30.25
-20402,Desmonte,San Mateo,Alajuela,68.3255,188,Medio,95.89,99.25,92.66,39.56,23.85
-20403,Jesús María,San Mateo,Alajuela,76.2007,87,Medio,89.11,85.12,92.86,76.23,18.8
-20404,Labrador,San Mateo,Alajuela,73.3466,117,Medio,76.95,60.5,100.0,79.74,25.22
-20501,Atenas,Atenas,Alajuela,91.9583,10,Mayor,88.42,81.68,97.73,79.63,53.06
-20502,Jesús,Atenas,Alajuela,70.3046,154,Medio,68.58,74.9,98.78,58.38,39.29
-20503,Mercedes,Atenas,Alajuela,71.5289,139,Medio,69.05,70.53,100.0,68.65,33.36
-20504,San Isidro,Atenas,Alajuela,57.5117,300,Bajo,50.74,79.02,98.45,59.67,19.71
-20505,Concepción,Atenas,Alajuela,74.5089,103,Medio,82.74,67.52,70.05,74.98,38.32
-20506,San José,Atenas,Alajuela,62.0413,256,Medio,59.41,65.93,96.25,63.54,26.6
-20507,Santa Eulalia,Atenas,Alajuela,68.8747,177,Medio,59.88,57.36,100.0,77.56,31.14
-20508,Escobal,Atenas,Alajuela,52.3445,359,Bajo,72.09,79.77,45.09,46.25,26.83
-20601,Naranjo,Naranjo,Alajuela,73.0508,120,Medio,72.34,67.31,91.44,73.56,34.89
-20602,San Miguel,Naranjo,Alajuela,65.3664,215,Medio,62.48,58.73,89.38,74.81,27.47
-20603,San José,Naranjo,Alajuela,67.6344,198,Medio,70.81,65.1,96.22,70.26,25.09
-20604,Cirrí Sur,Naranjo,Alajuela,60.4811,269,Bajo,70.64,56.95,89.74,59.61,24.56
-20605,San Jerónimo,Naranjo,Alajuela,65.7965,211,Medio,74.92,60.23,100.0,64.49,23.4
-20606,San Juan,Naranjo,Alajuela,67.1957,201,Medio,62.26,65.33,100.0,68.34,30.73
-20607,Rosario,Naranjo,Alajuela,67.0521,203,Medio,66.76,61.81,90.62,76.72,24.53
-20608,Palmito,Naranjo,Alajuela,65.0973,217,Medio,62.91,60.89,98.26,69.99,26.28
-20701,Palmares,Palmares,Alajuela,96.9032,5,Mayor,95.39,77.53,94.46,96.62,46.46
-20702,Zaragoza,Palmares,Alajuela,81.6269,52,Mayor,82.62,74.83,97.15,78.86,36.71
-20703,Buenos Aires,Palmares,Alajuela,78.2758,74,Mayor,89.01,70.42,88.67,65.91,41.69
-20704,Santiago,Palmares,Alajuela,68.4223,184,Medio,61.04,60.13,100.0,79.57,26.08
-20705,Candelaria,Palmares,Alajuela,63.0571,239,Medio,59.97,59.93,100.0,74.01,19.47
-20706,Esquipulas,Palmares,Alajuela,70.9138,148,Medio,79.43,60.17,98.28,67.78,29.79
-20707,Granja,Palmares,Alajuela,90.3963,13,Mayor,93.76,76.89,100.0,82.27,43.67
-20801,San Pedro,Poás,Alajuela,74.388,105,Medio,63.0,78.43,96.73,77.89,34.2
-20802,San Juan,Poás,Alajuela,63.1306,237,Medio,54.78,65.37,93.89,68.93,28.92
-20803,San Rafael,Poás,Alajuela,71.7921,137,Medio,66.12,87.24,100.0,73.68,24.45
-20804,Carrillos,Poás,Alajuela,66.0309,209,Medio,61.62,51.64,98.7,73.5,29.84
-20805,Sabana Redonda,Poás,Alajuela,59.6302,283,Bajo,68.25,48.16,96.98,68.51,16.38
-20901,Orotina,Orotina,Alajuela,73.8207,112,Medio,75.32,64.03,78.43,77.96,37.33
-20902,Mastate,Orotina,Alajuela,68.8945,176,Medio,80.67,57.9,97.52,66.08,26.9
-20903,Hacienda Vieja,Orotina,Alajuela,73.7045,114,Medio,66.43,64.27,88.58,84.39,33.24
-20904,Coyolar,Orotina,Alajuela,51.7199,365,Bajo,72.2,42.97,84.79,46.56,22.89
-20905,Ceiba,Orotina,Alajuela,50.823,378,Bajo,78.69,48.05,58.31,48.24,23.67
-21001,Quesada,San Carlos,Alajuela,72.6319,128,Medio,76.13,66.2,95.12,61.07,41.71
-21002,Florencia,San Carlos,Alajuela,59.9953,278,Bajo,69.14,57.01,80.92,59.84,28.2
-21003,Buenavista,San Carlos,Alajuela,54.5297,340,Bajo,70.32,75.97,6.39,74.01,25.62
-21004,Aguas Zarcas,San Carlos,Alajuela,60.5586,266,Bajo,69.96,52.97,89.14,59.79,27.03
-21005,Venecia,San Carlos,Alajuela,63.024,241,Medio,58.28,75.67,90.73,65.18,26.6
-21006,Pital,San Carlos,Alajuela,51.2707,374,Bajo,60.13,51.91,88.18,48.83,23.76
-21007,Fortuna,San Carlos,Alajuela,61.2039,264,Bajo,66.79,47.58,92.66,59.57,31.94
-21008,Tigra,San Carlos,Alajuela,62.3964,251,Medio,71.92,70.31,94.6,61.83,18.28
-21009,Palmera,San Carlos,Alajuela,62.6899,246,Medio,68.23,63.05,82.16,63.05,29.21
-21010,Venado,San Carlos,Alajuela,45.0436,431,Muy bajo,50.23,69.83,93.64,35.13,19.68
-21011,Cutris,San Carlos,Alajuela,46.8868,410,Muy bajo,65.91,62.85,90.37,33.55,17.82
-21012,Monterrey,San Carlos,Alajuela,55.0634,333,Bajo,71.97,67.18,93.43,40.2,23.17
-21013,Pocosol,San Carlos,Alajuela,46.9177,409,Muy bajo,65.24,45.76,90.73,40.84,18.46
-21101,Zarcero,Zarcero,Alajuela,82.0283,49,Mayor,76.47,84.15,98.85,80.02,36.66
-21102,Laguna,Zarcero,Alajuela,74.033,109,Medio,79.09,86.88,93.04,59.85,36.17
-21103,Tapezco,Zarcero,Alajuela,79.5135,65,Mayor,78.31,93.96,100.0,70.68,33.51
-21104,Guadalupe,Zarcero,Alajuela,42.8424,446,Muy bajo,39.81,82.92,100.0,22.68,26.06
-21105,Palmira,Zarcero,Alajuela,70.9276,147,Medio,76.08,77.51,91.64,71.82,24.21
-21106,Zapote,Zarcero,Alajuela,72.1291,134,Medio,90.01,85.67,84.82,55.35,31.59
-21107,Brisas,Zarcero,Alajuela,77.7513,76,Mayor,80.65,90.23,100.0,71.03,28.72
-21201,Sarchí Norte,Valverde Vega,Alajuela,74.3364,106,Medio,81.17,68.35,96.79,70.88,30.89
-21202,Sarchí Sur,Valverde Vega,Alajuela,64.4348,226,Medio,65.11,54.74,100.0,66.73,27.91
-21203,Toro Amarillo,Valverde Vega,Alajuela,57.9841,294,Bajo,78.98,98.68,64.1,50.17,14.94
-21204,San Pedro,Valverde Vega,Alajuela,72.9147,122,Medio,83.77,74.36,98.78,69.19,23.69
-21205,Rodríguez,Valverde Vega,Alajuela,71.4492,140,Medio,79.02,74.71,98.08,65.12,27.91
-21301,Upala,Upala,Alajuela,51.5816,367,Bajo,67.52,47.8,83.08,50.2,21.45
-21302,Aguas Claras,Upala,Alajuela,49.8826,390,Bajo,71.45,53.87,96.78,43.04,12.58
-21303,San José (Pizote),Upala,Alajuela,36.8127,464,Muy bajo,56.61,31.55,90.64,38.27,9.44
-21304,Bijagua,Upala,Alajuela,55.4224,325,Bajo,77.94,62.88,89.55,46.63,16.78
-21305,Delicias,Upala,Alajuela,41.9943,451,Muy bajo,52.77,42.24,91.76,48.7,9.88
-21306,Dos Ríos,Upala,Alajuela,46.6877,414,Muy bajo,69.37,33.56,93.46,53.46,6.6
-21307,Yolillal,Upala,Alajuela,42.9614,444,Muy bajo,62.76,51.04,89.39,37.76,12.24
-21308,Canalete,Upala,Alajuela,47.7417,404,Bajo,71.6,27.59,100.0,40.75,19.13
-21401,Los Chiles,Los Chiles,Alajuela,45.3857,428,Muy bajo,64.48,48.02,87.76,40.37,16.2
-21402,Caño Negro,Los Chiles,Alajuela,45.4546,427,Muy bajo,58.29,47.15,96.24,46.41,12.03
-21403,El Amparo,Los Chiles,Alajuela,40.7132,454,Muy bajo,61.01,50.54,81.66,35.91,13.6
-21404,San Jorge,Los Chiles,Alajuela,44.528,435,Muy bajo,77.38,54.39,95.91,25.28,12.29
-21501,San Rafael,Guatuso,Alajuela,45.6699,424,Muy bajo,69.89,54.19,83.21,35.83,16.44
-21502,Buenavista,Guatuso,Alajuela,38.3001,462,Muy bajo,65.86,67.6,76.21,24.27,10.43
-21503,Cote,Guatuso,Alajuela,52.4016,356,Bajo,77.95,75.2,100.0,34.76,11.1
-21504,Katira,Guatuso,Alajuela,52.2753,360,Bajo,74.7,57.43,100.0,42.79,13.11
-30101,Oriental,Cartago,Cartago,86.2328,31,Mayor,62.86,64.37,93.77,84.04,63.95
-30102,Occidental,Cartago,Cartago,82.0548,48,Mayor,62.98,66.66,89.41,73.56,64.83
-30103,Carmen,Cartago,Cartago,68.3612,185,Medio,53.84,60.01,95.77,58.07,53.92
-30104,San Nicolás,Cartago,Cartago,69.3575,169,Medio,63.97,53.28,89.19,71.02,41.84
-30105,Aguacaliente (SanFrancisco),Cartago,Cartago,68.2502,189,Medio,59.65,54.37,97.93,68.89,40.26
-30106,Guadalupe (Arenilla),Cartago,Cartago,77.5612,77,Mayor,60.98,63.42,96.51,77.91,49.71
-30107,Corralillo,Cartago,Cartago,70.9401,146,Medio,66.02,76.32,96.47,79.53,23.05
-30108,Tierra Blanca,Cartago,Cartago,71.8663,136,Medio,47.97,68.71,97.65,80.01,41.46
-30109,Dulce Nombre,Cartago,Cartago,80.4225,61,Mayor,76.39,68.86,98.87,67.4,51.32
-30110,Llano Grande,Cartago,Cartago,62.2602,253,Medio,45.48,54.59,98.3,70.21,35.4
-30111,Quebradilla,Cartago,Cartago,62.0767,254,Medio,56.24,66.4,95.53,69.67,23.41
-30201,Paraíso,Paraíso,Cartago,73.8672,111,Medio,58.3,70.91,90.12,73.33,47.01
-30202,Santiago,Paraíso,Cartago,55.2327,330,Bajo,40.42,61.78,97.88,63.25,26.32
-30203,Orosi,Paraíso,Cartago,57.4386,301,Bajo,47.62,70.05,97.02,57.27,28.63
-30204,Cachí,Paraíso,Cartago,65.5291,214,Medio,56.33,74.79,91.77,70.0,29.42
-30205,Llanos de Santa Lucía,Paraíso,Cartago,64.4313,227,Medio,46.51,55.08,98.39,70.35,39.41
-30301,Tres Ríos,La Unión,Cartago,88.0137,26,Mayor,65.86,63.34,77.61,100.0,58.23
-30302,San Diego,La Unión,Cartago,67.2856,200,Medio,61.75,40.77,90.41,67.69,46.49
-30303,San Juan,La Unión,Cartago,96.942,4,Mayor,80.96,54.72,99.12,74.21,86.6
-30304,San Rafael,La Unión,Cartago,67.9526,194,Medio,62.14,49.46,95.18,58.37,50.92
-30305,Concepción,La Unión,Cartago,74.6592,101,Medio,67.32,45.01,97.19,73.91,49.1
-30306,Dulce Nombre,La Unión,Cartago,69.6061,163,Medio,60.92,48.88,92.91,75.26,40.96
-30307,San Ramón,La Unión,Cartago,79.1893,68,Mayor,85.93,49.4,96.98,51.31,65.33
-30308,Río Azul,La Unión,Cartago,60.0385,276,Bajo,67.06,31.08,92.91,68.13,27.6
-30401,Juan Viñas,Jiménez,Cartago,69.4297,167,Medio,70.0,79.66,98.19,65.78,27.31
-30402,Tucurrique,Jiménez,Cartago,57.2315,303,Bajo,57.91,79.22,86.38,62.67,15.87
-30403,Pejibaye,Jiménez,Cartago,56.2735,312,Bajo,65.16,71.53,97.81,54.48,13.96
-30501,Turrialba,Turrialba,Cartago,71.4415,142,Medio,73.86,60.61,96.52,64.94,38.65
-30502,La Suiza,Turrialba,Cartago,55.3956,326,Bajo,62.85,57.26,93.04,52.77,23.37
-30503,Peralta,Turrialba,Cartago,49.1008,395,Bajo,72.58,66.98,92.0,41.91,7.52
-30504,Santa Cruz,Turrialba,Cartago,46.8672,411,Muy bajo,57.97,35.32,100.0,44.88,20.41
-30505,Santa Teresita,Turrialba,Cartago,54.1712,342,Bajo,74.3,49.46,100.0,50.28,14.15
-30506,Pavones,Turrialba,Cartago,60.3919,272,Bajo,81.22,49.22,96.18,56.15,19.85
-30507,Tuis,Turrialba,Cartago,51.3923,369,Bajo,67.17,55.46,100.0,45.49,15.08
-30508,Tayutic,Turrialba,Cartago,49.0344,397,Bajo,59.93,53.76,91.33,53.33,12.11
-30509,Santa Rosa,Turrialba,Cartago,62.3616,252,Medio,69.16,54.37,98.59,60.9,26.14
-30510,Tres Equis,Turrialba,Cartago,45.5818,425,Muy bajo,63.47,38.34,95.92,43.86,14.59
-30511,La Isabel,Turrialba,Cartago,56.0402,319,Bajo,60.09,56.83,94.71,55.29,24.09
-30512,Chirripó,Turrialba,Cartago,0.0,483,Muy bajo,12.97,0.0,100.0,0.0,0.83
-30601,Pacayas,Alvarado,Cartago,65.7321,212,Medio,60.42,70.78,96.4,62.65,33.38
-30602,Cervantes,Alvarado,Cartago,73.211,118,Medio,71.5,66.98,93.31,76.87,32.08
-30603,Capellades,Alvarado,Cartago,69.5133,166,Medio,60.8,69.25,96.89,77.07,28.8
-30701,San Rafael,Oreamuno,Cartago,72.7096,126,Medio,61.21,56.39,96.5,67.92,50.41
-30702,Cot,Oreamuno,Cartago,60.1707,275,Bajo,20.32,65.04,97.04,78.06,38.57
-30703,Potrero Cerrado,Oreamuno,Cartago,56.2539,314,Bajo,60.17,58.83,96.8,42.04,35.41
-30704,Cipreses,Oreamuno,Cartago,57.6499,299,Bajo,37.56,49.06,100.0,64.38,37.63
-30705,Santa Rosa,Oreamuno,Cartago,59.5716,284,Bajo,56.01,44.88,94.32,66.15,30.51
-30801,Tejar,El Guarco,Cartago,76.1558,90,Medio,65.97,62.04,96.41,69.96,50.7
-30802,San Isidro,El Guarco,Cartago,52.4011,357,Bajo,37.29,61.58,85.39,60.09,30.58
-30803,Tobosi,El Guarco,Cartago,69.057,173,Medio,68.16,76.51,97.49,64.31,30.88
-30804,Patio de Agua,El Guarco,Cartago,51.4719,368,Bajo,34.73,97.42,100.0,58.05,10.82
-40101,Heredia,Heredia,Heredia,88.1634,23,Mayor,84.9,50.61,84.36,89.53,56.19
-40102,Mercedes,Heredia,Heredia,90.1512,15,Mayor,91.34,59.87,97.76,70.36,64.44
-40103,San Francisco,Heredia,Heredia,74.937,97,Medio,78.5,39.24,92.54,65.37,53.73
-40104,Ulloa,Heredia,Heredia,80.5162,60,Mayor,81.49,46.53,92.97,69.65,57.42
-40105,Vara Blanca,Heredia,Heredia,50.4345,382,Bajo,67.82,73.81,100.0,28.6,20.7
-40201,Barva,Barva,Heredia,83.6622,38,Mayor,66.79,72.79,90.68,84.14,52.5
-40202,San Pedro,Barva,Heredia,70.7866,152,Medio,63.19,48.31,96.37,71.6,44.22
-40203,San Pablo,Barva,Heredia,76.8847,84,Mayor,68.2,63.71,98.56,70.92,48.15
-40204,San Roque,Barva,Heredia,82.6462,45,Mayor,68.3,61.46,99.01,76.1,57.66
-40205,Santa Lucía,Barva,Heredia,88.0711,24,Mayor,93.06,58.53,98.33,65.33,63.24
-40206,San José de la Montaña,Barva,Heredia,70.2726,156,Medio,61.19,64.71,96.1,65.61,43.5
-40301,Santo Domingo,Santo Domingo,Heredia,83.4988,40,Mayor,77.21,63.66,74.6,81.28,57.69
-40302,San Vicente,Santo Domingo,Heredia,87.2844,27,Mayor,86.52,65.79,95.09,72.8,57.69
-40303,San Miguel,Santo Domingo,Heredia,81.2942,56,Mayor,83.83,61.26,91.06,71.68,50.2
-40304,Paracito,Santo Domingo,Heredia,71.2694,143,Medio,52.73,54.86,98.11,68.14,53.26
-40305,Santo Tomás,Santo Domingo,Heredia,88.778,19,Mayor,77.8,66.8,96.77,74.96,64.79
-40306,Santa Rosa,Santo Domingo,Heredia,77.1561,82,Mayor,73.47,57.19,96.03,67.38,51.94
-40307,Tures,Santo Domingo,Heredia,70.8232,151,Medio,70.2,57.64,95.64,66.5,40.16
-40308,Pará,Santo Domingo,Heredia,74.7644,100,Medio,75.5,54.76,89.32,73.86,42.44
-40401,Santa Bárbara,Santa Bárbara,Heredia,88.0276,25,Mayor,84.24,66.67,92.97,83.58,51.52
-40402,San Pedro,Santa Bárbara,Heredia,75.7268,94,Medio,73.56,56.27,95.84,75.27,41.4
-40403,San Juan,Santa Bárbara,Heredia,81.4503,53,Mayor,79.7,59.6,98.09,75.36,47.85
-40404,Jesús,Santa Bárbara,Heredia,74.0838,108,Medio,71.38,50.19,94.61,75.58,41.97
-40405,Santo Domingo,Santa Bárbara,Heredia,69.3304,170,Medio,74.57,55.21,97.57,65.42,34.4
-40406,Purabá,Santa Bárbara,Heredia,73.9989,110,Medio,78.34,54.46,95.83,68.61,40.69
-40501,San Rafael,San Rafael,Heredia,83.2031,41,Mayor,83.73,59.47,93.53,73.46,52.8
-40502,San Josecito,San Rafael,Heredia,72.6098,129,Medio,72.52,41.31,97.76,63.03,51.85
-40503,Santiago,San Rafael,Heredia,82.9563,42,Mayor,78.2,58.61,97.46,72.36,56.18
-40504,Ángeles,San Rafael,Heredia,81.8089,51,Mayor,83.96,52.59,99.32,64.93,57.77
-40505,Concepción,San Rafael,Heredia,78.7309,71,Mayor,77.96,54.52,98.86,65.64,53.76
-40601,San Isidro,San Isidro,Heredia,94.1387,7,Mayor,81.27,69.9,99.22,90.94,57.3
-40602,San José,San Isidro,Heredia,82.2328,46,Mayor,71.37,66.52,94.82,70.54,59.32
-40603,Concepción,San Isidro,Heredia,78.6002,72,Mayor,60.53,73.69,97.2,72.49,53.11
-40604,San Francisco,San Isidro,Heredia,77.1394,83,Mayor,72.4,62.81,98.31,68.09,48.69
-40701,San Antonio,Belén,Heredia,84.783,33,Mayor,74.65,71.47,91.13,74.14,58.99
-40702,Ribera,Belén,Heredia,84.6105,36,Mayor,83.35,67.79,93.41,67.44,58.76
-40703,Asunción,Belén,Heredia,96.9458,3,Mayor,72.72,73.36,89.54,70.38,93.04
-40801,San Joaquín,Flores,Heredia,88.692,20,Mayor,82.14,71.85,83.13,76.12,64.01
-40802,Barrantes,Flores,Heredia,92.4621,9,Mayor,91.47,87.25,100.0,56.56,70.55
-40803,Llorente,Flores,Heredia,79.5907,64,Mayor,74.25,63.75,97.51,70.65,50.64
-40901,San Pablo,San Pablo,Heredia,88.4811,21,Mayor,82.73,60.65,99.38,74.26,62.36
-40902,Rincón de Sabanilla,San Pablo,Heredia,86.8908,28,Mayor,79.87,58.72,100.0,70.83,64.58
-41001,Puerto Viejo,Sarapiquí,Heredia,36.6716,466,Muy bajo,38.56,37.99,89.52,42.86,16.49
-41002,La Virgen,Sarapiquí,Heredia,47.5656,406,Bajo,62.95,47.84,87.83,47.82,15.54
-41003,Horquetas,Sarapiquí,Heredia,50.3679,383,Bajo,57.7,53.31,84.4,55.95,17.77
-41004,Llanuras del Gaspar,Sarapiquí,Heredia,19.2713,480,Muy bajo,39.29,41.84,95.13,0.89,10.27
-41005,Cureña,Sarapiquí,Heredia,8.5516,482,Muy bajo,0.0,45.65,100.0,12.29,0.45
-50101,Liberia,Liberia,Guanacaste,68.0593,191,Medio,72.66,34.73,90.13,69.48,40.84
-50102,Cañas Dulces,Liberia,Guanacaste,63.0654,238,Medio,71.79,55.58,86.46,63.05,28.58
-50103,Mayorga,Liberia,Guanacaste,45.0764,430,Muy bajo,72.31,31.75,53.91,52.23,19.83
-50104,Nacascolo,Liberia,Guanacaste,55.0946,331,Bajo,66.42,30.05,80.44,56.01,33.75
-50105,Curubandé,Liberia,Guanacaste,55.3253,327,Bajo,75.78,41.12,83.53,47.7,28.98
-50201,Nicoya,Nicoya,Guanacaste,63.012,242,Medio,81.2,57.73,84.12,57.51,26.58
-50202,Mansión,Nicoya,Guanacaste,59.2248,288,Bajo,84.12,58.81,74.29,53.39,23.07
-50203,San Antonio,Nicoya,Guanacaste,55.9405,321,Bajo,65.48,70.8,95.56,53.06,15.57
-50204,Quebrada Honda,Nicoya,Guanacaste,50.6033,380,Bajo,69.33,70.04,61.28,50.46,17.74
-50205,Sámara,Nicoya,Guanacaste,53.8048,344,Bajo,64.74,41.51,72.41,49.54,36.88
-50206,Nosara,Nicoya,Guanacaste,68.3592,186,Medio,69.43,45.49,90.0,59.73,48.9
-50207,Belén de Nosarita,Nicoya,Guanacaste,45.921,421,Muy bajo,64.39,69.4,89.17,37.12,11.06
-50301,Santa Cruz,Santa Cruz,Guanacaste,66.8742,204,Medio,73.49,57.82,87.03,62.3,35.9
-50302,Bolsón,Santa Cruz,Guanacaste,63.8467,230,Medio,81.46,63.6,93.29,61.23,18.32
-50303,Veintisiete de Abril,Santa Cruz,Guanacaste,59.7609,281,Bajo,75.6,49.78,94.14,50.03,29.2
-50304,Tempate,Santa Cruz,Guanacaste,67.7134,197,Medio,77.7,49.73,86.66,49.85,50.07
-50305,Cartagena,Santa Cruz,Guanacaste,76.0824,92,Medio,91.38,56.03,93.31,71.99,32.81
-50306,Cuajiniquil,Santa Cruz,Guanacaste,52.2161,361,Bajo,52.74,62.4,100.0,33.35,36.88
-50307,Diriá,Santa Cruz,Guanacaste,63.824,232,Medio,69.24,65.71,97.08,60.98,25.41
-50308,Cabo Velas,Santa Cruz,Guanacaste,63.407,235,Medio,65.59,53.49,69.84,49.49,55.33
-50309,Tamarindo,Santa Cruz,Guanacaste,71.7005,138,Medio,79.08,44.59,83.54,55.36,56.8
-50401,Bagaces,Bagaces,Guanacaste,58.1371,293,Bajo,72.25,39.24,81.57,54.88,33.25
-50402,Fortuna,Bagaces,Guanacaste,56.6605,308,Bajo,63.54,54.24,87.97,58.38,24.0
-50403,Mogote,Bagaces,Guanacaste,58.4617,292,Bajo,71.48,50.7,94.59,52.83,26.02
-50404,Río Naranjo,Bagaces,Guanacaste,61.375,261,Bajo,75.81,65.15,100.0,59.1,15.21
-50501,Filadelfia,Carrillo,Guanacaste,72.8659,123,Medio,76.69,57.27,78.88,76.87,37.67
-50502,Palmira,Carrillo,Guanacaste,72.8084,124,Medio,88.27,58.7,87.89,62.74,37.47
-50503,Sardinal,Carrillo,Guanacaste,80.6319,59,Mayor,81.15,47.33,86.9,62.16,67.44
-50504,Belén,Carrillo,Guanacaste,59.3642,285,Bajo,78.08,52.32,73.62,61.02,23.83
-50601,Cañas,Cañas,Guanacaste,64.6003,223,Medio,81.38,42.73,89.25,58.0,33.8
-50602,Palmira,Cañas,Guanacaste,40.1388,457,Muy bajo,50.33,68.19,69.55,42.55,12.1
-50603,San Miguel,Cañas,Guanacaste,46.0633,420,Muy bajo,64.73,46.11,88.44,38.48,19.93
-50604,Bebedero,Cañas,Guanacaste,51.316,373,Bajo,48.8,23.23,80.73,70.17,27.6
-50605,Porozal,Cañas,Guanacaste,27.4567,479,Muy bajo,41.83,79.77,0.0,35.49,20.91
-50701,Juntas,Abangares,Guanacaste,56.397,310,Bajo,69.08,67.08,78.83,49.63,26.07
-50702,Sierra,Abangares,Guanacaste,51.376,370,Bajo,70.21,63.89,92.11,36.01,21.67
-50703,San Juan,Abangares,Guanacaste,57.9095,297,Bajo,86.17,62.63,94.36,44.73,16.16
-50704,Colorado,Abangares,Guanacaste,62.7283,245,Medio,82.63,83.79,80.84,51.98,20.59
-50801,Tilarán,Tilarán,Guanacaste,77.275,80,Mayor,79.4,77.61,98.92,71.07,34.29
-50802,Quebrada Grande,Tilarán,Guanacaste,52.7441,353,Bajo,57.36,73.31,100.0,42.86,20.93
-50803,Tronadora,Tilarán,Guanacaste,66.1108,208,Medio,74.99,78.22,100.0,53.62,26.91
-50804,Santa Rosa,Tilarán,Guanacaste,58.8343,291,Bajo,79.41,57.75,80.02,50.51,26.45
-50805,Líbano,Tilarán,Guanacaste,51.7715,364,Bajo,64.84,88.3,100.0,35.97,13.1
-50806,Tierras Morenas,Tilarán,Guanacaste,60.1981,274,Bajo,73.13,70.71,96.72,51.44,20.89
-50807,Arenal,Tilarán,Guanacaste,59.9122,279,Bajo,58.34,79.9,93.21,49.57,31.14
-50901,Carmona,Nandayure,Guanacaste,72.965,121,Medio,81.31,92.27,89.7,60.87,30.14
-50902,Santa Rita,Nandayure,Guanacaste,48.4055,399,Bajo,55.94,82.5,56.01,52.42,18.09
-50903,Zapotal,Nandayure,Guanacaste,54.5498,339,Bajo,77.03,74.16,100.0,34.24,17.88
-50904,San Pablo,Nandayure,Guanacaste,56.9475,306,Bajo,71.71,64.58,88.85,57.4,14.58
-50905,Porvenir,Nandayure,Guanacaste,51.0111,375,Bajo,54.64,80.93,100.0,45.72,12.97
-50906,Bejuco,Nandayure,Guanacaste,50.036,388,Bajo,70.44,62.84,90.83,28.91,26.06
-51001,La Cruz,La Cruz,Guanacaste,57.3889,302,Bajo,70.29,55.42,78.31,58.58,24.1
-51002,Santa Cecilia,La Cruz,Guanacaste,38.7137,460,Muy bajo,58.21,32.26,91.16,41.64,9.01
-51003,Garita,La Cruz,Guanacaste,42.6271,448,Muy bajo,58.91,59.87,100.0,34.31,9.34
-51004,Santa Elena,La Cruz,Guanacaste,54.7877,335,Bajo,71.33,52.05,88.88,54.89,17.35
-51101,Hojancha,Hojancha,Guanacaste,69.3035,171,Medio,81.06,86.17,96.02,53.33,28.54
-51102,Monte Romo,Hojancha,Guanacaste,61.1504,265,Bajo,79.0,84.82,100.0,53.65,9.16
-51103,Puerto Carrillo,Hojancha,Guanacaste,57.2305,304,Bajo,68.44,75.81,78.65,56.71,18.23
-51104,Huacas,Hojancha,Guanacaste,69.367,168,Medio,75.4,91.14,100.0,73.37,10.13
-51105,Matambú,Hojancha,Guanacaste,57.2305,305,Bajo,,,,,
-60101,Puntarenas,Puntarenas,Puntarenas,70.0571,160,Medio,84.06,54.11,75.25,60.02,44.25
-60102,Pitahaya,Puntarenas,Puntarenas,52.7836,352,Bajo,80.01,51.0,94.73,42.55,15.46
-60103,Chomes,Puntarenas,Puntarenas,43.6021,440,Muy bajo,70.51,35.42,73.93,43.73,15.46
-60104,Lepanto,Puntarenas,Puntarenas,50.1819,385,Bajo,73.05,51.2,90.38,39.96,18.93
-60105,Paquera,Puntarenas,Puntarenas,55.9743,320,Bajo,73.73,60.32,92.66,41.94,25.54
-60106,Manzanillo,Puntarenas,Puntarenas,50.8493,377,Bajo,65.48,47.6,84.54,56.08,15.1
-60107,Guacimal,Puntarenas,Puntarenas,46.413,415,Muy bajo,79.23,62.84,88.25,29.11,11.54
-60108,Barranca,Puntarenas,Puntarenas,59.7163,282,Bajo,83.16,27.61,91.53,56.13,27.87
-60109,Monteverde,Puntarenas,Puntarenas,65.9182,210,Medio,80.79,58.12,93.31,54.27,32.71
-60111,Cóbano,Puntarenas,Puntarenas,56.2563,313,Bajo,72.96,49.47,84.92,35.69,40.73
-60112,Chacarita,Puntarenas,Puntarenas,63.1332,236,Medio,80.18,33.06,87.29,66.14,28.38
-60113,Chira,Puntarenas,Puntarenas,42.1957,450,Muy bajo,42.61,53.43,96.96,48.34,11.59
-60114,Acapulco,Puntarenas,Puntarenas,43.6245,439,Muy bajo,53.2,54.84,73.09,43.19,21.65
-60115,El Roble,Puntarenas,Puntarenas,72.6835,127,Medio,85.93,40.02,84.68,69.97,41.34
-60116,Arancibia,Puntarenas,Puntarenas,47.7985,402,Bajo,92.65,76.06,100.0,22.55,0.0
-60201,Espíritu Santo,Esparza,Puntarenas,71.9512,135,Medio,86.08,64.0,85.94,64.44,34.13
-60202,San Juan Grande,Esparza,Puntarenas,57.9637,295,Bajo,77.72,55.85,72.41,57.91,22.79
-60203,Macacona,Esparza,Puntarenas,74.9265,98,Medio,84.37,65.52,84.48,66.32,40.79
-60204,San Rafael,Esparza,Puntarenas,62.7694,243,Medio,75.44,81.81,100.0,45.43,24.88
-60205,San Jerónimo,Esparza,Puntarenas,62.0218,257,Medio,96.08,86.66,85.07,43.98,13.04
-60206,Caldera,Esparza,Puntarenas,69.5821,164,Medio,86.36,41.67,100.0,62.03,33.72
-60301,Buenos Aires,Buenos Aires,Puntarenas,49.8828,389,Bajo,76.02,37.79,95.7,40.67,18.52
-60302,Volcán,Buenos Aires,Puntarenas,46.31,416,Muy bajo,73.56,40.98,78.35,48.85,10.4
-60303,Potrero Grande,Buenos Aires,Puntarenas,34.0381,473,Muy bajo,58.96,34.21,88.05,30.14,8.77
-60304,Boruca,Buenos Aires,Puntarenas,37.2212,463,Muy bajo,58.37,32.84,88.18,35.63,12.12
-60305,Pilas,Buenos Aires,Puntarenas,38.4295,461,Muy bajo,61.32,45.52,95.53,31.73,7.88
-60306,Colinas,Buenos Aires,Puntarenas,33.2517,474,Muy bajo,67.77,32.38,88.94,21.96,8.24
-60307,Chánguena,Buenos Aires,Puntarenas,36.0287,469,Muy bajo,68.92,38.04,93.83,25.05,6.52
-60308,Biolley,Buenos Aires,Puntarenas,43.595,441,Muy bajo,73.78,37.17,100.0,36.75,7.33
-60309,Brunka,Buenos Aires,Puntarenas,50.888,376,Bajo,83.37,46.74,93.3,41.11,12.12
-60401,Miramar,Montes Oro,Puntarenas,72.224,132,Medio,84.11,82.69,90.33,57.36,33.28
-60402,Unión,Montes Oro,Puntarenas,53.8325,343,Bajo,75.81,100.0,90.95,36.78,7.84
-60403,San Isidro,Montes Oro,Puntarenas,65.3503,216,Medio,74.86,77.66,97.79,54.28,25.77
-60501,Puerto Cortés,Osa,Puntarenas,61.2573,262,Bajo,87.75,55.78,72.1,44.32,36.01
-60502,Palmar,Osa,Puntarenas,53.1717,349,Bajo,81.06,49.92,78.7,42.39,23.25
-60503,Sierpe,Osa,Puntarenas,34.5371,472,Muy bajo,57.17,46.22,81.28,20.63,18.36
-60504,Bahía Ballena,Osa,Puntarenas,50.157,386,Bajo,62.09,42.16,63.49,47.41,35.9
-60505,Piedras Blancas,Osa,Puntarenas,40.7071,455,Muy bajo,63.34,33.98,78.35,42.08,14.31
-60506,Bahía Drake,Osa,Puntarenas,42.6804,447,Muy bajo,53.39,71.69,100.0,18.05,24.28
-60601,Quepos,Aguirre,Puntarenas,64.4599,225,Medio,82.3,40.11,74.32,57.55,40.86
-60602,Savegre,Aguirre,Puntarenas,51.3664,372,Bajo,66.76,69.29,56.27,46.64,27.72
-60603,Naranjito,Aguirre,Puntarenas,60.3207,273,Bajo,82.68,52.46,98.01,49.04,23.16
-60701,Golfito,Golfito,Puntarenas,53.2104,348,Bajo,68.09,28.03,87.23,50.75,30.84
-60702,Puerto Jiménez,Golfito,Puntarenas,43.0779,443,Muy bajo,69.75,35.09,81.99,33.96,20.68
-60703,Guaycará,Golfito,Puntarenas,49.6025,393,Bajo,77.1,36.65,80.69,40.82,23.97
-60704,Pavón,Golfito,Puntarenas,32.9106,475,Muy bajo,56.97,38.19,92.34,12.04,21.31
-60801,San Vito,Coto Brus,Puntarenas,61.9118,258,Bajo,75.83,49.18,95.06,63.43,21.23
-60802,Sabalito,Coto Brus,Puntarenas,47.7946,403,Bajo,70.42,24.95,97.73,48.08,15.29
-60803,Aguabuena,Coto Brus,Puntarenas,52.4585,355,Bajo,84.38,41.52,92.68,42.45,16.28
-60804,Limoncito,Coto Brus,Puntarenas,36.3013,467,Muy bajo,58.78,48.58,88.29,26.38,11.77
-60805,Pittier,Coto Brus,Puntarenas,32.4871,476,Muy bajo,40.74,47.86,100.0,30.87,7.49
-60806,Gutiérrez Brown,Coto Brus,Puntarenas,41.6091,453,Muy bajo,54.14,22.18,88.88,54.79,11.77
-60901,Parrita,Parrita,Puntarenas,53.6883,345,Bajo,70.17,52.24,78.37,46.68,28.0
-61001,Corredor,Corredores,Puntarenas,49.1281,394,Bajo,68.47,39.49,78.06,42.54,27.85
-61002,La Cuesta,Corredores,Puntarenas,52.3514,358,Bajo,63.19,25.6,79.69,60.86,27.27
-61003,Canoas,Corredores,Puntarenas,43.9615,437,Muy bajo,63.98,21.92,71.81,49.03,22.9
-61004,Laurel,Corredores,Puntarenas,45.1526,429,Muy bajo,66.69,38.1,85.09,40.56,19.09
-61101,Jacó,Garabito,Puntarenas,70.2195,158,Medio,77.44,42.77,74.9,50.12,64.11
-61102,Tárcoles,Garabito,Puntarenas,56.2076,315,Bajo,64.56,51.39,78.78,51.66,33.79
-70101,Limón,Limón,Limón,64.7602,222,Medio,78.64,40.43,71.71,68.31,35.17
-70102,Valle La Estrella,Limón,Limón,28.6738,478,Muy bajo,45.51,46.15,92.73,17.57,11.27
-70103,Río Blanco,Limón,Limón,46.7642,413,Muy bajo,64.81,37.83,77.06,49.34,19.68
-70104,Matama,Limón,Limón,48.9184,398,Bajo,70.86,47.18,84.89,44.02,17.84
-70201,Guápiles,Pococí,Limón,67.8596,195,Medio,78.9,47.89,72.85,74.91,32.45
-70202,Jiménez,Pococí,Limón,62.757,244,Medio,76.3,52.93,86.79,63.43,24.96
-70203,Rita,Pococí,Limón,43.6769,438,Muy bajo,57.95,43.82,85.61,44.88,15.58
-70204,Roxana,Pococí,Limón,44.9794,432,Muy bajo,57.55,33.12,91.38,51.97,14.19
-70205,Cariari,Pococí,Limón,47.9215,401,Bajo,61.9,39.18,83.52,53.56,17.26
-70206,Colorado,Pococí,Limón,28.8755,477,Muy bajo,42.46,25.04,96.51,23.67,15.49
-70207,Colonia,Pococí,Limón,65.7243,213,Medio,76.17,44.31,93.5,70.15,26.4
-70301,Siquirres,Siquirres,Limón,53.2337,347,Bajo,65.06,39.36,84.4,56.56,24.19
-70302,Pacuarito,Siquirres,Limón,40.1629,456,Muy bajo,53.84,33.67,89.21,43.17,14.67
-70303,Florida,Siquirres,Limón,49.7794,392,Bajo,62.58,62.18,94.83,42.9,16.71
-70304,Germania,Siquirres,Limón,46.1588,419,Muy bajo,72.78,49.35,64.28,45.55,16.48
-70305,Cairo,Siquirres,Limón,39.4818,459,Muy bajo,54.55,39.77,81.89,39.17,16.97
-70306,Alegría,Siquirres,Limón,55.0445,334,Bajo,61.43,55.06,91.4,57.64,20.62
-70401,Bratsi,Talamanca,Limón,34.7956,471,Muy bajo,51.31,48.34,85.59,27.9,13.79
-70402,Sixaola,Talamanca,Limón,35.3966,470,Muy bajo,39.29,45.93,85.04,41.61,12.72
-70403,Cahuita,Talamanca,Limón,46.1737,418,Muy bajo,58.59,47.42,67.33,41.91,30.44
-70404,Telire,Talamanca,Limón,16.1621,481,Muy bajo,24.44,42.92,95.38,12.05,3.13
-70501,Matina,Matina,Limón,45.736,422,Muy bajo,62.33,55.26,84.02,43.99,13.88
-70502,Batán,Matina,Limón,50.7253,379,Bajo,67.49,54.45,80.41,49.22,18.74
-70503,Carrandi,Matina,Limón,46.838,412,Muy bajo,67.17,56.01,76.34,46.91,13.03
-70601,Guácimo,Guácimo,Limón,55.4568,324,Bajo,76.66,38.92,78.98,59.99,19.83
-70602,Mercedes,Guácimo,Limón,56.8013,307,Bajo,70.6,58.72,97.74,39.52,30.68
-70603,Pocora,Guácimo,Limón,52.9821,350,Bajo,74.69,47.81,78.82,54.23,17.27
-70604,Río Jiménez,Guácimo,Limón,45.5678,426,Muy bajo,56.79,40.93,84.97,53.0,14.75
-70605,Duacarí,Guácimo,Limón,41.8754,452,Muy bajo,48.86,38.71,98.9,47.67,11.94
+codigo,distrito,canton,provincia,ids,posicion,area,imputado,salud,participacion,seguridad,educacion,economico
+10101,Carmen,San José,San José,81.1583,57,Mayor,0,78.15,41.11,36.94,90.67,68.48
+10102,Merced,San José,San José,67.7308,196,Medio,0,76.35,39.93,76.23,68.9,41.7
+10103,Hospital,San José,San José,62.5015,250,Medio,0,74.53,36.12,70.54,63.08,40.26
+10104,Catedral,San José,San José,76.174,89,Medio,0,83.26,43.0,84.17,73.79,47.08
+10105,Zapote,San José,San José,82.8575,44,Mayor,0,82.95,49.73,91.9,73.15,57.68
+10106,San Francisco Dos Ríos,San José,San José,82.8684,43,Mayor,0,82.56,51.82,92.2,64.52,65.22
+10107,Uruca,San José,San José,63.8655,229,Medio,0,73.96,39.8,85.07,58.98,39.92
+10108,Mata Redonda,San José,San José,93.1604,8,Mayor,0,91.35,49.94,85.89,74.56,77.02
+10109,Pavas,San José,San José,73.7229,113,Medio,0,83.23,39.71,90.07,62.57,50.73
+10110,Hatillo,San José,San José,68.7081,178,Medio,0,72.17,39.99,90.06,66.98,42.98
+10111,San Sebastián,San José,San José,76.1861,88,Medio,0,82.77,42.8,87.39,73.68,46.26
+10201,Escazú,Escazú,San José,91.5388,11,Mayor,0,82.76,65.58,90.55,71.27,74.32
+10202,San Antonio,Escazú,San José,80.8998,58,Mayor,0,83.24,58.38,95.19,64.7,55.75
+10203,San Rafael,Escazú,San José,100.0,1,Mayor,0,92.91,57.34,86.98,62.58,100.0
+10301,Desamparados,Desamparados,San José,81.4162,54,Mayor,0,86.62,44.2,89.83,79.48,48.59
+10302,San Miguel,Desamparados,San José,68.4475,183,Medio,0,73.27,37.67,93.87,68.33,39.51
+10303,San Juan de Dios,Desamparados,San José,68.6561,180,Medio,0,78.06,32.65,95.61,69.41,36.61
+10304,San Rafael Arriba,Desamparados,San José,75.6397,95,Medio,0,83.16,37.38,95.11,70.66,46.4
+10305,San Antonio,Desamparados,San José,86.6614,29,Mayor,0,85.01,50.94,95.84,79.0,57.35
+10306,Frailes,Desamparados,San José,55.8183,322,Bajo,0,43.79,50.35,97.03,73.23,20.77
+10307,Patarrá,Desamparados,San José,69.2291,172,Medio,0,70.16,41.35,93.4,74.19,36.87
+10308,San Cristóbal,Desamparados,San José,63.8393,231,Medio,0,60.74,65.38,97.13,69.18,24.34
+10309,Rosario,Desamparados,San José,55.0944,332,Bajo,0,63.91,49.85,96.33,56.09,20.33
+10310,Damas,Desamparados,San José,78.7939,70,Mayor,0,83.1,46.1,94.74,72.39,48.85
+10311,San Rafael Abajo,Desamparados,San José,74.6043,102,Medio,0,77.04,37.71,89.37,76.39,45.59
+10312,Gravilias,Desamparados,San José,84.8369,32,Mayor,0,86.07,53.35,97.57,72.28,56.81
+10313,Los Guido,Desamparados,San José,60.5083,267,Bajo,0,76.55,24.0,93.07,65.31,26.96
+10401,Santiago,Puriscal,San José,74.4056,104,Medio,0,77.5,59.35,96.83,72.1,36.49
+10402,Mercedes Sur,Puriscal,San José,61.4612,260,Bajo,0,82.79,64.85,93.35,49.95,21.79
+10403,Barbacoas,Puriscal,San José,63.4821,234,Medio,0,64.11,56.18,97.6,71.5,22.31
+10404,Grifo Alto,Puriscal,San José,55.2813,328,Bajo,0,49.76,76.89,100.0,54.12,20.63
+10405,San Rafael,Puriscal,San José,54.6768,336,Bajo,0,49.58,65.25,100.0,57.01,21.47
+10406,Candelaria,Puriscal,San José,62.5115,249,Medio,0,77.67,56.12,100.0,63.44,16.14
+10407,Desamparaditos,Puriscal,San José,62.5682,248,Medio,0,68.5,78.05,100.0,53.04,24.1
+10408,San Antonio,Puriscal,San José,63.0458,240,Medio,0,77.82,44.74,91.03,61.73,27.66
+10409,Chires,Puriscal,San José,43.5359,442,Muy bajo,0,70.35,46.57,96.24,33.86,10.32
+10501,San Marcos,Tarrazú,San José,59.2874,287,Bajo,0,57.28,55.93,96.11,62.88,26.55
+10502,San Lorenzo,Tarrazú,San José,36.2832,468,Muy bajo,0,26.87,45.48,98.05,44.11,16.53
+10503,San Carlos,Tarrazú,San José,36.7846,465,Muy bajo,0,36.34,48.98,88.96,46.93,10.24
+10601,Aserrí,Aserrí,San José,69.5452,165,Medio,0,71.57,40.47,94.44,75.48,35.21
+10602,Tarbaca,Aserrí,San José,57.9277,296,Bajo,0,68.18,53.25,61.79,55.11,38.52
+10603,Vuelta de Jorco,Aserrí,San José,60.5022,268,Bajo,0,61.41,52.57,99.28,67.07,22.26
+10604,San Gabriel,Aserrí,San José,55.2471,329,Bajo,0,58.74,47.19,96.75,59.71,22.17
+10605,Legua,Aserrí,San José,45.7002,423,Muy bajo,0,48.33,64.8,92.24,51.73,9.61
+10606,Monterrey,Aserrí,San José,50.075,387,Bajo,0,34.29,56.37,100.0,73.66,10.15
+10607,Salitrillos,Aserrí,San José,62.0454,255,Medio,0,69.73,39.78,97.47,60.79,31.67
+10701,Colón,Mora,San José,77.2457,81,Mayor,0,77.03,62.53,90.89,66.68,50.09
+10702,Guayabo,Mora,San José,66.3195,207,Medio,0,70.83,47.44,93.1,77.14,24.16
+10703,Tabarcia,Mora,San José,59.0189,290,Bajo,0,62.91,52.9,96.76,65.28,20.24
+10704,Piedras Negras,Mora,San José,47.7343,405,Bajo,0,54.35,81.37,82.27,47.81,11.0
+10705,Picagres,Mora,San José,64.5928,224,Medio,0,89.64,70.66,100.0,49.91,18.65
+10706,Jaris,Mora,San José,56.1153,317,Bajo,0,66.26,46.91,100.0,62.24,14.7
+10707,Quitirrisí,Mora,San José,60.029,277,Bajo,1,55.63,59.37,100.0,71.09,18.61
+10801,Guadalupe,Goicoechea,San José,79.6837,63,Mayor,0,82.2,44.99,83.19,75.97,53.81
+10802,San Francisco,Goicoechea,San José,77.5428,78,Mayor,0,75.22,64.3,77.68,80.66,43.97
+10803,Calle Blancos,Goicoechea,San José,78.3491,73,Mayor,0,82.33,47.13,94.05,66.55,53.82
+10804,Mata de Plátano,Goicoechea,San José,79.3172,67,Mayor,0,70.59,43.93,98.39,74.69,56.89
+10805,Ipís,Goicoechea,San José,72.5246,130,Medio,0,69.7,35.73,91.86,74.77,47.59
+10806,Rancho Redondo,Goicoechea,San José,71.0981,144,Medio,0,65.83,44.38,91.89,76.49,41.9
+10807,Purral,Goicoechea,San José,67.5061,199,Medio,0,70.25,38.23,93.0,71.39,36.83
+10901,Santa Ana,Santa Ana,San José,90.2177,14,Mayor,0,75.6,68.28,88.76,69.58,77.97
+10902,Salitral,Santa Ana,San José,70.2742,155,Medio,0,64.52,65.43,90.28,61.23,47.37
+10903,Pozos,Santa Ana,San José,95.3234,6,Mayor,0,87.08,59.73,89.28,65.2,88.82
+10904,Uruca,Santa Ana,San José,82.016,50,Mayor,0,64.82,62.15,97.45,63.58,71.17
+10905,Piedades,Santa Ana,San José,84.62,35,Mayor,0,77.2,63.87,92.7,74.19,59.07
+10906,Brasil,Santa Ana,San José,74.8873,99,Medio,0,73.34,61.58,84.82,63.81,53.12
+11001,Alajuelita,Alajuelita,San José,79.1759,69,Mayor,0,88.16,52.4,87.66,75.8,43.08
+11002,San Josecito,Alajuelita,San José,70.2646,157,Medio,0,82.53,48.89,93.03,63.18,37.27
+11003,San Antonio,Alajuelita,San José,62.685,247,Medio,0,73.29,54.17,94.05,56.21,30.27
+11004,Concepción,Alajuelita,San José,68.519,182,Medio,0,82.17,36.22,95.6,66.17,34.7
+11005,San Felipe,Alajuelita,San José,68.0988,190,Medio,0,78.88,44.49,93.97,64.39,35.18
+11101,San Isidro,Vazquez de Coronado,San José,84.7469,34,Mayor,0,87.48,54.72,93.06,69.69,59.38
+11102,San Rafael,Vazquez de Coronado,San José,79.8796,62,Mayor,0,76.33,57.37,92.69,76.79,48.67
+11103,Dulce Nombre de Jesús,Vazquez de Coronado,San José,79.3847,66,Mayor,0,86.45,48.82,79.84,78.37,47.38
+11104,Patalillo,Vazquez de Coronado,San José,82.1895,47,Mayor,0,76.14,46.14,97.48,76.86,56.86
+11105,Cascajal,Vazquez de Coronado,San José,64.9141,220,Medio,0,67.92,48.83,97.3,56.67,40.13
+11201,San Ignacio,Acosta,San José,67.9615,193,Medio,0,66.97,62.03,93.83,76.79,24.97
+11202,Guaitil,Acosta,San José,53.333,346,Bajo,0,66.3,52.28,98.06,54.82,13.68
+11203,Palmichal,Acosta,San José,59.8518,280,Bajo,0,67.11,56.63,100.0,64.74,16.51
+11204,Cangrejal,Acosta,San José,50.3331,384,Bajo,0,81.89,42.62,100.0,46.07,5.99
+11205,Sabanillas,Acosta,San José,42.8632,445,Muy bajo,0,60.01,52.7,94.98,42.19,6.76
+11301,San Juan,Tibás,San José,81.3069,55,Mayor,0,80.8,42.82,94.81,74.42,56.04
+11302,Cinco Esquinas,Tibás,San José,64.8094,221,Medio,0,73.26,37.22,83.25,65.24,38.65
+11303,Anselmo Llorente,Tibás,San José,83.6063,39,Mayor,0,81.83,42.8,87.04,68.78,69.55
+11304,León XIII,Tibás,San José,59.358,286,Bajo,0,67.02,38.7,82.94,68.99,26.38
+11305,Colima,Tibás,San José,76.1195,91,Medio,0,83.13,46.47,93.19,61.99,52.88
+11401,San Vicente,Moravia,San José,90.0372,16,Mayor,0,87.08,53.48,96.09,73.87,67.54
+11402,San Jerónimo,Moravia,San José,70.0597,159,Medio,0,66.11,51.33,86.53,72.96,42.0
+11403,Trinidad,Moravia,San José,76.3661,86,Medio,0,74.95,46.41,95.23,70.53,50.78
+11501,San Pedro,Montes de oca,San José,88.3866,22,Mayor,0,86.31,54.17,94.97,70.92,67.2
+11502,Sabanilla,Montes de oca,San José,89.2435,17,Mayor,0,82.83,60.55,92.27,72.2,69.24
+11503,Mercedes,Montes de oca,San José,90.8482,12,Mayor,0,97.2,58.51,96.45,65.78,67.08
+11504,San Rafael,Montes de oca,San José,77.43,79,Mayor,0,72.84,51.18,96.73,66.78,55.87
+11601,San Pablo,Turrubares,San José,65.0892,218,Medio,0,82.26,92.03,93.43,45.21,23.96
+11602,San Pedro,Turrubares,San José,54.6275,337,Bajo,0,78.68,97.91,62.67,35.79,21.8
+11603,San Juan de Mata,Turrubares,San José,49.0956,396,Bajo,0,63.42,71.15,94.22,40.61,13.11
+11604,San Luis,Turrubares,San José,50.5277,381,Bajo,0,78.46,88.32,100.0,26.87,8.24
+11605,Carara,Turrubares,San José,51.7773,363,Bajo,0,65.81,81.94,100.0,36.41,14.6
+11701,Santa María,Dota,San José,54.2067,341,Bajo,0,33.77,76.68,87.81,62.14,28.26
+11702,Jardín,Dota,San José,54.5663,338,Bajo,0,84.88,25.05,80.89,61.92,14.48
+11703,Copey,Dota,San José,51.6869,366,Bajo,0,38.83,76.6,83.95,53.61,28.2
+11801,Curridabat,Curridabat,San José,84.3934,37,Mayor,0,80.29,56.96,92.23,68.06,65.09
+11802,Granadilla,Curridabat,San José,86.4451,30,Mayor,0,81.58,49.29,96.55,66.09,72.18
+11803,Sánchez,Curridabat,San José,99.4736,2,Mayor,0,90.9,68.98,88.19,64.53,93.03
+11804,Tirrases,Curridabat,San José,66.3707,206,Medio,0,72.74,42.94,90.99,65.73,36.49
+11901,San Isidro de El General,Pérez Zeledón,San José,69.9405,161,Medio,0,89.52,51.19,94.18,63.27,29.52
+11902,General,Pérez Zeledón,San José,67.1203,202,Medio,0,83.12,53.09,98.11,67.08,21.57
+11903,Daniel Flores,Pérez Zeledón,San José,71.4454,141,Medio,0,90.86,47.22,91.07,72.25,26.56
+11904,Rivas,Pérez Zeledón,San José,52.7045,354,Bajo,0,58.44,64.86,96.45,53.15,15.3
+11905,San Pedro,Pérez Zeledón,San José,52.8273,351,Bajo,0,69.45,42.41,94.25,58.75,12.11
+11906,Platanares,Pérez Zeledón,San José,55.7986,323,Bajo,0,73.63,56.92,96.4,55.94,11.62
+11907,Pejibaye,Pérez Zeledón,San José,46.9451,408,Muy bajo,0,68.51,46.13,92.8,46.27,9.76
+11908,Cajón,Pérez Zeledón,San José,52.1128,362,Bajo,0,71.03,45.02,90.2,55.62,12.85
+11909,Barú,Pérez Zeledón,San José,49.8204,391,Bajo,0,78.45,45.75,89.02,33.84,22.6
+11910,Río Nuevo,Pérez Zeledón,San José,42.3541,449,Muy bajo,0,57.54,48.26,97.11,40.36,10.11
+11911,Páramo,Pérez Zeledón,San José,47.4489,407,Bajo,0,56.38,62.8,87.19,48.87,13.36
+11912,La Amistad,Pérez Zeledón,San José,51.3719,371,Bajo,1,,,,,
+12001,San Pablo,León Cortés,San José,56.4946,309,Bajo,0,31.84,64.04,91.58,80.11,21.73
+12002,San Andrés,León Cortés,San José,44.2454,436,Muy bajo,0,46.09,47.01,92.16,57.32,10.03
+12003,Llano Bonito,León Cortés,San José,40.0821,458,Muy bajo,0,40.11,55.6,91.72,49.17,9.07
+12004,San Isidro,León Cortés,San José,44.8564,433,Muy bajo,0,35.41,52.79,95.37,61.52,11.92
+12005,Santa Cruz,León Cortés,San José,48.2306,400,Bajo,0,33.44,61.45,95.95,68.09,11.37
+12006,San Antonio,León Cortés,San José,56.1378,316,Bajo,0,59.84,61.79,95.79,66.39,11.37
+20101,Alajuela,Alajuela,Alajuela,77.8167,75,Mayor,0,78.32,49.4,90.12,77.44,46.05
+20102,San José,Alajuela,Alajuela,70.7205,153,Medio,0,73.09,44.46,90.5,69.15,42.94
+20103,Carrizal,Alajuela,Alajuela,64.3771,228,Medio,0,64.01,56.22,91.14,68.21,30.5
+20104,San Antonio,Alajuela,Alajuela,72.3171,131,Medio,0,82.01,41.98,89.83,73.3,37.23
+20105,Guácima,Alajuela,Alajuela,69.7946,162,Medio,0,75.97,48.91,91.24,67.04,38.31
+20106,San Isidro,Alajuela,Alajuela,63.5664,233,Medio,0,68.94,43.35,93.27,64.39,32.84
+20107,Sabanilla,Alajuela,Alajuela,61.7992,259,Bajo,0,57.7,51.57,97.62,72.55,24.17
+20108,San Rafael,Alajuela,Alajuela,69.033,174,Medio,0,63.1,35.72,88.56,75.09,45.5
+20109,Río Segundo,Alajuela,Alajuela,66.6506,205,Medio,0,75.56,45.02,82.52,64.24,39.27
+20110,Desamparados,Alajuela,Alajuela,68.5649,181,Medio,0,68.89,46.52,93.96,66.85,40.84
+20111,Turrúcares,Alajuela,Alajuela,68.7062,179,Medio,0,75.76,52.14,79.65,71.82,35.07
+20112,Tambor,Alajuela,Alajuela,68.0326,192,Medio,0,73.59,47.68,93.41,71.8,30.97
+20113,Garita,Alajuela,Alajuela,73.4845,116,Medio,0,75.5,48.83,81.63,70.68,48.31
+20114,Sarapiquí,Alajuela,Alajuela,56.0755,318,Bajo,0,63.59,60.82,97.25,55.91,18.08
+20201,San Ramón,San Ramón,Alajuela,89.0843,18,Mayor,0,85.68,64.26,84.3,95.83,46.09
+20202,Santiago,San Ramón,Alajuela,61.2127,263,Bajo,0,67.31,59.77,78.12,60.62,31.86
+20203,San Juan,San Ramón,Alajuela,75.8946,93,Medio,0,88.6,48.21,94.25,72.96,36.45
+20204,Piedades Norte,San Ramón,Alajuela,72.7108,125,Medio,0,87.66,54.76,94.68,69.38,30.03
+20205,Piedades Sur,San Ramón,Alajuela,59.0598,289,Bajo,0,69.96,70.56,96.94,55.08,17.12
+20206,San Rafael,San Ramón,Alajuela,70.8798,150,Medio,0,76.3,54.5,94.03,68.02,36.14
+20207,San Isidro,San Ramón,Alajuela,72.1789,133,Medio,0,75.53,59.2,97.28,74.7,30.07
+20208,Ángeles,San Ramón,Alajuela,60.4373,270,Bajo,0,73.17,52.97,93.96,56.94,24.84
+20209,Alfaro,San Ramón,Alajuela,73.5198,115,Medio,0,86.94,53.3,96.63,65.26,36.2
+20210,Volio,San Ramón,Alajuela,56.3026,311,Bajo,0,65.58,61.98,98.03,45.43,26.24
+20211,Concepción,San Ramón,Alajuela,64.9833,219,Medio,0,72.21,66.31,90.3,73.15,17.02
+20212,Zapotal,San Ramón,Alajuela,46.2157,417,Muy bajo,0,64.03,90.67,100.0,27.13,7.88
+20213,Peñas Blancas,San Ramón,Alajuela,57.9094,298,Bajo,0,71.07,68.75,92.32,53.54,17.77
+20214,San Lorenzo,San Ramón,Alajuela,60.4373,271,Bajo,1,,,,,
+20301,Grecia,Grecia,Alajuela,76.6512,85,Medio,0,67.9,62.65,92.03,76.95,45.39
+20302,San Isidro,Grecia,Alajuela,70.9012,149,Medio,0,62.25,62.39,98.06,73.96,36.33
+20303,San José,Grecia,Alajuela,73.0542,119,Medio,0,70.13,66.54,100.0,76.36,30.49
+20304,San Roque,Grecia,Alajuela,74.9499,96,Medio,0,66.78,72.37,99.6,76.4,35.3
+20305,Tacares,Grecia,Alajuela,71.0732,145,Medio,0,73.17,56.21,98.03,73.92,30.93
+20307,Puente de Piedra,Grecia,Alajuela,68.9063,175,Medio,0,69.49,60.12,92.83,70.22,32.78
+20308,Bolívar,Grecia,Alajuela,68.3399,187,Medio,0,70.64,57.52,97.82,71.93,27.79
+20401,San Mateo,San Mateo,Alajuela,74.2611,107,Medio,0,100.0,86.45,94.05,49.37,30.25
+20402,Desmonte,San Mateo,Alajuela,68.3255,188,Medio,0,95.89,99.25,92.66,39.56,23.85
+20403,Jesús María,San Mateo,Alajuela,76.2007,87,Medio,0,89.11,85.12,92.86,76.23,18.8
+20404,Labrador,San Mateo,Alajuela,73.3466,117,Medio,0,76.95,60.5,100.0,79.74,25.22
+20501,Atenas,Atenas,Alajuela,91.9583,10,Mayor,0,88.42,81.68,97.73,79.63,53.06
+20502,Jesús,Atenas,Alajuela,70.3046,154,Medio,0,68.58,74.9,98.78,58.38,39.29
+20503,Mercedes,Atenas,Alajuela,71.5289,139,Medio,0,69.05,70.53,100.0,68.65,33.36
+20504,San Isidro,Atenas,Alajuela,57.5117,300,Bajo,0,50.74,79.02,98.45,59.67,19.71
+20505,Concepción,Atenas,Alajuela,74.5089,103,Medio,0,82.74,67.52,70.05,74.98,38.32
+20506,San José,Atenas,Alajuela,62.0413,256,Medio,0,59.41,65.93,96.25,63.54,26.6
+20507,Santa Eulalia,Atenas,Alajuela,68.8747,177,Medio,0,59.88,57.36,100.0,77.56,31.14
+20508,Escobal,Atenas,Alajuela,52.3445,359,Bajo,0,72.09,79.77,45.09,46.25,26.83
+20601,Naranjo,Naranjo,Alajuela,73.0508,120,Medio,0,72.34,67.31,91.44,73.56,34.89
+20602,San Miguel,Naranjo,Alajuela,65.3664,215,Medio,0,62.48,58.73,89.38,74.81,27.47
+20603,San José,Naranjo,Alajuela,67.6344,198,Medio,0,70.81,65.1,96.22,70.26,25.09
+20604,Cirrí Sur,Naranjo,Alajuela,60.4811,269,Bajo,0,70.64,56.95,89.74,59.61,24.56
+20605,San Jerónimo,Naranjo,Alajuela,65.7965,211,Medio,0,74.92,60.23,100.0,64.49,23.4
+20606,San Juan,Naranjo,Alajuela,67.1957,201,Medio,0,62.26,65.33,100.0,68.34,30.73
+20607,Rosario,Naranjo,Alajuela,67.0521,203,Medio,0,66.76,61.81,90.62,76.72,24.53
+20608,Palmito,Naranjo,Alajuela,65.0973,217,Medio,0,62.91,60.89,98.26,69.99,26.28
+20701,Palmares,Palmares,Alajuela,96.9032,5,Mayor,0,95.39,77.53,94.46,96.62,46.46
+20702,Zaragoza,Palmares,Alajuela,81.6269,52,Mayor,0,82.62,74.83,97.15,78.86,36.71
+20703,Buenos Aires,Palmares,Alajuela,78.2758,74,Mayor,0,89.01,70.42,88.67,65.91,41.69
+20704,Santiago,Palmares,Alajuela,68.4223,184,Medio,0,61.04,60.13,100.0,79.57,26.08
+20705,Candelaria,Palmares,Alajuela,63.0571,239,Medio,0,59.97,59.93,100.0,74.01,19.47
+20706,Esquipulas,Palmares,Alajuela,70.9138,148,Medio,0,79.43,60.17,98.28,67.78,29.79
+20707,Granja,Palmares,Alajuela,90.3963,13,Mayor,0,93.76,76.89,100.0,82.27,43.67
+20801,San Pedro,Poás,Alajuela,74.388,105,Medio,0,63.0,78.43,96.73,77.89,34.2
+20802,San Juan,Poás,Alajuela,63.1306,237,Medio,0,54.78,65.37,93.89,68.93,28.92
+20803,San Rafael,Poás,Alajuela,71.7921,137,Medio,0,66.12,87.24,100.0,73.68,24.45
+20804,Carrillos,Poás,Alajuela,66.0309,209,Medio,0,61.62,51.64,98.7,73.5,29.84
+20805,Sabana Redonda,Poás,Alajuela,59.6302,283,Bajo,0,68.25,48.16,96.98,68.51,16.38
+20901,Orotina,Orotina,Alajuela,73.8207,112,Medio,0,75.32,64.03,78.43,77.96,37.33
+20902,Mastate,Orotina,Alajuela,68.8945,176,Medio,0,80.67,57.9,97.52,66.08,26.9
+20903,Hacienda Vieja,Orotina,Alajuela,73.7045,114,Medio,0,66.43,64.27,88.58,84.39,33.24
+20904,Coyolar,Orotina,Alajuela,51.7199,365,Bajo,0,72.2,42.97,84.79,46.56,22.89
+20905,Ceiba,Orotina,Alajuela,50.823,378,Bajo,0,78.69,48.05,58.31,48.24,23.67
+21001,Quesada,San Carlos,Alajuela,72.6319,128,Medio,0,76.13,66.2,95.12,61.07,41.71
+21002,Florencia,San Carlos,Alajuela,59.9953,278,Bajo,0,69.14,57.01,80.92,59.84,28.2
+21003,Buenavista,San Carlos,Alajuela,54.5297,340,Bajo,0,70.32,75.97,6.39,74.01,25.62
+21004,Aguas Zarcas,San Carlos,Alajuela,60.5586,266,Bajo,0,69.96,52.97,89.14,59.79,27.03
+21005,Venecia,San Carlos,Alajuela,63.024,241,Medio,0,58.28,75.67,90.73,65.18,26.6
+21006,Pital,San Carlos,Alajuela,51.2707,374,Bajo,0,60.13,51.91,88.18,48.83,23.76
+21007,Fortuna,San Carlos,Alajuela,61.2039,264,Bajo,0,66.79,47.58,92.66,59.57,31.94
+21008,Tigra,San Carlos,Alajuela,62.3964,251,Medio,0,71.92,70.31,94.6,61.83,18.28
+21009,Palmera,San Carlos,Alajuela,62.6899,246,Medio,0,68.23,63.05,82.16,63.05,29.21
+21010,Venado,San Carlos,Alajuela,45.0436,431,Muy bajo,0,50.23,69.83,93.64,35.13,19.68
+21011,Cutris,San Carlos,Alajuela,46.8868,410,Muy bajo,0,65.91,62.85,90.37,33.55,17.82
+21012,Monterrey,San Carlos,Alajuela,55.0634,333,Bajo,0,71.97,67.18,93.43,40.2,23.17
+21013,Pocosol,San Carlos,Alajuela,46.9177,409,Muy bajo,0,65.24,45.76,90.73,40.84,18.46
+21101,Zarcero,Zarcero,Alajuela,82.0283,49,Mayor,0,76.47,84.15,98.85,80.02,36.66
+21102,Laguna,Zarcero,Alajuela,74.033,109,Medio,0,79.09,86.88,93.04,59.85,36.17
+21103,Tapezco,Zarcero,Alajuela,79.5135,65,Mayor,0,78.31,93.96,100.0,70.68,33.51
+21104,Guadalupe,Zarcero,Alajuela,42.8424,446,Muy bajo,0,39.81,82.92,100.0,22.68,26.06
+21105,Palmira,Zarcero,Alajuela,70.9276,147,Medio,0,76.08,77.51,91.64,71.82,24.21
+21106,Zapote,Zarcero,Alajuela,72.1291,134,Medio,0,90.01,85.67,84.82,55.35,31.59
+21107,Brisas,Zarcero,Alajuela,77.7513,76,Mayor,0,80.65,90.23,100.0,71.03,28.72
+21201,Sarchí Norte,Valverde Vega,Alajuela,74.3364,106,Medio,0,81.17,68.35,96.79,70.88,30.89
+21202,Sarchí Sur,Valverde Vega,Alajuela,64.4348,226,Medio,0,65.11,54.74,100.0,66.73,27.91
+21203,Toro Amarillo,Valverde Vega,Alajuela,57.9841,294,Bajo,0,78.98,98.68,64.1,50.17,14.94
+21204,San Pedro,Valverde Vega,Alajuela,72.9147,122,Medio,0,83.77,74.36,98.78,69.19,23.69
+21205,Rodríguez,Valverde Vega,Alajuela,71.4492,140,Medio,0,79.02,74.71,98.08,65.12,27.91
+21301,Upala,Upala,Alajuela,51.5816,367,Bajo,0,67.52,47.8,83.08,50.2,21.45
+21302,Aguas Claras,Upala,Alajuela,49.8826,390,Bajo,0,71.45,53.87,96.78,43.04,12.58
+21303,San José (Pizote),Upala,Alajuela,36.8127,464,Muy bajo,0,56.61,31.55,90.64,38.27,9.44
+21304,Bijagua,Upala,Alajuela,55.4224,325,Bajo,0,77.94,62.88,89.55,46.63,16.78
+21305,Delicias,Upala,Alajuela,41.9943,451,Muy bajo,0,52.77,42.24,91.76,48.7,9.88
+21306,Dos Ríos,Upala,Alajuela,46.6877,414,Muy bajo,0,69.37,33.56,93.46,53.46,6.6
+21307,Yolillal,Upala,Alajuela,42.9614,444,Muy bajo,0,62.76,51.04,89.39,37.76,12.24
+21308,Canalete,Upala,Alajuela,47.7417,404,Bajo,0,71.6,27.59,100.0,40.75,19.13
+21401,Los Chiles,Los Chiles,Alajuela,45.3857,428,Muy bajo,0,64.48,48.02,87.76,40.37,16.2
+21402,Caño Negro,Los Chiles,Alajuela,45.4546,427,Muy bajo,0,58.29,47.15,96.24,46.41,12.03
+21403,El Amparo,Los Chiles,Alajuela,40.7132,454,Muy bajo,0,61.01,50.54,81.66,35.91,13.6
+21404,San Jorge,Los Chiles,Alajuela,44.528,435,Muy bajo,0,77.38,54.39,95.91,25.28,12.29
+21501,San Rafael,Guatuso,Alajuela,45.6699,424,Muy bajo,0,69.89,54.19,83.21,35.83,16.44
+21502,Buenavista,Guatuso,Alajuela,38.3001,462,Muy bajo,0,65.86,67.6,76.21,24.27,10.43
+21503,Cote,Guatuso,Alajuela,52.4016,356,Bajo,0,77.95,75.2,100.0,34.76,11.1
+21504,Katira,Guatuso,Alajuela,52.2753,360,Bajo,0,74.7,57.43,100.0,42.79,13.11
+21601,Río Cuarto,Río Cuarto,Alajuela,44.75,434,Muy bajo,0,,,,,
+30101,Oriental,Cartago,Cartago,86.2328,31,Mayor,0,62.86,64.37,93.77,84.04,63.95
+30102,Occidental,Cartago,Cartago,82.0548,48,Mayor,0,62.98,66.66,89.41,73.56,64.83
+30103,Carmen,Cartago,Cartago,68.3612,185,Medio,0,53.84,60.01,95.77,58.07,53.92
+30104,San Nicolás,Cartago,Cartago,69.3575,169,Medio,0,63.97,53.28,89.19,71.02,41.84
+30105,Aguacaliente (SanFrancisco),Cartago,Cartago,68.2502,189,Medio,0,59.65,54.37,97.93,68.89,40.26
+30106,Guadalupe (Arenilla),Cartago,Cartago,77.5612,77,Mayor,0,60.98,63.42,96.51,77.91,49.71
+30107,Corralillo,Cartago,Cartago,70.9401,146,Medio,0,66.02,76.32,96.47,79.53,23.05
+30108,Tierra Blanca,Cartago,Cartago,71.8663,136,Medio,0,47.97,68.71,97.65,80.01,41.46
+30109,Dulce Nombre,Cartago,Cartago,80.4225,61,Mayor,0,76.39,68.86,98.87,67.4,51.32
+30110,Llano Grande,Cartago,Cartago,62.2602,253,Medio,0,45.48,54.59,98.3,70.21,35.4
+30111,Quebradilla,Cartago,Cartago,62.0767,254,Medio,0,56.24,66.4,95.53,69.67,23.41
+30201,Paraíso,Paraíso,Cartago,73.8672,111,Medio,0,58.3,70.91,90.12,73.33,47.01
+30202,Santiago,Paraíso,Cartago,55.2327,330,Bajo,0,40.42,61.78,97.88,63.25,26.32
+30203,Orosi,Paraíso,Cartago,57.4386,301,Bajo,0,47.62,70.05,97.02,57.27,28.63
+30204,Cachí,Paraíso,Cartago,65.5291,214,Medio,0,56.33,74.79,91.77,70.0,29.42
+30205,Llanos de Santa Lucía,Paraíso,Cartago,64.4313,227,Medio,0,46.51,55.08,98.39,70.35,39.41
+30301,Tres Ríos,La Unión,Cartago,88.0137,26,Mayor,0,65.86,63.34,77.61,100.0,58.23
+30302,San Diego,La Unión,Cartago,67.2856,200,Medio,0,61.75,40.77,90.41,67.69,46.49
+30303,San Juan,La Unión,Cartago,96.942,4,Mayor,0,80.96,54.72,99.12,74.21,86.6
+30304,San Rafael,La Unión,Cartago,67.9526,194,Medio,0,62.14,49.46,95.18,58.37,50.92
+30305,Concepción,La Unión,Cartago,74.6592,101,Medio,0,67.32,45.01,97.19,73.91,49.1
+30306,Dulce Nombre,La Unión,Cartago,69.6061,163,Medio,0,60.92,48.88,92.91,75.26,40.96
+30307,San Ramón,La Unión,Cartago,79.1893,68,Mayor,0,85.93,49.4,96.98,51.31,65.33
+30308,Río Azul,La Unión,Cartago,60.0385,276,Bajo,0,67.06,31.08,92.91,68.13,27.6
+30401,Juan Viñas,Jiménez,Cartago,69.4297,167,Medio,0,70.0,79.66,98.19,65.78,27.31
+30402,Tucurrique,Jiménez,Cartago,57.2315,303,Bajo,0,57.91,79.22,86.38,62.67,15.87
+30403,Pejibaye,Jiménez,Cartago,56.2735,312,Bajo,0,65.16,71.53,97.81,54.48,13.96
+30501,Turrialba,Turrialba,Cartago,71.4415,142,Medio,0,73.86,60.61,96.52,64.94,38.65
+30502,La Suiza,Turrialba,Cartago,55.3956,326,Bajo,0,62.85,57.26,93.04,52.77,23.37
+30503,Peralta,Turrialba,Cartago,49.1008,395,Bajo,0,72.58,66.98,92.0,41.91,7.52
+30504,Santa Cruz,Turrialba,Cartago,46.8672,411,Muy bajo,0,57.97,35.32,100.0,44.88,20.41
+30505,Santa Teresita,Turrialba,Cartago,54.1712,342,Bajo,0,74.3,49.46,100.0,50.28,14.15
+30506,Pavones,Turrialba,Cartago,60.3919,272,Bajo,0,81.22,49.22,96.18,56.15,19.85
+30507,Tuis,Turrialba,Cartago,51.3923,369,Bajo,0,67.17,55.46,100.0,45.49,15.08
+30508,Tayutic,Turrialba,Cartago,49.0344,397,Bajo,0,59.93,53.76,91.33,53.33,12.11
+30509,Santa Rosa,Turrialba,Cartago,62.3616,252,Medio,0,69.16,54.37,98.59,60.9,26.14
+30510,Tres Equis,Turrialba,Cartago,45.5818,425,Muy bajo,0,63.47,38.34,95.92,43.86,14.59
+30511,La Isabel,Turrialba,Cartago,56.0402,319,Bajo,0,60.09,56.83,94.71,55.29,24.09
+30512,Chirripó,Turrialba,Cartago,0.0,483,Muy bajo,0,12.97,0.0,100.0,0.0,0.83
+30601,Pacayas,Alvarado,Cartago,65.7321,212,Medio,0,60.42,70.78,96.4,62.65,33.38
+30602,Cervantes,Alvarado,Cartago,73.211,118,Medio,0,71.5,66.98,93.31,76.87,32.08
+30603,Capellades,Alvarado,Cartago,69.5133,166,Medio,0,60.8,69.25,96.89,77.07,28.8
+30701,San Rafael,Oreamuno,Cartago,72.7096,126,Medio,0,61.21,56.39,96.5,67.92,50.41
+30702,Cot,Oreamuno,Cartago,60.1707,275,Bajo,0,20.32,65.04,97.04,78.06,38.57
+30703,Potrero Cerrado,Oreamuno,Cartago,56.2539,314,Bajo,0,60.17,58.83,96.8,42.04,35.41
+30704,Cipreses,Oreamuno,Cartago,57.6499,299,Bajo,0,37.56,49.06,100.0,64.38,37.63
+30705,Santa Rosa,Oreamuno,Cartago,59.5716,284,Bajo,0,56.01,44.88,94.32,66.15,30.51
+30801,Tejar,El Guarco,Cartago,76.1558,90,Medio,0,65.97,62.04,96.41,69.96,50.7
+30802,San Isidro,El Guarco,Cartago,52.4011,357,Bajo,0,37.29,61.58,85.39,60.09,30.58
+30803,Tobosi,El Guarco,Cartago,69.057,173,Medio,0,68.16,76.51,97.49,64.31,30.88
+30804,Patio de Agua,El Guarco,Cartago,51.4719,368,Bajo,0,34.73,97.42,100.0,58.05,10.82
+40101,Heredia,Heredia,Heredia,88.1634,23,Mayor,0,84.9,50.61,84.36,89.53,56.19
+40102,Mercedes,Heredia,Heredia,90.1512,15,Mayor,0,91.34,59.87,97.76,70.36,64.44
+40103,San Francisco,Heredia,Heredia,74.937,97,Medio,0,78.5,39.24,92.54,65.37,53.73
+40104,Ulloa,Heredia,Heredia,80.5162,60,Mayor,0,81.49,46.53,92.97,69.65,57.42
+40105,Vara Blanca,Heredia,Heredia,50.4345,382,Bajo,0,67.82,73.81,100.0,28.6,20.7
+40201,Barva,Barva,Heredia,83.6622,38,Mayor,0,66.79,72.79,90.68,84.14,52.5
+40202,San Pedro,Barva,Heredia,70.7866,152,Medio,0,63.19,48.31,96.37,71.6,44.22
+40203,San Pablo,Barva,Heredia,76.8847,84,Mayor,0,68.2,63.71,98.56,70.92,48.15
+40204,San Roque,Barva,Heredia,82.6462,45,Mayor,0,68.3,61.46,99.01,76.1,57.66
+40205,Santa Lucía,Barva,Heredia,88.0711,24,Mayor,0,93.06,58.53,98.33,65.33,63.24
+40206,San José de la Montaña,Barva,Heredia,70.2726,156,Medio,0,61.19,64.71,96.1,65.61,43.5
+40301,Santo Domingo,Santo Domingo,Heredia,83.4988,40,Mayor,0,77.21,63.66,74.6,81.28,57.69
+40302,San Vicente,Santo Domingo,Heredia,87.2844,27,Mayor,0,86.52,65.79,95.09,72.8,57.69
+40303,San Miguel,Santo Domingo,Heredia,81.2942,56,Mayor,0,83.83,61.26,91.06,71.68,50.2
+40304,Paracito,Santo Domingo,Heredia,71.2694,143,Medio,0,52.73,54.86,98.11,68.14,53.26
+40305,Santo Tomás,Santo Domingo,Heredia,88.778,19,Mayor,0,77.8,66.8,96.77,74.96,64.79
+40306,Santa Rosa,Santo Domingo,Heredia,77.1561,82,Mayor,0,73.47,57.19,96.03,67.38,51.94
+40307,Tures,Santo Domingo,Heredia,70.8232,151,Medio,0,70.2,57.64,95.64,66.5,40.16
+40308,Pará,Santo Domingo,Heredia,74.7644,100,Medio,0,75.5,54.76,89.32,73.86,42.44
+40401,Santa Bárbara,Santa Bárbara,Heredia,88.0276,25,Mayor,0,84.24,66.67,92.97,83.58,51.52
+40402,San Pedro,Santa Bárbara,Heredia,75.7268,94,Medio,0,73.56,56.27,95.84,75.27,41.4
+40403,San Juan,Santa Bárbara,Heredia,81.4503,53,Mayor,0,79.7,59.6,98.09,75.36,47.85
+40404,Jesús,Santa Bárbara,Heredia,74.0838,108,Medio,0,71.38,50.19,94.61,75.58,41.97
+40405,Santo Domingo,Santa Bárbara,Heredia,69.3304,170,Medio,0,74.57,55.21,97.57,65.42,34.4
+40406,Purabá,Santa Bárbara,Heredia,73.9989,110,Medio,0,78.34,54.46,95.83,68.61,40.69
+40501,San Rafael,San Rafael,Heredia,83.2031,41,Mayor,0,83.73,59.47,93.53,73.46,52.8
+40502,San Josecito,San Rafael,Heredia,72.6098,129,Medio,0,72.52,41.31,97.76,63.03,51.85
+40503,Santiago,San Rafael,Heredia,82.9563,42,Mayor,0,78.2,58.61,97.46,72.36,56.18
+40504,Ángeles,San Rafael,Heredia,81.8089,51,Mayor,0,83.96,52.59,99.32,64.93,57.77
+40505,Concepción,San Rafael,Heredia,78.7309,71,Mayor,0,77.96,54.52,98.86,65.64,53.76
+40601,San Isidro,San Isidro,Heredia,94.1387,7,Mayor,0,81.27,69.9,99.22,90.94,57.3
+40602,San José,San Isidro,Heredia,82.2328,46,Mayor,0,71.37,66.52,94.82,70.54,59.32
+40603,Concepción,San Isidro,Heredia,78.6002,72,Mayor,0,60.53,73.69,97.2,72.49,53.11
+40604,San Francisco,San Isidro,Heredia,77.1394,83,Mayor,0,72.4,62.81,98.31,68.09,48.69
+40701,San Antonio,Belén,Heredia,84.783,33,Mayor,0,74.65,71.47,91.13,74.14,58.99
+40702,Ribera,Belén,Heredia,84.6105,36,Mayor,0,83.35,67.79,93.41,67.44,58.76
+40703,Asunción,Belén,Heredia,96.9458,3,Mayor,0,72.72,73.36,89.54,70.38,93.04
+40801,San Joaquín,Flores,Heredia,88.692,20,Mayor,0,82.14,71.85,83.13,76.12,64.01
+40802,Barrantes,Flores,Heredia,92.4621,9,Mayor,0,91.47,87.25,100.0,56.56,70.55
+40803,Llorente,Flores,Heredia,79.5907,64,Mayor,0,74.25,63.75,97.51,70.65,50.64
+40901,San Pablo,San Pablo,Heredia,88.4811,21,Mayor,0,82.73,60.65,99.38,74.26,62.36
+40902,Rincón de Sabanilla,San Pablo,Heredia,86.8908,28,Mayor,0,79.87,58.72,100.0,70.83,64.58
+41001,Puerto Viejo,Sarapiquí,Heredia,36.6716,466,Muy bajo,0,38.56,37.99,89.52,42.86,16.49
+41002,La Virgen,Sarapiquí,Heredia,47.5656,406,Bajo,0,62.95,47.84,87.83,47.82,15.54
+41003,Horquetas,Sarapiquí,Heredia,50.3679,383,Bajo,0,57.7,53.31,84.4,55.95,17.77
+41004,Llanuras del Gaspar,Sarapiquí,Heredia,19.2713,480,Muy bajo,0,39.29,41.84,95.13,0.89,10.27
+41005,Cureña,Sarapiquí,Heredia,8.5516,482,Muy bajo,0,0.0,45.65,100.0,12.29,0.45
+50101,Liberia,Liberia,Guanacaste,68.0593,191,Medio,0,72.66,34.73,90.13,69.48,40.84
+50102,Cañas Dulces,Liberia,Guanacaste,63.0654,238,Medio,0,71.79,55.58,86.46,63.05,28.58
+50103,Mayorga,Liberia,Guanacaste,45.0764,430,Muy bajo,0,72.31,31.75,53.91,52.23,19.83
+50104,Nacascolo,Liberia,Guanacaste,55.0946,331,Bajo,0,66.42,30.05,80.44,56.01,33.75
+50105,Curubandé,Liberia,Guanacaste,55.3253,327,Bajo,0,75.78,41.12,83.53,47.7,28.98
+50201,Nicoya,Nicoya,Guanacaste,63.012,242,Medio,0,81.2,57.73,84.12,57.51,26.58
+50202,Mansión,Nicoya,Guanacaste,59.2248,288,Bajo,0,84.12,58.81,74.29,53.39,23.07
+50203,San Antonio,Nicoya,Guanacaste,55.9405,321,Bajo,0,65.48,70.8,95.56,53.06,15.57
+50204,Quebrada Honda,Nicoya,Guanacaste,50.6033,380,Bajo,0,69.33,70.04,61.28,50.46,17.74
+50205,Sámara,Nicoya,Guanacaste,53.8048,344,Bajo,0,64.74,41.51,72.41,49.54,36.88
+50206,Nosara,Nicoya,Guanacaste,68.3592,186,Medio,0,69.43,45.49,90.0,59.73,48.9
+50207,Belén de Nosarita,Nicoya,Guanacaste,45.921,421,Muy bajo,0,64.39,69.4,89.17,37.12,11.06
+50301,Santa Cruz,Santa Cruz,Guanacaste,66.8742,204,Medio,0,73.49,57.82,87.03,62.3,35.9
+50302,Bolsón,Santa Cruz,Guanacaste,63.8467,230,Medio,0,81.46,63.6,93.29,61.23,18.32
+50303,Veintisiete de Abril,Santa Cruz,Guanacaste,59.7609,281,Bajo,0,75.6,49.78,94.14,50.03,29.2
+50304,Tempate,Santa Cruz,Guanacaste,67.7134,197,Medio,0,77.7,49.73,86.66,49.85,50.07
+50305,Cartagena,Santa Cruz,Guanacaste,76.0824,92,Medio,0,91.38,56.03,93.31,71.99,32.81
+50306,Cuajiniquil,Santa Cruz,Guanacaste,52.2161,361,Bajo,0,52.74,62.4,100.0,33.35,36.88
+50307,Diriá,Santa Cruz,Guanacaste,63.824,232,Medio,0,69.24,65.71,97.08,60.98,25.41
+50308,Cabo Velas,Santa Cruz,Guanacaste,63.407,235,Medio,0,65.59,53.49,69.84,49.49,55.33
+50309,Tamarindo,Santa Cruz,Guanacaste,71.7005,138,Medio,0,79.08,44.59,83.54,55.36,56.8
+50401,Bagaces,Bagaces,Guanacaste,58.1371,293,Bajo,0,72.25,39.24,81.57,54.88,33.25
+50402,Fortuna,Bagaces,Guanacaste,56.6605,308,Bajo,0,63.54,54.24,87.97,58.38,24.0
+50403,Mogote,Bagaces,Guanacaste,58.4617,292,Bajo,0,71.48,50.7,94.59,52.83,26.02
+50404,Río Naranjo,Bagaces,Guanacaste,61.375,261,Bajo,0,75.81,65.15,100.0,59.1,15.21
+50501,Filadelfia,Carrillo,Guanacaste,72.8659,123,Medio,0,76.69,57.27,78.88,76.87,37.67
+50502,Palmira,Carrillo,Guanacaste,72.8084,124,Medio,0,88.27,58.7,87.89,62.74,37.47
+50503,Sardinal,Carrillo,Guanacaste,80.6319,59,Mayor,0,81.15,47.33,86.9,62.16,67.44
+50504,Belén,Carrillo,Guanacaste,59.3642,285,Bajo,0,78.08,52.32,73.62,61.02,23.83
+50601,Cañas,Cañas,Guanacaste,64.6003,223,Medio,0,81.38,42.73,89.25,58.0,33.8
+50602,Palmira,Cañas,Guanacaste,40.1388,457,Muy bajo,0,50.33,68.19,69.55,42.55,12.1
+50603,San Miguel,Cañas,Guanacaste,46.0633,420,Muy bajo,0,64.73,46.11,88.44,38.48,19.93
+50604,Bebedero,Cañas,Guanacaste,51.316,373,Bajo,0,48.8,23.23,80.73,70.17,27.6
+50605,Porozal,Cañas,Guanacaste,27.4567,479,Muy bajo,0,41.83,79.77,0.0,35.49,20.91
+50701,Juntas,Abangares,Guanacaste,56.397,310,Bajo,0,69.08,67.08,78.83,49.63,26.07
+50702,Sierra,Abangares,Guanacaste,51.376,370,Bajo,0,70.21,63.89,92.11,36.01,21.67
+50703,San Juan,Abangares,Guanacaste,57.9095,297,Bajo,0,86.17,62.63,94.36,44.73,16.16
+50704,Colorado,Abangares,Guanacaste,62.7283,245,Medio,0,82.63,83.79,80.84,51.98,20.59
+50801,Tilarán,Tilarán,Guanacaste,77.275,80,Mayor,0,79.4,77.61,98.92,71.07,34.29
+50802,Quebrada Grande,Tilarán,Guanacaste,52.7441,353,Bajo,0,57.36,73.31,100.0,42.86,20.93
+50803,Tronadora,Tilarán,Guanacaste,66.1108,208,Medio,0,74.99,78.22,100.0,53.62,26.91
+50804,Santa Rosa,Tilarán,Guanacaste,58.8343,291,Bajo,0,79.41,57.75,80.02,50.51,26.45
+50805,Líbano,Tilarán,Guanacaste,51.7715,364,Bajo,0,64.84,88.3,100.0,35.97,13.1
+50806,Tierras Morenas,Tilarán,Guanacaste,60.1981,274,Bajo,0,73.13,70.71,96.72,51.44,20.89
+50807,Arenal,Tilarán,Guanacaste,59.9122,279,Bajo,0,58.34,79.9,93.21,49.57,31.14
+50901,Carmona,Nandayure,Guanacaste,72.965,121,Medio,0,81.31,92.27,89.7,60.87,30.14
+50902,Santa Rita,Nandayure,Guanacaste,48.4055,399,Bajo,0,55.94,82.5,56.01,52.42,18.09
+50903,Zapotal,Nandayure,Guanacaste,54.5498,339,Bajo,0,77.03,74.16,100.0,34.24,17.88
+50904,San Pablo,Nandayure,Guanacaste,56.9475,306,Bajo,0,71.71,64.58,88.85,57.4,14.58
+50905,Porvenir,Nandayure,Guanacaste,51.0111,375,Bajo,0,54.64,80.93,100.0,45.72,12.97
+50906,Bejuco,Nandayure,Guanacaste,50.036,388,Bajo,0,70.44,62.84,90.83,28.91,26.06
+51001,La Cruz,La Cruz,Guanacaste,57.3889,302,Bajo,0,70.29,55.42,78.31,58.58,24.1
+51002,Santa Cecilia,La Cruz,Guanacaste,38.7137,460,Muy bajo,0,58.21,32.26,91.16,41.64,9.01
+51003,Garita,La Cruz,Guanacaste,42.6271,448,Muy bajo,0,58.91,59.87,100.0,34.31,9.34
+51004,Santa Elena,La Cruz,Guanacaste,54.7877,335,Bajo,0,71.33,52.05,88.88,54.89,17.35
+51101,Hojancha,Hojancha,Guanacaste,69.3035,171,Medio,0,81.06,86.17,96.02,53.33,28.54
+51102,Monte Romo,Hojancha,Guanacaste,61.1504,265,Bajo,0,79.0,84.82,100.0,53.65,9.16
+51103,Puerto Carrillo,Hojancha,Guanacaste,57.2305,304,Bajo,0,68.44,75.81,78.65,56.71,18.23
+51104,Huacas,Hojancha,Guanacaste,69.367,168,Medio,0,75.4,91.14,100.0,73.37,10.13
+51105,Matambú,Hojancha,Guanacaste,57.2305,305,Bajo,1,,,,,
+60101,Puntarenas,Puntarenas,Puntarenas,70.0571,160,Medio,0,84.06,54.11,75.25,60.02,44.25
+60102,Pitahaya,Puntarenas,Puntarenas,52.7836,352,Bajo,0,80.01,51.0,94.73,42.55,15.46
+60103,Chomes,Puntarenas,Puntarenas,43.6021,440,Muy bajo,0,70.51,35.42,73.93,43.73,15.46
+60104,Lepanto,Puntarenas,Puntarenas,50.1819,385,Bajo,0,73.05,51.2,90.38,39.96,18.93
+60105,Paquera,Puntarenas,Puntarenas,55.9743,320,Bajo,0,73.73,60.32,92.66,41.94,25.54
+60106,Manzanillo,Puntarenas,Puntarenas,50.8493,377,Bajo,0,65.48,47.6,84.54,56.08,15.1
+60107,Guacimal,Puntarenas,Puntarenas,46.413,415,Muy bajo,0,79.23,62.84,88.25,29.11,11.54
+60108,Barranca,Puntarenas,Puntarenas,59.7163,282,Bajo,0,83.16,27.61,91.53,56.13,27.87
+60109,Monteverde,Puntarenas,Puntarenas,65.9182,210,Medio,0,80.79,58.12,93.31,54.27,32.71
+60111,Cóbano,Puntarenas,Puntarenas,56.2563,313,Bajo,0,72.96,49.47,84.92,35.69,40.73
+60112,Chacarita,Puntarenas,Puntarenas,63.1332,236,Medio,0,80.18,33.06,87.29,66.14,28.38
+60113,Chira,Puntarenas,Puntarenas,42.1957,450,Muy bajo,0,42.61,53.43,96.96,48.34,11.59
+60114,Acapulco,Puntarenas,Puntarenas,43.6245,439,Muy bajo,0,53.2,54.84,73.09,43.19,21.65
+60115,El Roble,Puntarenas,Puntarenas,72.6835,127,Medio,0,85.93,40.02,84.68,69.97,41.34
+60116,Arancibia,Puntarenas,Puntarenas,47.7985,402,Bajo,0,92.65,76.06,100.0,22.55,0.0
+60201,Espíritu Santo,Esparza,Puntarenas,71.9512,135,Medio,0,86.08,64.0,85.94,64.44,34.13
+60202,San Juan Grande,Esparza,Puntarenas,57.9637,295,Bajo,0,77.72,55.85,72.41,57.91,22.79
+60203,Macacona,Esparza,Puntarenas,74.9265,98,Medio,0,84.37,65.52,84.48,66.32,40.79
+60204,San Rafael,Esparza,Puntarenas,62.7694,243,Medio,0,75.44,81.81,100.0,45.43,24.88
+60205,San Jerónimo,Esparza,Puntarenas,62.0218,257,Medio,0,96.08,86.66,85.07,43.98,13.04
+60206,Caldera,Esparza,Puntarenas,69.5821,164,Medio,1,86.36,41.67,100.0,62.03,33.72
+60301,Buenos Aires,Buenos Aires,Puntarenas,49.8828,389,Bajo,0,76.02,37.79,95.7,40.67,18.52
+60302,Volcán,Buenos Aires,Puntarenas,46.31,416,Muy bajo,0,73.56,40.98,78.35,48.85,10.4
+60303,Potrero Grande,Buenos Aires,Puntarenas,34.0381,473,Muy bajo,0,58.96,34.21,88.05,30.14,8.77
+60304,Boruca,Buenos Aires,Puntarenas,37.2212,463,Muy bajo,0,58.37,32.84,88.18,35.63,12.12
+60305,Pilas,Buenos Aires,Puntarenas,38.4295,461,Muy bajo,0,61.32,45.52,95.53,31.73,7.88
+60306,Colinas,Buenos Aires,Puntarenas,33.2517,474,Muy bajo,0,67.77,32.38,88.94,21.96,8.24
+60307,Chánguena,Buenos Aires,Puntarenas,36.0287,469,Muy bajo,0,68.92,38.04,93.83,25.05,6.52
+60308,Biolley,Buenos Aires,Puntarenas,43.595,441,Muy bajo,0,73.78,37.17,100.0,36.75,7.33
+60309,Brunka,Buenos Aires,Puntarenas,50.888,376,Bajo,0,83.37,46.74,93.3,41.11,12.12
+60401,Miramar,Montes Oro,Puntarenas,72.224,132,Medio,0,84.11,82.69,90.33,57.36,33.28
+60402,Unión,Montes Oro,Puntarenas,53.8325,343,Bajo,0,75.81,100.0,90.95,36.78,7.84
+60403,San Isidro,Montes Oro,Puntarenas,65.3503,216,Medio,0,74.86,77.66,97.79,54.28,25.77
+60501,Puerto Cortés,Osa,Puntarenas,61.2573,262,Bajo,0,87.75,55.78,72.1,44.32,36.01
+60502,Palmar,Osa,Puntarenas,53.1717,349,Bajo,0,81.06,49.92,78.7,42.39,23.25
+60503,Sierpe,Osa,Puntarenas,34.5371,472,Muy bajo,0,57.17,46.22,81.28,20.63,18.36
+60504,Bahía Ballena,Osa,Puntarenas,50.157,386,Bajo,0,62.09,42.16,63.49,47.41,35.9
+60505,Piedras Blancas,Osa,Puntarenas,40.7071,455,Muy bajo,0,63.34,33.98,78.35,42.08,14.31
+60506,Bahía Drake,Osa,Puntarenas,42.6804,447,Muy bajo,0,53.39,71.69,100.0,18.05,24.28
+60601,Quepos,Aguirre,Puntarenas,64.4599,225,Medio,0,82.3,40.11,74.32,57.55,40.86
+60602,Savegre,Aguirre,Puntarenas,51.3664,372,Bajo,0,66.76,69.29,56.27,46.64,27.72
+60603,Naranjito,Aguirre,Puntarenas,60.3207,273,Bajo,0,82.68,52.46,98.01,49.04,23.16
+60701,Golfito,Golfito,Puntarenas,53.2104,348,Bajo,0,68.09,28.03,87.23,50.75,30.84
+60702,Puerto Jiménez,Golfito,Puntarenas,43.0779,443,Muy bajo,0,69.75,35.09,81.99,33.96,20.68
+60703,Guaycará,Golfito,Puntarenas,49.6025,393,Bajo,0,77.1,36.65,80.69,40.82,23.97
+60704,Pavón,Golfito,Puntarenas,32.9106,475,Muy bajo,0,56.97,38.19,92.34,12.04,21.31
+60801,San Vito,Coto Brus,Puntarenas,61.9118,258,Bajo,0,75.83,49.18,95.06,63.43,21.23
+60802,Sabalito,Coto Brus,Puntarenas,47.7946,403,Bajo,0,70.42,24.95,97.73,48.08,15.29
+60803,Aguabuena,Coto Brus,Puntarenas,52.4585,355,Bajo,0,84.38,41.52,92.68,42.45,16.28
+60804,Limoncito,Coto Brus,Puntarenas,36.3013,467,Muy bajo,0,58.78,48.58,88.29,26.38,11.77
+60805,Pittier,Coto Brus,Puntarenas,32.4871,476,Muy bajo,0,40.74,47.86,100.0,30.87,7.49
+60806,Gutiérrez Brown,Coto Brus,Puntarenas,41.6091,453,Muy bajo,0,54.14,22.18,88.88,54.79,11.77
+60901,Parrita,Parrita,Puntarenas,53.6883,345,Bajo,0,70.17,52.24,78.37,46.68,28.0
+61001,Corredor,Corredores,Puntarenas,49.1281,394,Bajo,0,68.47,39.49,78.06,42.54,27.85
+61002,La Cuesta,Corredores,Puntarenas,52.3514,358,Bajo,0,63.19,25.6,79.69,60.86,27.27
+61003,Canoas,Corredores,Puntarenas,43.9615,437,Muy bajo,0,63.98,21.92,71.81,49.03,22.9
+61004,Laurel,Corredores,Puntarenas,45.1526,429,Muy bajo,0,66.69,38.1,85.09,40.56,19.09
+61101,Jacó,Garabito,Puntarenas,70.2195,158,Medio,0,77.44,42.77,74.9,50.12,64.11
+61102,Tárcoles,Garabito,Puntarenas,56.2076,315,Bajo,0,64.56,51.39,78.78,51.66,33.79
+70101,Limón,Limón,Limón,64.7602,222,Medio,0,78.64,40.43,71.71,68.31,35.17
+70102,Valle La Estrella,Limón,Limón,28.6738,478,Muy bajo,0,45.51,46.15,92.73,17.57,11.27
+70103,Río Blanco,Limón,Limón,46.7642,413,Muy bajo,0,64.81,37.83,77.06,49.34,19.68
+70104,Matama,Limón,Limón,48.9184,398,Bajo,0,70.86,47.18,84.89,44.02,17.84
+70201,Guápiles,Pococí,Limón,67.8596,195,Medio,0,78.9,47.89,72.85,74.91,32.45
+70202,Jiménez,Pococí,Limón,62.757,244,Medio,0,76.3,52.93,86.79,63.43,24.96
+70203,Rita,Pococí,Limón,43.6769,438,Muy bajo,0,57.95,43.82,85.61,44.88,15.58
+70204,Roxana,Pococí,Limón,44.9794,432,Muy bajo,0,57.55,33.12,91.38,51.97,14.19
+70205,Cariari,Pococí,Limón,47.9215,401,Bajo,0,61.9,39.18,83.52,53.56,17.26
+70206,Colorado,Pococí,Limón,28.8755,477,Muy bajo,0,42.46,25.04,96.51,23.67,15.49
+70207,Colonia,Pococí,Limón,65.7243,213,Medio,0,76.17,44.31,93.5,70.15,26.4
+70301,Siquirres,Siquirres,Limón,53.2337,347,Bajo,0,65.06,39.36,84.4,56.56,24.19
+70302,Pacuarito,Siquirres,Limón,40.1629,456,Muy bajo,0,53.84,33.67,89.21,43.17,14.67
+70303,Florida,Siquirres,Limón,49.7794,392,Bajo,0,62.58,62.18,94.83,42.9,16.71
+70304,Germania,Siquirres,Limón,46.1588,419,Muy bajo,0,72.78,49.35,64.28,45.55,16.48
+70305,Cairo,Siquirres,Limón,39.4818,459,Muy bajo,0,54.55,39.77,81.89,39.17,16.97
+70306,Alegría,Siquirres,Limón,55.0445,334,Bajo,0,61.43,55.06,91.4,57.64,20.62
+70401,Bratsi,Talamanca,Limón,34.7956,471,Muy bajo,0,51.31,48.34,85.59,27.9,13.79
+70402,Sixaola,Talamanca,Limón,35.3966,470,Muy bajo,0,39.29,45.93,85.04,41.61,12.72
+70403,Cahuita,Talamanca,Limón,46.1737,418,Muy bajo,0,58.59,47.42,67.33,41.91,30.44
+70404,Telire,Talamanca,Limón,16.1621,481,Muy bajo,0,24.44,42.92,95.38,12.05,3.13
+70501,Matina,Matina,Limón,45.736,422,Muy bajo,0,62.33,55.26,84.02,43.99,13.88
+70502,Batán,Matina,Limón,50.7253,379,Bajo,0,67.49,54.45,80.41,49.22,18.74
+70503,Carrandi,Matina,Limón,46.838,412,Muy bajo,0,67.17,56.01,76.34,46.91,13.03
+70601,Guácimo,Guácimo,Limón,55.4568,324,Bajo,0,76.66,38.92,78.98,59.99,19.83
+70602,Mercedes,Guácimo,Limón,56.8013,307,Bajo,0,70.6,58.72,97.74,39.52,30.68
+70603,Pocora,Guácimo,Limón,52.9821,350,Bajo,0,74.69,47.81,78.82,54.23,17.27
+70604,Río Jiménez,Guácimo,Limón,45.5678,426,Muy bajo,0,56.79,40.93,84.97,53.0,14.75
+70605,Duacarí,Guácimo,Limón,41.8754,452,Muy bajo,0,48.86,38.71,98.9,47.67,11.94

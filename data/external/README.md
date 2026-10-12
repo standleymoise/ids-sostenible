@@ -2,16 +2,31 @@
 
 ## MIDEPLAN · Índice de Desarrollo Social 2017 (la edición que usó la tesis)
 
-Archivos: `mideplan-ids-2017-distritos.csv` (482 distritos) y `mideplan-ids-2017-cantones.csv` (82 cantones).
-**Fuente:** MIDEPLAN, *Índice de Desarrollo Social 2017*, libro «IDS 2017.xlsx» (hojas «IDS segun PCD», «IDS dimensiones», «IDS AMNDR», «IDS cantonal»).
+Archivos: `mideplan-ids-2017-distritos.csv` (483 distritos) y `mideplan-ids-2017-cantones.csv` (82 cantones).
+
+**Fuentes** (ambas de MIDEPLAN, Área de Análisis del Desarrollo):
+1. Libro «IDS 2017.xlsx» (hojas «IDS segun PCD», «IDS dimensiones», «IDS AMNDR», «IDS cantonal»): valores.
+2. Informe *Índice de Desarrollo Social 2017* (PDF, 128 páginas, marzo de 2018): metodología, pesos, distritos imputados y el distrito que falta en el libro.
+
 **Generado con:** `python tools/build_mideplan_2017.py "ruta/IDS 2017.xlsx"`.
 
-- Distritos: `codigo`, `distrito`, `canton`, `provincia`, `ids` (0–100), `posicion`, `area` (Mayor / Medio / Bajo / Muy bajo desarrollo relativo) y las 5 dimensiones (`salud`, `participacion`, `seguridad`, `educacion`, `economico`).
+### Metodología (informe, §1.6–1.10)
+- **5 dimensiones, 19 indicadores y 14 índices.** Período de referencia 2011–2016. Cada indicador se estandariza de 0 a 100 (mín–máx, invertido si es negativo).
+- **Pesos oficiales (Ecuación 2, p. 25):** IDS 2017 = **0,279**·Económica + **0,266**·Educación + **0,216**·Salud + **0,116**·Participación electoral + **0,123**·Seguridad. Se obtuvieron estadísticamente (correlaciones, covarianzas y componentes principales), no por criterio de expertos. El resultado se vuelve a estandarizar a 0–100. Con estos pesos se reproduce el IDS de los datos con r > 0,9999 (`tests/mideplan.test.js`).
+- **Es un índice relativo:** el informe aclara que no establece umbrales; compara distritos y cantones entre sí. Por eso conviene validar con medidas de orden (Spearman, quintiles) y no con diferencias absolutas.
+- **El IDS cantonal no se obtiene agregando distritos:** se calcula de nuevo para cada indicador a nivel de cantón.
+- Cobertura: **483 distritos** (excluye la Isla del Coco, deshabitada) y **82 cantones** (Río Cuarto es nuevo en 2017). No comparable con 2013 ni con 2023.
+
+### Columnas
+- Distritos: `codigo`, `distrito`, `canton`, `provincia`, `ids` (0–100), `posicion`, `area` (Mayor / Medio / Bajo / Muy bajo desarrollo relativo), **`imputado`** (1 si MIDEPLAN imputó el IDS) y las 5 dimensiones (`salud`, `participacion`, `seguridad`, `educacion`, `economico`).
 - Cantones: `codigo`, `canton`, `provincia`, `ids`. **No trae dimensiones.**
-- **Tres distritos sin dimensiones** (La Amistad 11912, San Lorenzo 20214, Matambú 51105): el libro trae su IDS pero no sus dimensiones; quedan con las dimensiones vacías.
-- **Cobertura:** 482 distritos (la tabla comparativa de MIDEPLAN habla de 483) y 82 cantones; no incluye los cantones creados después (612 y 613). 480 de los 482 códigos existen en la división territorial actual (`60109` y `60702` ya no).
-- **Pesos 2017:** MIDEPLAN dice que usó pesos distintos para cada dimensión pero el libro no los trae. Ajustando por mínimos cuadrados el IDS sobre sus 5 dimensiones se obtiene R² = 0,99999995 y **pesos implícitos aproximados** (estimación nuestra, no publicada): económica ≈ 0,28, educación ≈ 0,27, salud ≈ 0,22, seguridad ≈ 0,12, participación electoral ≈ 0,12. Sirve como comprobación de integridad.
-- **No es comparable con la edición 2023** (más distritos y cambios metodológicos, según MIDEPLAN); por eso se guardan ambas por separado.
+
+### Salvedades
+- **5 distritos tienen el IDS imputado, no medido** (informe, Tabla 1): Quitirrisí (promedio de Jaris y Tarbaca), La Amistad (promedio de Pejibaye y Platanares), San Lorenzo de San Ramón (igual a Ángeles), Matambú (mínimo de Hojancha) y Caldera (promedio de Espíritu Santo, San Juan Grande y Puntarenas centro). Están marcados `imputado = 1` y **la pantalla de validación los excluye**.
+- **Río Cuarto (21601)** no está en el libro de Excel, pero sí en el informe (IDS 44,75; posición 434; nivel «muy bajo»): se añadió desde el PDF (2 decimales) y no tiene dimensiones. El informe dice que su código es 21601 «en lugar de 20306».
+- Otros 3 distritos (La Amistad, San Lorenzo, Matambú) no traen dimensiones en el libro.
+- 481 de los 483 códigos existen en la división actual; `60109` (Monteverde) y `60702` (Puerto Jiménez) hoy son cantones (612 y 613).
+- **Cita:** MIDEPLAN (2018). *Índice de Desarrollo Social 2017*. San José: Ministerio de Planificación Nacional y Política Económica, Área de Análisis del Desarrollo.
 
 ## MIDEPLAN · Índice de Desarrollo Social 2023
 

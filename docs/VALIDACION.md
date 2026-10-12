@@ -30,7 +30,7 @@ sería redundante; si no correlacionara con ninguno, no estaría midiendo desarr
 
 ## 3. Datos externos
 
-**MIDEPLAN ya está incluido en la app** (`data/external/`, ver su README), en dos ediciones: **2017** (la que usó la tesis; 482 distritos y 82 cantones) y **2023** (490 y 84), con las 5 dimensiones por distrito y códigos oficiales. La pantalla *Validación* usa por defecto la **2017**; ambas ediciones **no son comparables entre sí**, y conviene reportar los resultados con la edición más cercana a la fecha de las evaluaciones. Para los otros dos índices: al 12 de octubre de 2026, MIDEPLAN publica una hoja de cálculo (XLS) con el IDS 2023; el Atlas del PNUD se encontró solo como PDF y herramienta interactiva (sin CSV directo); del IPS cantonal no se encontró una tabla descargable. Hay que preparar un CSV con lo que se obtenga:
+**MIDEPLAN ya está incluido en la app** (`data/external/`, ver su README), en dos ediciones: **2017** (la que usó la tesis; 483 distritos y 82 cantones) y **2023** (490 y 84), con las 5 dimensiones por distrito y códigos oficiales. La pantalla *Validación* usa por defecto la **2017**; ambas ediciones **no son comparables entre sí**, y conviene reportar los resultados con la edición más cercana a la fecha de las evaluaciones. Para los otros dos índices: al 12 de octubre de 2026, MIDEPLAN publica una hoja de cálculo (XLS) con el IDS 2023; el Atlas del PNUD se encontró solo como PDF y herramienta interactiva (sin CSV directo); del IPS cantonal no se encontró una tabla descargable. Hay que preparar un CSV con lo que se obtenga:
 
 - **MIDEPLAN IDS 2023:** la página oficial publica el paquete de datos con valores distritales, cantonales y regionales (hoja de cálculo y PDF metodológico): https://www.mideplan.go.cr/indice-desarrollo-social
 - **Atlas de Desarrollo Humano Cantonal:** PDF e herramienta interactiva en https://www.undp.org/es/costa-rica/atlas-de-desarrollo-humano-cantonal ; para la base completa, solicitar a la Escuela de Estadística (UCR) o a Sinirube.
@@ -83,7 +83,8 @@ Cada evaluación guarda la versión del instrumento (1.0 tesis; 1.1 con la polí
 
 - **Instrumento:** versión **1.1** (dimensión política ampliada). La pantalla *Validación* filtra por defecto las evaluaciones 1.1; las de la 1.0 se excluyen para no mezclar versiones (se puede cambiar el filtro).
 - **Índice de contraste principal:** IDS distrital de MIDEPLAN **2017** (el de la tesis) y, como análisis de sensibilidad, **2023**.
-- **Limitaciones del 2017:** el cantonal no trae dimensiones; 3 distritos sin dimensiones; 2 códigos que ya no existen.
+- **Limitaciones del 2017:** el cantonal no trae dimensiones; 5 distritos tienen el IDS **imputado** (se excluyen automáticamente) y Río Cuarto no tiene dimensiones; 2 códigos hoy son cantones. El informe oficial (128 p.) está citado en `data/external/README.md`.
+- **Es un índice relativo** (MIDEPLAN: «no se pretende establecer umbrales; se comparan áreas entre sí»): por eso la escala común por defecto es el **percentil** y las medidas principales son de orden (Spearman, quintiles). Las medidas de valor absoluto (CCC, Bland–Altman, rango de cercanía) deben leerse con cautela.
 - Las evaluaciones guardan el código oficial del distrito, así que el cruce funciona con ambas ediciones.
 
 ## 5. Plan de análisis previo (propuesta; fijarlo antes de ver los datos)

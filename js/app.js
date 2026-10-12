@@ -421,7 +421,12 @@ async function runValidation() {
     const text = (u) => fetch(u).then((r) => r.text());
     const ed = valState.edition;
     const [d, c] = await Promise.all([text(`data/external/mideplan-ids-${ed}-distritos.csv`), text(`data/external/mideplan-ids-${ed}-cantones.csv`)]);
-    const build = (level, map) => zones.filter((z) => z.level === level && map.has(String(z.code))).map((z) => {
+    let excludedImputed = 0;
+    const build = (level, map) => zones.filter((z) => {
+      if (z.level !== level || !map.has(String(z.code))) return false;
+      if (map.get(String(z.code)).imputed) { excludedImputed += 1; return false; } // IDS imputado por MIDEPLAN, no medido
+      return true;
+    }).map((z) => {
       const m = map.get(String(z.code));
       return { name: z.name, ids: z.ids, dims: z.dims, ext: { ids_mideplan: m.ids }, extDims: m.dims };
     });
@@ -430,7 +435,7 @@ async function runValidation() {
       .map(([title, rows]) => ({ title, n: rows.length, result: rows.length >= 3 ? compareIndices(rows, opts) : null,
         matrix: rows.length >= 3 && rows.some((r) => Object.values(r.extDims).some(Number.isFinite)) ? dimensionMatrix(rows, ['salud', 'participacion', 'seguridad', 'educacion', 'economico']) : null }));
     valState.sections = sections;
-    valState.info = { n: sections.reduce((a, s) => a + s.n, 0), unmatched: [], indices: ['ids_mideplan'] };
+    valState.info = { n: sections.reduce((a, s) => a + s.n, 0), unmatched: [], indices: ['ids_mideplan'], excludedImputed };
     valState.result = null;
   } else {
     const parsed = parseCsv(valState.text);
@@ -554,13 +559,14 @@ function viewValidate() {
       h('div', { class: 'row' }, h('button', { class: 'btn primary', type: 'button', onclick: runValidation }, t('runValidate')))),
   ];
   if (valState.sections) {
+    if (info?.excludedImputed) content.push(h('p', { class: 'muted' }, `${t('imputedNote')}: ${info.excludedImputed}`));
     if (!valState.sections.length) content.push(h('p', { class: 'neg' }, t('noMideplan')));
     for (const sec of valState.sections) {
       content.push(h('h2', {}, `${t(sec.title)} · ${sec.n} ${t('zonesUsed')}`));
       if (!sec.result) { content.push(h('p', { class: 'muted' }, t('noZones'))); continue; }
       for (const [key, r] of Object.entries(sec.result.indices)) content.push(indexCard(key, r));
       if (sec.matrix) content.push(h('div', { class: 'card' }, matrixTable(sec.matrix)));
-      content.push(h('div', { class: 'row' }, h('button', { class: 'btn', type: 'button', onclick: () => download(`validacion-mideplan-${sec.title}.md`, toMarkdown(sec.result, { scale: valState.scale, tol: valState.tol, threshold: 0.8, version: '1.6.0' }), 'text/markdown') }, t('downloadReport'))));
+      content.push(h('div', { class: 'row' }, h('button', { class: 'btn', type: 'button', onclick: () => download(`validacion-mideplan-${sec.title}.md`, toMarkdown(sec.result, { scale: valState.scale, tol: valState.tol, threshold: 0.8, version: '1.6.1' }), 'text/markdown') }, t('downloadReport'))));
     }
     content.push(h('p', { class: 'muted' }, t('validateNote')));
   }
@@ -570,7 +576,7 @@ function viewValidate() {
   }
   if (result) {
     for (const [key, r] of Object.entries(result.indices)) content.push(indexCard(key, r));
-    content.push(h('div', { class: 'row' }, h('button', { class: 'btn', type: 'button', onclick: () => download('validacion-ids.md', toMarkdown(result, { scale: valState.scale, tol: valState.tol, threshold: 0.8, version: '1.6.0' }), 'text/markdown') }, t('downloadReport'))));
+    content.push(h('div', { class: 'row' }, h('button', { class: 'btn', type: 'button', onclick: () => download('validacion-ids.md', toMarkdown(result, { scale: valState.scale, tol: valState.tol, threshold: 0.8, version: '1.6.1' }), 'text/markdown') }, t('downloadReport'))));
     content.push(h('p', { class: 'muted' }, t('validateNote')));
   }
   content.push(h('h2', {}, t('reliabilityTitle')), reliabilityBlock(), h('h2', {}, t('internalTitle')), internalBlock());
