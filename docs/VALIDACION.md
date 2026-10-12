@@ -75,12 +75,17 @@ Si la dimensión ambiental correlacionara fuerte con todo, sugeriría que el ins
 
 **Cruce por código.** Al crear la evaluación elegí provincia → cantón → distrito (lista oficial, 490 distritos). El cruce usa el código oficial; no los nombres, que se repiten («San Juan» existe en varios cantones). Evaluaciones de un distrito se comparan con el IDS distrital; las de un cantón completo, con el IDS cantonal. No se promedian distritos para obtener un cantón.
 
+## 4c. Versión del instrumento
+
+Cada evaluación guarda la versión del instrumento (1.0 tesis; 1.1 con la política ampliada). La validación contra MIDEPLAN usa el IDS normalizado de cada evaluación calculado con **su** versión; las dimensiones ambiental, social y económica son idénticas en ambas, pero el IDS global y la dimensión política **no** son estrictamente comparables entre versiones. Para un estudio de campo, use **una sola versión** para todas las zonas y repórtela. Para fiabilidad entre evaluadores, todas las evaluaciones comparadas deben usar la misma versión.
+
 ## 5. Plan de análisis previo (propuesta; fijarlo antes de ver los datos)
 
 - **H1.** ρ de Spearman ≥ 0,5 entre el IDS y cada índice externo (IC 95 % que excluya 0,3).
 - **H2.** κ ponderado (cuadrático) en quintiles ≥ 0,4 y ≥ 85 % de las zonas a ±1 quintil.
 - **H3.** ICC(2,k) entre evaluadores ≥ 0,75 y α de Cronbach ≥ 0,7.
 - **H4.** En el contraste de grupos conocidos, el IDS del quintil 5 es mayor que el del quintil 1 (p < 0,05).
+- **H6 (solo versión 1.1).** La dimensión política 1.1 correlaciona (ρ ≥ 0,3) con el nivel del IGSM de la Contraloría de la municipalidad (ver [DIMENSION-POLITICA.md](DIMENSION-POLITICA.md)).
 - **H5 (convergente/discriminante).** ρ ≥ 0,4 entre la dimensión social de la escala y salud, educación y seguridad de MIDEPLAN; ρ ≥ 0,4 entre económica y económica; ρ < 0,3 entre ambiental y cada dimensión de MIDEPLAN.
 - Analizar cada índice por separado; **corregir por comparaciones múltiples** (Holm) al declarar «significativo» en varios.
 - Reportar siempre n, intervalos y los resultados no favorables. Si H1 se cumple solo con un índice, decirlo.

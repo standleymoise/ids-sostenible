@@ -1,0 +1,199 @@
+{
+  "_status": "PROPUESTA de la implementación web (instrumento 1.1). No forma parte de la tesis; los pesos son provisionales y deben validarse con un panel de expertos. Fuente de verdad de los indicadores nuevos de la dimensión política; se compila con tools/build_instrument_1_1.py.",
+  "keep": {
+    "id": "pol01",
+    "weight": 0.25
+  },
+  "indicators": [
+    {
+      "id": "pol02",
+      "weight": 0.2,
+      "sdg": [
+        16,
+        11
+      ],
+      "name": {
+        "es": "Participación ciudadana",
+        "en": "Citizen participation"
+      },
+      "items": [
+        {
+          "weight": 0.25,
+          "es": "Los concejos de distrito o el concejo municipal sesionan con regularidad y de forma abierta al público",
+          "en": "District councils or the municipal council meet regularly and are open to the public"
+        },
+        {
+          "weight": 0.25,
+          "es": "Se realizan audiencias públicas o cabildos abiertos al menos una vez al año",
+          "en": "Public hearings or open town meetings are held at least once a year"
+        },
+        {
+          "weight": 0.25,
+          "es": "La comunidad participa en definir las prioridades de inversión (presupuesto participativo, consultas sobre el plan o el presupuesto)",
+          "en": "The community takes part in setting investment priorities (participatory budgeting, consultations on the plan or budget)"
+        },
+        {
+          "weight": 0.15,
+          "es": "Hay organizaciones comunales activas (asociaciones de desarrollo, comités) que se toman en cuenta en las decisiones locales",
+          "en": "Active community organisations (development associations, committees) are taken into account in local decisions"
+        },
+        {
+          "weight": 0.1,
+          "es": "Existen espacios de participación para jóvenes y mujeres (por ejemplo, comité cantonal de la persona joven, redes de mujeres)",
+          "en": "There are participation spaces for young people and women (for example, a cantonal youth committee, women's networks)"
+        }
+      ]
+    },
+    {
+      "id": "pol03",
+      "weight": 0.2,
+      "sdg": [
+        16
+      ],
+      "name": {
+        "es": "Transparencia y rendición de cuentas",
+        "en": "Transparency and accountability"
+      },
+      "items": [
+        {
+          "weight": 0.3,
+          "es": "La municipalidad publica su presupuesto, sus planes y sus informes de ejecución de forma accesible a la ciudadanía",
+          "en": "The municipality publishes its budget, plans and execution reports in a way citizens can access"
+        },
+        {
+          "weight": 0.2,
+          "es": "Las actas del concejo municipal y las decisiones importantes son públicas y fáciles de consultar",
+          "en": "Municipal council minutes and major decisions are public and easy to consult"
+        },
+        {
+          "weight": 0.25,
+          "es": "Las autoridades locales presentan cada año un informe de rendición de cuentas a la comunidad",
+          "en": "Local authorities present an annual accountability report to the community"
+        },
+        {
+          "weight": 0.25,
+          "es": "Hay un canal conocido para consultas, quejas o denuncias, y la municipalidad responde en plazos razonables",
+          "en": "There is a well-known channel for queries, complaints or reports, and the municipality answers within reasonable time"
+        },
+        {
+          "weight": -0.2,
+          "es": "Los entes de control (Contraloría, auditoría interna) han señalado incumplimientos graves recientes que no se han corregido",
+          "en": "Oversight bodies (comptroller, internal audit) have recently flagged serious breaches that have not been corrected"
+        }
+      ]
+    },
+    {
+      "id": "pol04",
+      "weight": 0.15,
+      "sdg": [
+        11,
+        13
+      ],
+      "name": {
+        "es": "Planificación y ordenamiento territorial",
+        "en": "Planning and land-use management"
+      },
+      "items": [
+        {
+          "weight": 0.3,
+          "es": "Existe un plan de desarrollo local vigente (plan cantonal o distrital de desarrollo)",
+          "en": "A current local development plan exists (cantonal or district development plan)"
+        },
+        {
+          "weight": 0.25,
+          "es": "Existe un plan regulador u otro instrumento de ordenamiento territorial vigente",
+          "en": "A current land-use plan or similar territorial planning instrument exists"
+        },
+        {
+          "weight": 0.2,
+          "es": "Al plan de desarrollo se le da seguimiento con metas e indicadores conocidos",
+          "en": "The development plan is monitored with known targets and indicators"
+        },
+        {
+          "weight": 0.25,
+          "es": "Hay un plan de gestión del riesgo de desastres y una comisión de emergencias que funciona",
+          "en": "There is a disaster-risk management plan and a working emergency committee"
+        },
+        {
+          "weight": -0.2,
+          "es": "Se otorgan permisos de construcción en zonas de riesgo o de protección",
+          "en": "Building permits are granted in hazard or protected areas"
+        }
+      ]
+    },
+    {
+      "id": "pol05",
+      "weight": 0.1,
+      "sdg": [
+        16,
+        11
+      ],
+      "name": {
+        "es": "Capacidad de gestión local",
+        "en": "Local management capacity"
+      },
+      "items": [
+        {
+          "weight": 0.35,
+          "es": "Los servicios municipales básicos (recolección de residuos, alumbrado, mantenimiento vial) se prestan con regularidad",
+          "en": "Basic municipal services (waste collection, street lighting, road maintenance) are delivered regularly"
+        },
+        {
+          "weight": 0.25,
+          "es": "Los trámites municipales (permisos, patentes) se resuelven en plazos razonables",
+          "en": "Municipal procedures (permits, licences) are resolved within reasonable time"
+        },
+        {
+          "weight": 0.25,
+          "es": "La municipalidad cuenta con personal técnico para gestión vial, ambiental y planificación",
+          "en": "The municipality has technical staff for roads, environment and planning"
+        },
+        {
+          "weight": 0.15,
+          "es": "La municipalidad participa en alianzas o convenios con instituciones, universidades u organizaciones para proyectos locales",
+          "en": "The municipality takes part in partnerships or agreements with institutions, universities or organisations for local projects"
+        }
+      ]
+    },
+    {
+      "id": "pol06",
+      "weight": 0.1,
+      "sdg": [
+        16,
+        10
+      ],
+      "name": {
+        "es": "Justicia y no discriminación",
+        "en": "Justice and non-discrimination"
+      },
+      "items": [
+        {
+          "weight": 0.4,
+          "es": "La población tiene acceso a servicios de justicia (juzgado, defensa pública, fiscalía) en la zona o a una distancia razonable",
+          "en": "People have access to justice services (court, public defence, prosecutor) in the area or within reasonable distance"
+        },
+        {
+          "weight": 0.3,
+          "es": "Existen mecanismos locales de resolución alterna de conflictos (mediación comunitaria, conciliación)",
+          "en": "Local alternative dispute-resolution mechanisms exist (community mediation, conciliation)"
+        },
+        {
+          "weight": 0.3,
+          "es": "Las políticas y los servicios locales se aplican sin discriminación por género, origen, discapacidad o condición social",
+          "en": "Local policies and services are applied without discrimination by gender, origin, disability or social status"
+        },
+        {
+          "weight": -0.2,
+          "es": "Hay denuncias frecuentes de abuso de autoridad o discriminación por parte de funcionarios públicos",
+          "en": "There are frequent reports of abuse of authority or discrimination by public officials"
+        }
+      ]
+    }
+  ],
+  "rename": {
+    "pol01": {
+      "es": "Política general",
+      "en": "General politics"
+    }
+  }
+}

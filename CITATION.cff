@@ -6,7 +6,7 @@ authors:
   - family-names: "Moïse"
     given-names: "Standley"
     affiliation: "Universidad EARTH, Guácimo, Limón, Costa Rica"
-version: 1.4.0
+version: 1.5.0
 date-released: "2026-10-12"
 license: MIT
 repository-code: "https://github.com/standleymoise/ids-sostenible"

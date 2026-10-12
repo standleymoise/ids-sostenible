@@ -17,7 +17,7 @@ conviene decidir antes de una versión 2.0. Son observaciones, no veredictos.
 | `eco09` Aerolínea nacional | Depende de la geografía y no aplica a la mayoría de zonas pequeñas. Peso bajo (3 %), pero introduce sesgo contra zonas sin aeropuerto. |
 | `soc06` | Mezcla percepciones («el pueblo se siente bien») con hechos («homicidios frecuentes»). Las percepciones dependen de quién responde. |
 | `soc06_5` / `soc09_5` | **«Homicidios frecuentes» aparece dos veces** (Bienestar del pueblo y Seguridad): cuenta doble en el IDS (−0,1 × 0,10 + −0,05 × 0,15 en la dimensión social). La web las mantiene iguales (se responden a la vez) para evitar contradicciones, pero conviene decidir si se deja una sola. |
-| `pol01` | Un solo indicador (7 afirmaciones) con 10 % del IDS. La justificación de la tesis (poco margen local frente a acuerdos internacionales) es discutible: gobernanza local, participación y transparencia son centrales en índices como el IGSM y el CPI. |
+| `pol01` | Un solo indicador (7 afirmaciones) con 10 % del IDS. La justificación de la tesis (poco margen local frente a acuerdos internacionales) es discutible: gobernanza local, participación y transparencia son centrales en índices como el IGSM y el CPI. **Atendido en el instrumento 1.1** (política ampliada a 6 indicadores; ver [DIMENSION-POLITICA.md](DIMENSION-POLITICA.md)); queda pendiente reconsiderar su peso del 10 %. |
 
 ## B. Temas que otros índices cubren y esta escala no
 

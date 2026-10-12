@@ -13,7 +13,7 @@ asesorado por MSc. Victor Hugo Morales Peña.
 
 ## Qué hace
 
-- 41 indicadores y 180 afirmaciones Sí/No en cuatro dimensiones: **ambiental (40 %)**, **social (30 %)**, **económica (20 %)** y **política (10 %)**.
+- **Dos versiones del instrumento:** la **1.0** de la tesis (41 indicadores, 180 afirmaciones) y la **1.1** con la dimensión política ampliada (46 indicadores, 203 afirmaciones; propuesta, ver [`docs/DIMENSION-POLITICA.md`](docs/DIMENSION-POLITICA.md)). Cuatro dimensiones: **ambiental (40 %)**, **social (30 %)**, **económica (20 %)** y **política (10 %)**.
 - IDS por indicador, por dimensión y global, en la **escala original** de la tesis y en una **escala normalizada 0–1**.
 - **Rigor metodológico** (v1.1): análisis de sensibilidad de los pesos (Monte Carlo ±20 %), equilibrio entre dimensiones (la dimensión más débil), y contribución por ODS (mapeo propuesto).
 - **Fiabilidad**: compara evaluaciones de varias personas sobre la misma zona (κ de Fleiss, acuerdo por afirmación, consenso por mayoría) o de fechas distintas.

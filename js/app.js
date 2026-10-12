@@ -9,7 +9,7 @@ import { UI, DIM_ORDER, DIM_ADVICE, SDG_NAMES } from './i18n.js';
 
 const STORE = 'ids.v1';
 const $app = document.getElementById('app');
-let model, geo, sdgMap, cIndex, texts = {}, state = { lang: 'es', evals: [] }, deferredInstall = null, cmpSel = new Set(), valState = { source: 'mideplan', text: '', scale: 'percentile', tol: 10, result: null, info: null, demo: false, sections: null };
+let model, models = {}, geo, sdgMap, cIndex, texts = {}, state = { lang: 'es', evals: [] }, deferredInstall = null, cmpSel = new Set(), valState = { source: 'mideplan', text: '', scale: 'percentile', tol: 10, result: null, info: null, demo: false, sections: null };
 
 // ---------- utilidades ----------
 const h = (tag, attrs = {}, ...kids) => {
@@ -32,6 +32,8 @@ const tx = (k) => texts[state.lang]?.[k] ?? texts.es?.[k] ?? k;
 const pct = (x) => (x === null || x === undefined ? '–' : `${(x * 100).toFixed(1)} %`);
 const num = (x) => (x === null || x === undefined ? '–' : x.toFixed(3));
 const uid = () => Date.now().toString(36) + Math.random().toString(36).slice(2, 7);
+const INSTRUMENTS = ['1.1', '1.0'];
+const modelFor = (ev) => models[ev?.instrument] || models['1.0'];
 const dimOf = (id) => model.dimensions.find((d) => d.id === id);
 const allIndicators = () => model.dimensions.flatMap((d) => d.indicators);
 
@@ -78,7 +80,7 @@ function progressBar(done, total) {
 }
 
 function evalStats(ev) {
-  const r = compute(model, ev.answers);
+  const r = compute(modelFor(ev), ev.answers);
   const inds = Object.values(r.indicators);
   return { r, doneInd: inds.filter((i) => i.done).length, totalInd: inds.length };
 }
@@ -117,7 +119,7 @@ function viewHome() {
       district: dist?.name || '', pcd: dist?.code || '',
       role: Object.keys(UI.es.roles).includes(role) ? role : 'other',
       date: /^\d{4}-\d{2}-\d{2}$/.test(get('date', 10)) ? get('date', 10) : today,
-      instrument: '1.0', created: new Date().toISOString(), answers: {},
+      instrument: INSTRUMENTS.includes(get('instrument', 4)) ? get('instrument', 4) : '1.1', created: new Date().toISOString(), answers: {},
     };
     state.evals.unshift(ev);
     persist();
@@ -132,6 +134,7 @@ function viewHome() {
     h('div', { class: 'two' },
       h('label', {}, t('role'), h('select', { name: 'role' }, Object.entries(UI[state.lang].roles).map(([k, v]) => h('option', { value: k }, v)))),
       h('label', {}, t('evalDate'), h('input', { name: 'date', type: 'date', value: today, max: today }))),
+    h('label', {}, t('instrumentLabel'), h('select', { name: 'instrument' }, INSTRUMENTS.map((v) => h('option', { value: v }, t(`inst${v.replace('.', '')}`))))),
     h('div', { class: 'row' },
       h('button', { class: 'btn primary', type: 'submit' }, t('create')),
       h('label', { class: 'btn' }, t('importJson'), h('input', { type: 'file', accept: 'application/json,.json', hidden: true, onchange: importFile }))));
@@ -162,7 +165,7 @@ function viewEval(ev) {
       progressBar(done, dim.indicators.length), h('small', {}, `${done}/${dim.indicators.length}`),
       r.dimensions[id].done ? h('strong', {}, pct(r.dimensions[id].norm)) : null);
   });
-  const meta = [ev.district || null, ev.canton && ev.province ? `${ev.canton}, ${ev.province}` : null, ev.role ? UI[state.lang].roles[ev.role] : null, ev.date].filter(Boolean).join(' · ');
+  const meta = [ev.district || null, ev.canton && ev.province ? `${ev.canton}, ${ev.province}` : null, ev.role ? UI[state.lang].roles[ev.role] : null, ev.date, `v${ev.instrument || '1.0'}`].filter(Boolean).join(' · ');
   shell(ev.name, [
     meta ? h('p', { class: 'muted' }, meta) : null,
     h('p', { class: 'muted' }, `${t('progress')}: ${doneInd}/${totalInd}`), progressBar(doneInd, totalInd),
@@ -322,7 +325,7 @@ function robustCard(ev) {
 function sdgCard(r) {
   const by = {};
   for (const [id, goals] of Object.entries(sdgMap.map)) {
-    if (sdgMap.context_only.includes(id)) continue;
+    if (sdgMap.context_only.includes(id) || !r.indicators[id]) continue;
     for (const g of goals) (by[g] ||= []).push(r.indicators[id].norm);
   }
   const rows = Object.keys(by).map(Number).sort((a, b) => a - b).map((g) => {
@@ -345,20 +348,21 @@ function viewCompare() {
   const out = [h('p', { class: 'muted' }, t('compareHint')), complete.length >= 2 ? h('div', { class: 'card' }, boxes) : h('p', { class: 'muted' }, t('compareNeed'))];
 
   if (chosen.length >= 2) {
-    const results = chosen.map((e) => compute(model, e.answers));
+    const results = chosen.map((e) => compute(modelFor(e), e.answers));
     const head = h('tr', {}, h('th', {}, ''), chosen.map((e) => h('th', {}, e.name)));
     const line = (label, f) => h('tr', {}, h('td', {}, label), results.map((r) => h('td', {}, f(r))));
     out.push(h('div', { class: 'card' }, h('table', {}, h('thead', {}, head), h('tbody', {},
       line(t('global'), (r) => pct(r.global.norm)),
-      model.dimensions.map((d) => line(tx(`dim.${d.id}`), (r) => pct(r.dimensions[d.id].norm)))))));
+      models['1.0'].dimensions.map((d) => line(tx(`dim.${d.id}`), (r) => pct(r.dimensions[d.id].norm)))))));
 
-    const itemIds = allIndicators().flatMap((i) => i.items.map((it) => it.id));
+    const itemIds = [...new Set(chosen.flatMap((e) => modelFor(e).dimensions.flatMap((d) => d.indicators.flatMap((i) => i.items.map((it) => it.id)))))];
     const ag = agreement(chosen.map((e) => e.answers), itemIds);
     const full = Object.values(ag.perItem).filter((x) => x.agreement === 1).length;
     const kl = kappaLabel(ag.kappa);
     const worst = Object.entries(ag.perItem).filter(([, x]) => x.agreement < 1).sort((a, b) => a[1].agreement - b[1].agreement).slice(0, 10);
     const cons = consensus(chosen.map((e) => e.answers));
-    const cr = compute(model, cons);
+    const sameInst = chosen.every((e) => (e.instrument || '1.0') === (chosen[0].instrument || '1.0'));
+    const cr = sameInst ? compute(modelFor(chosen[0]), cons) : { complete: false };
     out.push(h('div', { class: 'card' }, h('h3', {}, t('agreementTitle')),
       h('p', {}, `${t('kappa')}: `, h('strong', {}, ag.kappa === null ? t('kappaNA') : `${ag.kappa.toFixed(2)} (${UI[state.lang].kappaLevels[kl]})`)),
       h('p', {}, `${t('meanAgreement')}: `, h('strong', {}, pct(ag.meanAgreement))),
@@ -382,7 +386,7 @@ const pc0 = (x) => (x === null || x === undefined ? '–' : `${(x * 100).toFixed
 function ownZones() {
   const zones = new Map();
   for (const e of state.evals) {
-    const r = compute(model, e.answers);
+    const r = compute(modelFor(e), e.answers);
     if (!r.complete) continue;
     const name = e.district || e.canton || e.name;
     const code = e.pcd || e.cantonCode || '';
@@ -393,7 +397,7 @@ function ownZones() {
   return [...zones.values()].map((z) => ({
     name: z.name, code: z.code, level: z.level,
     ids: mean(z.list.map((x) => x.r.global.norm * 100)),
-    dims: Object.fromEntries(model.dimensions.map((d) => [d.id, mean(z.list.map((x) => x.r.dimensions[d.id].norm * 100))])),
+    dims: Object.fromEntries(models['1.0'].dimensions.map((d) => [d.id, mean(z.list.map((x) => x.r.dimensions[d.id].norm * 100))])),
     list: z.list.sort((a, b) => String(a.ev.date).localeCompare(String(b.ev.date))),
   }));
 }
@@ -477,9 +481,13 @@ function reliabilityBlock() {
 
 function internalBlock() {
   const L = UI[state.lang];
-  const evs = state.evals.map((e) => compute(model, e.answers)).filter((r) => r.complete);
+  // se usa la versión del instrumento con más evaluaciones completas (no se pueden mezclar indicadores distintos)
+  const byV = {};
+  for (const e of state.evals) { const r = compute(modelFor(e), e.answers); if (r.complete) (byV[e.instrument || '1.0'] ||= []).push(r); }
+  const ver = Object.keys(byV).sort((a, b) => byV[b].length - byV[a].length)[0];
+  const evs = ver ? byV[ver] : [];
   if (evs.length < 3) return h('p', { class: 'muted' }, t('internalHint'));
-  const inds = allIndicators();
+  const inds = models[ver].dimensions.flatMap((d) => d.indicators);
   const matrix = evs.map((r) => inds.map((i) => r.indicators[i.id].norm));
   const ia = itemAnalysis(matrix);
   if (!ia || ia.alpha === null) return h('p', { class: 'muted' }, t('internalHint'));
@@ -541,7 +549,7 @@ function viewValidate() {
       if (!sec.result) { content.push(h('p', { class: 'muted' }, t('noZones'))); continue; }
       for (const [key, r] of Object.entries(sec.result.indices)) content.push(indexCard(key, r));
       if (sec.matrix) content.push(h('div', { class: 'card' }, matrixTable(sec.matrix)));
-      content.push(h('div', { class: 'row' }, h('button', { class: 'btn', type: 'button', onclick: () => download(`validacion-mideplan-${sec.title}.md`, toMarkdown(sec.result, { scale: valState.scale, tol: valState.tol, threshold: 0.8, version: '1.4.0' }), 'text/markdown') }, t('downloadReport'))));
+      content.push(h('div', { class: 'row' }, h('button', { class: 'btn', type: 'button', onclick: () => download(`validacion-mideplan-${sec.title}.md`, toMarkdown(sec.result, { scale: valState.scale, tol: valState.tol, threshold: 0.8, version: '1.5.0' }), 'text/markdown') }, t('downloadReport'))));
     }
     content.push(h('p', { class: 'muted' }, t('validateNote')));
   }
@@ -551,7 +559,7 @@ function viewValidate() {
   }
   if (result) {
     for (const [key, r] of Object.entries(result.indices)) content.push(indexCard(key, r));
-    content.push(h('div', { class: 'row' }, h('button', { class: 'btn', type: 'button', onclick: () => download('validacion-ids.md', toMarkdown(result, { scale: valState.scale, tol: valState.tol, threshold: 0.8, version: '1.4.0' }), 'text/markdown') }, t('downloadReport'))));
+    content.push(h('div', { class: 'row' }, h('button', { class: 'btn', type: 'button', onclick: () => download('validacion-ids.md', toMarkdown(result, { scale: valState.scale, tol: valState.tol, threshold: 0.8, version: '1.5.0' }), 'text/markdown') }, t('downloadReport'))));
     content.push(h('p', { class: 'muted' }, t('validateNote')));
   }
   content.push(h('h2', {}, t('reliabilityTitle')), reliabilityBlock(), h('h2', {}, t('internalTitle')), internalBlock());
@@ -596,7 +604,7 @@ async function importFile(e) {
     const s = (v, n = 120) => String(v || '').slice(0, n);
     const ev = { id: uid(), name: o.name.slice(0, 120), evaluator: s(o.evaluator), province: s(o.province), canton: s(o.canton), cantonCode: /^\d{3}$/.test(String(o.cantonCode)) ? Number(o.cantonCode) : '', district: s(o.district), pcd: /^\d{5}$/.test(String(o.pcd)) ? Number(o.pcd) : '',
       role: Object.keys(UI.es.roles).includes(o.role) ? o.role : 'other', date: /^\d{4}-\d{2}-\d{2}$/.test(o.date) ? o.date : '',
-      instrument: '1.0', created: new Date().toISOString(), answers };
+      instrument: INSTRUMENTS.includes(o.instrument) ? o.instrument : '1.0', created: new Date().toISOString(), answers };
     state.evals.unshift(ev); persist(); location.hash = `#/e/${ev.id}`;
   } catch { alert(t('importError')); }
 }
@@ -611,6 +619,7 @@ function route() {
   if (p[0] === 'compare') return viewCompare();
   if (p[0] === 'validate') return viewValidate();
   if (p[0] === 'e' && !ev) { location.hash = '#/'; return; }
+  if (ev) model = modelFor(ev);
   if (ev && p[2] === 'd' && dimOf(p[3])) return viewDimension(ev, p[3]);
   if (ev && p[2] === 'i' && allIndicators().some((i) => i.id === p[3])) return viewIndicator(ev, p[3]);
   if (ev && p[2] === 'r') return viewResults(ev);
@@ -622,8 +631,13 @@ async function boot() {
   restore();
   const j = (u) => fetch(u).then((r) => r.json());
   let constraints;
-  [model, texts.es, texts.en, geo, sdgMap, constraints] = await Promise.all([j('data/indicators.json'), j('data/i18n.es.json'), j('data/i18n.en.json'),
-    j('data/cr-distritos.json'), j('data/sdg-map.json'), j('data/constraints.json')]);
+  let extraEs; let extraEn;
+  [models['1.0'], models['1.1'], texts.es, texts.en, extraEs, extraEn, geo, sdgMap, constraints] = await Promise.all([
+    j('data/indicators.json'), j('data/indicators-1.1.json'), j('data/i18n.es.json'), j('data/i18n.en.json'),
+    j('data/i18n-1.1.es.json'), j('data/i18n-1.1.en.json'), j('data/cr-distritos.json'), j('data/sdg-map.json'), j('data/constraints.json')]);
+  Object.assign(texts.es, extraEs);
+  Object.assign(texts.en, extraEn);
+  model = models['1.1'];
   cIndex = buildIndex(constraints);
   window.addEventListener('hashchange', route);
   window.addEventListener('beforeinstallprompt', (e) => { e.preventDefault(); deferredInstall = e; route(); });

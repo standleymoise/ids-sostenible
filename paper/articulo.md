@@ -47,7 +47,7 @@ El instrumento se compone de **41 indicadores** y **180 afirmaciones** de respue
 | Ambiental | 0,40 | 18 | 68 |
 | Social | 0,30 | 9 | 51 |
 | Económica | 0,20 | 13 | 54 |
-| Política | 0,10 | 1 | 7 |
+| Política | 0,10 | 1 (v1.0) / 6 (v1.1) | 7 (v1.0) / 30 (v1.1) |
 
 Las dimensiones se eligieron siguiendo la literatura (§1). Cada afirmación recibe un peso; las que describen un factor negativo (por ejemplo, «Homicidios frecuentes») tienen peso negativo y restan al resultado cuando la respuesta es Sí. El instrumento completo, con sus pesos, está en `data/indicators.json` del repositorio.
 
@@ -82,7 +82,7 @@ Al reimplementar el modelo se compararon uno a uno los pesos del Excel y del có
 
 Queda una cuestión abierta: el indicador «Inflación» tiene peso −0,05 en la dimensión económica pese a que sus afirmaciones ya llevan signo propio, lo que hace que un buen manejo de la inflación reduzca el índice; con +0,05 los pesos económicos sumarían exactamente 1. Se conservó el valor original para no alterar el modelo validado.
 
-### 2.6 Extensiones de la versión 1.1 (no forman parte de la tesis)
+### 2.6 Extensiones de la implementación web (software v1.1; no forman parte de la tesis)
 
 Siguiendo la guía de la OCDE y el JRC para índices compuestos (Nardo et al., 2008), la implementación web añade herramientas de rigor y de fiabilidad, **sin modificar el modelo de la tesis**:
 
@@ -94,7 +94,11 @@ Siguiendo la guía de la OCDE y el JRC para índices compuestos (Nardo et al., 2
 
 El código incluye además el α de Cronbach y la correlación de Spearman, previstos para la validación externa contra índices cantonales.
 
-### 2.7 Coherencia de las respuestas (versión 1.2)
+### 2.7 Ampliación de la dimensión política (instrumento 1.1)
+
+La tesis dedicó a la dimensión política un solo indicador de 7 afirmaciones (10 % del IDS). A escala local, la gobernanza es justamente lo que una comunidad puede observar y mejorar, y es central en el ODS 16 (instituciones eficaces, transparentes, participativas y que rinden cuentas), en los ejes del Índice de Gestión Municipal y del IGSM de la Contraloría General de la República y en la dimensión de gobernanza del *City Prosperity Index*. El instrumento 1.1 conserva el indicador original y añade cinco: participación ciudadana, transparencia y rendición de cuentas, planificación y ordenamiento territorial (incluida la gestión del riesgo), capacidad de gestión local, y justicia y no discriminación, con 23 afirmaciones nuevas (30 en total en la dimensión; 203 en el instrumento). Se redactaron con cuatro criterios: afirmaciones verificables en documentos o instituciones, restringidas a la escala local, sin solapes con otras dimensiones y aplicables a cualquier zona; y se mantuvo el formato de la tesis (pesos positivos que suman 1 por indicador y a lo más una afirmación negativa moderada). Las otras tres dimensiones y el peso de la dimensión política no cambian, y la versión 1.0 se conserva para reproducir la tesis. Los pesos son provisionales y la propuesta requiere validación de contenido por expertos (§3.3).
+
+### 2.8 Coherencia de las respuestas (software v1.2)
 
 Un instrumento de afirmaciones Sí/No es vulnerable a respuestas contradictorias (por ejemplo, declarar a la vez un clima tropical húmedo y uno seco). La aplicación incorpora reglas de coherencia en `data/constraints.json`, de cuatro tipos: *exclusión* (a lo más una afirmación del grupo puede ser «Sí»), *exactamente una* (el clima), *dependencia* (p. ej. «mantenimiento de espacios verdes» exige que existan espacios verdes) e *igualdad* (una afirmación que aparece en dos indicadores —«Homicidios frecuentes»— se responde una sola vez). Las reglas lógicamente inevitables **bloquean** la respuesta; las probables pero no imposibles (p. ej. ríos limpios y contaminados a la vez) piden confirmación y dejan una advertencia en el informe. Estas reglas son una propuesta no validada por la autora.
 
@@ -117,7 +121,8 @@ La validación de la tesis es limitada (§5). Para el estudio de seguimiento se 
 - **Fiabilidad:** ICC(2,1) e ICC(2,k) (Shrout y Fleiss, 1979) y κ de Fleiss entre evaluadores independientes; α de Cronbach y análisis de ítems de los 41 indicadores.
 - **Tamaño de muestra:** unas 29 zonas permiten detectar ρ = 0,5 con 80 % de potencia (α = 0,05); se recomienda cubrir todo el rango del índice externo.
 - **Validez convergente y discriminante frente a MIDEPLAN:** como su IDS no mide ambiente ni política en sentido estricto, se espera que la dimensión social de la escala correlacione con salud, educación y seguridad; la económica con la económica; la política con participación electoral; y que la ambiental correlacione poco con todas (H5).
-- **Hipótesis previas:** H1 ρ ≥ 0,5 con cada índice; H2 κ ponderado ≥ 0,4 y ≥ 85 % a ±1 quintil; H3 ICC(2,k) ≥ 0,75 y α ≥ 0,7; H4 IDS mayor en el quintil externo 5 que en el 1; H5 correlaciones dimensión a dimensión según lo anterior; con corrección de Holm por comparaciones múltiples.
+- **Validez de contenido de la dimensión política 1.1:** panel de expertos con índice de validez de contenido por afirmación, y contraste con el nivel del IGSM de la municipalidad (H6).
+- **Hipótesis previas:** H1 ρ ≥ 0,5 con cada índice; H2 κ ponderado ≥ 0,4 y ≥ 85 % a ±1 quintil; H3 ICC(2,k) ≥ 0,75 y α ≥ 0,7; H4 IDS mayor en el quintil externo 5 que en el 1; H5 correlaciones dimensión a dimensión según lo anterior; H6 (solo versión 1.1) la dimensión política correlaciona con el nivel del IGSM (ρ ≥ 0,3); con corrección de Holm por comparaciones múltiples.
 
 Una correlación alta indicaría validez convergente, no que el instrumento mida «sostenibilidad» en sentido estricto, pues los índices de contraste miden conceptos cercanos pero distintos (desarrollo humano, progreso social y desarrollo social). **Este borrador no contiene todavía resultados del estudio de seguimiento.**
 
@@ -132,10 +137,10 @@ Un valor de α = 0,87 con 10 evaluadores es alentador, pero mide acuerdo entre q
 - **Muestra pequeña** (10 ciudades, 10 evaluadores) y sin contraste con datos objetivos de campo.
 - **Subjetividad:** las respuestas Sí/No dependen de quien conozca la zona; la tesis no documenta una guía operativa que defina cuándo cada afirmación debe responderse «Sí».
 - **Pesos asignados por la autora** sin un análisis de sensibilidad ni un procedimiento formal (p. ej., panel de expertos o AHP). No se evaluó cuánto cambia el IDS al variar los pesos.
-- **Dimensión política con un solo indicador** (7 afirmaciones), justificada por el peso limitado de las decisiones locales frente a acuerdos internacionales, pero que debería discutirse.
+- **Dimensión política con un solo indicador** (7 afirmaciones), justificada por el peso limitado de las decisiones locales frente a acuerdos internacionales, pero que debería discutirse (atendido parcialmente en el instrumento 1.1, §2.7).
 - **Inconsistencias conocidas** del modelo original (§2.5), incluida la cuestión abierta de «Inflación».
 - **Validez de contenido.** Una auditoría posterior (`docs/AUDITORIA-CONTENIDO.md`) señala indicadores que describen contexto y no desempeño (p. ej. el tipo de clima), afirmaciones de sentido discutible y temas de otros índices que la escala no cubre (pobreza y desigualdad, resultados de salud y educación, riesgo climático, gobernanza municipal), además de la ausencia de definiciones operativas por afirmación.
-- Las extensiones de la versión 1.1 (§2.6) **no se han probado con datos reales de campo**: el análisis de sensibilidad solo considera la incertidumbre de los pesos, no la del contenido del instrumento, y el mapeo a ODS no está validado.
+- Las extensiones de la implementación web (§2.6–2.8) y el instrumento 1.1 **no se han probado con datos reales de campo**: el análisis de sensibilidad solo considera la incertidumbre de los pesos, no la del contenido del instrumento, y el mapeo a ODS no está validado.
 - La escala normalizada es una herramienta de interpretación y **no sustituye** una calibración empírica de los rangos cualitativos.
 
 ## 6. Conclusiones

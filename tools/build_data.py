@@ -121,6 +121,7 @@ def main() -> None:
 
     out = {
         "schema": 1,
+        "instrument": "1.0",
         "scale": {"answers": [0, 1]},
         "dimensions": dims,
     }

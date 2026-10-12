@@ -5,9 +5,10 @@ import { buildIndex, conflictsIf, sameAs, blocked, validate } from '../js/consis
 
 const load = (p) => JSON.parse(readFileSync(new URL(p, import.meta.url), 'utf8'));
 const model = load('../data/indicators.json');
+const model11 = load('../data/indicators-1.1.json');
 const cons = load('../data/constraints.json');
 const index = buildIndex(cons);
-const ids = new Set(model.dimensions.flatMap((d) => d.indicators.flatMap((i) => i.items.map((it) => it.id))));
+const ids = new Set([model, model11].flatMap((m) => m.dimensions.flatMap((d) => d.indicators.flatMap((i) => i.items.map((it) => it.id)))));
 
 test('las reglas apuntan a afirmaciones que existen y tienen texto en es/en', () => {
   for (const r of cons.rules) {

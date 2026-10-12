@@ -1,60 +1,327 @@
 {
   "status": "PROPUESTA de la implementación web (no forma parte de la tesis): reglas de coherencia entre afirmaciones, pendientes de revisión por la autora. level=hard bloquea la respuesta; level=soft pide confirmación y deja una advertencia.",
   "rules": [
-    { "id": "clima", "type": "exactlyOne", "level": "hard", "items": ["env13_1", "env13_2", "env13_3"],
-      "reason": { "es": "El clima de la zona es uno solo: tropical húmedo, tropical seco u otro.", "en": "The area has a single climate: tropical humid, tropical dry or other." } },
-    { "id": "mantenimiento", "type": "exclusive", "level": "hard", "items": ["env15_3", "env15_4"],
-      "reason": { "es": "El mantenimiento no puede ser constante y a la vez con intervalos grandes.", "en": "Maintenance cannot be constant and at long intervals at the same time." } },
-    { "id": "exportacion", "type": "exclusive", "level": "hard", "items": ["eco02_1", "eco02_2"],
-      "reason": { "es": "Si se exportan productos locales, no puede ser cierto que no se exporta nada por producirse solo para autoconsumo.", "en": "If local products are exported, it cannot be true that nothing is exported because production is only for self-consumption." } },
-
-    { "id": "verde-existe-1", "type": "implies", "level": "hard", "if": "env15_2", "then": "env15_1",
-      "reason": { "es": "Para que un espacio verde esté mal usado, primero deben existir espacios verdes.", "en": "A green space can only be misused if green spaces exist." } },
-    { "id": "verde-existe-2", "type": "implies", "level": "hard", "if": "env15_3", "then": "env15_1",
-      "reason": { "es": "Para hablar de mantenimiento, deben existir espacios verdes.", "en": "Maintenance requires that green spaces exist." } },
-    { "id": "verde-existe-3", "type": "implies", "level": "hard", "if": "env15_4", "then": "env15_1",
-      "reason": { "es": "Para hablar de mantenimiento, deben existir espacios verdes.", "en": "Maintenance requires that green spaces exist." } },
-    { "id": "educ-practicas", "type": "implies", "level": "hard", "if": "env02_2", "then": "env02_1",
-      "reason": { "es": "No se pueden hacer prácticas de lo que se enseña si no se da educación ambiental en las escuelas.", "en": "Schools cannot practise what is taught if no environmental education is given." } },
-    { "id": "inst-deportivas", "type": "implies", "level": "hard", "if": "soc04_3", "then": "soc04_1",
-      "reason": { "es": "El manejo de las instalaciones deportivas requiere que existan.", "en": "Managing sports facilities requires that they exist." } },
-    { "id": "plazas", "type": "implies", "level": "hard", "if": "soc04_4", "then": "soc04_2",
-      "reason": { "es": "El manejo de plazas o parques requiere que existan.", "en": "Managing squares or parks requires that they exist." } },
-    { "id": "servicios-descentralizados", "type": "implies", "level": "hard", "if": "eco04_4", "then": "eco04_1",
-      "reason": { "es": "La facilidad de acceso a servicios descentralizados requiere que haya servicios descentralizados.", "en": "Easy access to decentralised services requires that such services exist." } },
-    { "id": "mineria-aporta", "type": "implies", "level": "hard", "if": "eco06_4", "then": "eco06_1",
-      "reason": { "es": "La minería solo puede aportar ingresos si hay explotación del subsuelo.", "en": "Mining can only contribute income if there is subsoil exploitation." } },
-    { "id": "mecanizacion-1", "type": "implies", "level": "hard", "if": "eco07_3", "then": "eco07_1",
-      "reason": { "es": "El efecto de la mecanización sobre la mano de obra requiere que haya mecanización.", "en": "The effect of mechanisation on labour requires that mechanisation exists." } },
-    { "id": "mecanizacion-2", "type": "implies", "level": "hard", "if": "eco07_4", "then": "eco07_1",
-      "reason": { "es": "El aporte de la mecanización a la economía local requiere que haya mecanización.", "en": "Mechanisation can only contribute to the local economy if it exists." } },
-    { "id": "turismo-1", "type": "implies", "level": "hard", "if": "eco12_2", "then": "eco12_1",
-      "reason": { "es": "El turismo solo aporta ingresos si hay atracción turística.", "en": "Tourism only contributes income if there is a tourist attraction." } },
-    { "id": "turismo-2", "type": "implies", "level": "hard", "if": "eco12_3", "then": "eco12_1",
-      "reason": { "es": "Hablar de turismo seguro requiere que haya atracción turística.", "en": "Safe tourism requires that there is a tourist attraction." } },
-    { "id": "proyectos-realizados", "type": "implies", "level": "hard", "if": "soc01_4", "then": "soc01_2",
-      "reason": { "es": "Los proyectos solo contribuyen al progreso si se realizan.", "en": "Projects only contribute to progress if they are carried out." } },
-    { "id": "policia-suficiente", "type": "implies", "level": "hard", "if": "soc07_7", "then": "soc09_1",
-      "reason": { "es": "Una delegación policial suficiente requiere que haya delegación policial.", "en": "A sufficient police presence requires a police station." } },
-
-    { "id": "homicidios-duplicado", "type": "same", "level": "hard", "items": ["soc06_5", "soc09_5"],
-      "reason": { "es": "Esta afirmación aparece en dos indicadores (Bienestar del pueblo y Seguridad); la respuesta es la misma.", "en": "This statement appears in two indicators (Community well-being and Security); the answer is the same." } },
-
-    { "id": "rios-tipo", "type": "exclusive", "level": "soft", "items": ["env14_1", "env14_2"],
-      "reason": { "es": "Los ríos suelen ser de un tipo. Confirmá solo si en la zona hay ríos intermitentes y permanentes a la vez.", "en": "Rivers are usually of one type. Confirm only if the area has both intermittent and permanent rivers." } },
-    { "id": "rios-estado", "type": "exclusive", "level": "soft", "items": ["env14_3", "env14_4"],
-      "reason": { "es": "Los ríos suelen estar limpios o contaminados. Confirmá solo si hay ríos de ambos tipos.", "en": "Rivers are usually clean or polluted. Confirm only if the area has both." } },
-    { "id": "tala-reposicion-1", "type": "exclusive", "level": "soft", "items": ["env05_1", "env05_2"],
-      "reason": { "es": "Talar sin reemplazar parece contradecir la renovación de árboles.", "en": "Felling without replacing seems to contradict tree renewal." } },
-    { "id": "tala-reposicion-2", "type": "exclusive", "level": "soft", "items": ["env05_1", "env05_3"],
-      "reason": { "es": "Talar sin reemplazar parece contradecir sembrar después de talar.", "en": "Felling without replacing seems to contradict planting after felling." } },
-    { "id": "servicios-concentrados", "type": "exclusive", "level": "soft", "items": ["eco04_1", "eco04_3"],
-      "reason": { "es": "Servicios descentralizados y concentrados en ciudades lejanas se contradicen, salvo que hablés de servicios distintos.", "en": "Decentralised services and services concentrated in distant cities contradict each other, unless you mean different services." } },
-    { "id": "mineria-poca", "type": "exclusive", "level": "soft", "items": ["eco06_1", "eco06_2"],
-      "reason": { "es": "Hay explotación del subsuelo pero también «poca» explotación minera: confirmá que ambas son ciertas.", "en": "There is subsoil exploitation but also 'little' mining: confirm both are true." } },
-    { "id": "seguridad-delincuencia", "type": "exclusive", "level": "soft", "items": ["soc06_3", "soc09_3"],
-      "reason": { "es": "«Seguridad» parece contradecir una «tasa alta de delincuencia».", "en": "'Security' seems to contradict a 'high crime rate'." } },
-    { "id": "seguridad-homicidios", "type": "exclusive", "level": "soft", "items": ["soc06_3", "soc06_5"],
-      "reason": { "es": "«Seguridad» parece contradecir «homicidios frecuentes».", "en": "'Security' seems to contradict 'frequent homicides'." } }
+    {
+      "id": "clima",
+      "type": "exactlyOne",
+      "level": "hard",
+      "items": [
+        "env13_1",
+        "env13_2",
+        "env13_3"
+      ],
+      "reason": {
+        "es": "El clima de la zona es uno solo: tropical húmedo, tropical seco u otro.",
+        "en": "The area has a single climate: tropical humid, tropical dry or other."
+      }
+    },
+    {
+      "id": "mantenimiento",
+      "type": "exclusive",
+      "level": "hard",
+      "items": [
+        "env15_3",
+        "env15_4"
+      ],
+      "reason": {
+        "es": "El mantenimiento no puede ser constante y a la vez con intervalos grandes.",
+        "en": "Maintenance cannot be constant and at long intervals at the same time."
+      }
+    },
+    {
+      "id": "exportacion",
+      "type": "exclusive",
+      "level": "hard",
+      "items": [
+        "eco02_1",
+        "eco02_2"
+      ],
+      "reason": {
+        "es": "Si se exportan productos locales, no puede ser cierto que no se exporta nada por producirse solo para autoconsumo.",
+        "en": "If local products are exported, it cannot be true that nothing is exported because production is only for self-consumption."
+      }
+    },
+    {
+      "id": "verde-existe-1",
+      "type": "implies",
+      "level": "hard",
+      "if": "env15_2",
+      "then": "env15_1",
+      "reason": {
+        "es": "Para que un espacio verde esté mal usado, primero deben existir espacios verdes.",
+        "en": "A green space can only be misused if green spaces exist."
+      }
+    },
+    {
+      "id": "verde-existe-2",
+      "type": "implies",
+      "level": "hard",
+      "if": "env15_3",
+      "then": "env15_1",
+      "reason": {
+        "es": "Para hablar de mantenimiento, deben existir espacios verdes.",
+        "en": "Maintenance requires that green spaces exist."
+      }
+    },
+    {
+      "id": "verde-existe-3",
+      "type": "implies",
+      "level": "hard",
+      "if": "env15_4",
+      "then": "env15_1",
+      "reason": {
+        "es": "Para hablar de mantenimiento, deben existir espacios verdes.",
+        "en": "Maintenance requires that green spaces exist."
+      }
+    },
+    {
+      "id": "educ-practicas",
+      "type": "implies",
+      "level": "hard",
+      "if": "env02_2",
+      "then": "env02_1",
+      "reason": {
+        "es": "No se pueden hacer prácticas de lo que se enseña si no se da educación ambiental en las escuelas.",
+        "en": "Schools cannot practise what is taught if no environmental education is given."
+      }
+    },
+    {
+      "id": "inst-deportivas",
+      "type": "implies",
+      "level": "hard",
+      "if": "soc04_3",
+      "then": "soc04_1",
+      "reason": {
+        "es": "El manejo de las instalaciones deportivas requiere que existan.",
+        "en": "Managing sports facilities requires that they exist."
+      }
+    },
+    {
+      "id": "plazas",
+      "type": "implies",
+      "level": "hard",
+      "if": "soc04_4",
+      "then": "soc04_2",
+      "reason": {
+        "es": "El manejo de plazas o parques requiere que existan.",
+        "en": "Managing squares or parks requires that they exist."
+      }
+    },
+    {
+      "id": "servicios-descentralizados",
+      "type": "implies",
+      "level": "hard",
+      "if": "eco04_4",
+      "then": "eco04_1",
+      "reason": {
+        "es": "La facilidad de acceso a servicios descentralizados requiere que haya servicios descentralizados.",
+        "en": "Easy access to decentralised services requires that such services exist."
+      }
+    },
+    {
+      "id": "mineria-aporta",
+      "type": "implies",
+      "level": "hard",
+      "if": "eco06_4",
+      "then": "eco06_1",
+      "reason": {
+        "es": "La minería solo puede aportar ingresos si hay explotación del subsuelo.",
+        "en": "Mining can only contribute income if there is subsoil exploitation."
+      }
+    },
+    {
+      "id": "mecanizacion-1",
+      "type": "implies",
+      "level": "hard",
+      "if": "eco07_3",
+      "then": "eco07_1",
+      "reason": {
+        "es": "El efecto de la mecanización sobre la mano de obra requiere que haya mecanización.",
+        "en": "The effect of mechanisation on labour requires that mechanisation exists."
+      }
+    },
+    {
+      "id": "mecanizacion-2",
+      "type": "implies",
+      "level": "hard",
+      "if": "eco07_4",
+      "then": "eco07_1",
+      "reason": {
+        "es": "El aporte de la mecanización a la economía local requiere que haya mecanización.",
+        "en": "Mechanisation can only contribute to the local economy if it exists."
+      }
+    },
+    {
+      "id": "turismo-1",
+      "type": "implies",
+      "level": "hard",
+      "if": "eco12_2",
+      "then": "eco12_1",
+      "reason": {
+        "es": "El turismo solo aporta ingresos si hay atracción turística.",
+        "en": "Tourism only contributes income if there is a tourist attraction."
+      }
+    },
+    {
+      "id": "turismo-2",
+      "type": "implies",
+      "level": "hard",
+      "if": "eco12_3",
+      "then": "eco12_1",
+      "reason": {
+        "es": "Hablar de turismo seguro requiere que haya atracción turística.",
+        "en": "Safe tourism requires that there is a tourist attraction."
+      }
+    },
+    {
+      "id": "proyectos-realizados",
+      "type": "implies",
+      "level": "hard",
+      "if": "soc01_4",
+      "then": "soc01_2",
+      "reason": {
+        "es": "Los proyectos solo contribuyen al progreso si se realizan.",
+        "en": "Projects only contribute to progress if they are carried out."
+      }
+    },
+    {
+      "id": "policia-suficiente",
+      "type": "implies",
+      "level": "hard",
+      "if": "soc07_7",
+      "then": "soc09_1",
+      "reason": {
+        "es": "Una delegación policial suficiente requiere que haya delegación policial.",
+        "en": "A sufficient police presence requires a police station."
+      }
+    },
+    {
+      "id": "plan-seguimiento",
+      "type": "implies",
+      "level": "hard",
+      "if": "pol04_3",
+      "then": "pol04_1",
+      "reason": {
+        "es": "No se le puede dar seguimiento a un plan de desarrollo local si no existe un plan vigente.",
+        "en": "A local development plan cannot be monitored if no current plan exists."
+      }
+    },
+    {
+      "id": "homicidios-duplicado",
+      "type": "same",
+      "level": "hard",
+      "items": [
+        "soc06_5",
+        "soc09_5"
+      ],
+      "reason": {
+        "es": "Esta afirmación aparece en dos indicadores (Bienestar del pueblo y Seguridad); la respuesta es la misma.",
+        "en": "This statement appears in two indicators (Community well-being and Security); the answer is the same."
+      }
+    },
+    {
+      "id": "rios-tipo",
+      "type": "exclusive",
+      "level": "soft",
+      "items": [
+        "env14_1",
+        "env14_2"
+      ],
+      "reason": {
+        "es": "Los ríos suelen ser de un tipo. Confirmá solo si en la zona hay ríos intermitentes y permanentes a la vez.",
+        "en": "Rivers are usually of one type. Confirm only if the area has both intermittent and permanent rivers."
+      }
+    },
+    {
+      "id": "rios-estado",
+      "type": "exclusive",
+      "level": "soft",
+      "items": [
+        "env14_3",
+        "env14_4"
+      ],
+      "reason": {
+        "es": "Los ríos suelen estar limpios o contaminados. Confirmá solo si hay ríos de ambos tipos.",
+        "en": "Rivers are usually clean or polluted. Confirm only if the area has both."
+      }
+    },
+    {
+      "id": "tala-reposicion-1",
+      "type": "exclusive",
+      "level": "soft",
+      "items": [
+        "env05_1",
+        "env05_2"
+      ],
+      "reason": {
+        "es": "Talar sin reemplazar parece contradecir la renovación de árboles.",
+        "en": "Felling without replacing seems to contradict tree renewal."
+      }
+    },
+    {
+      "id": "tala-reposicion-2",
+      "type": "exclusive",
+      "level": "soft",
+      "items": [
+        "env05_1",
+        "env05_3"
+      ],
+      "reason": {
+        "es": "Talar sin reemplazar parece contradecir sembrar después de talar.",
+        "en": "Felling without replacing seems to contradict planting after felling."
+      }
+    },
+    {
+      "id": "servicios-concentrados",
+      "type": "exclusive",
+      "level": "soft",
+      "items": [
+        "eco04_1",
+        "eco04_3"
+      ],
+      "reason": {
+        "es": "Servicios descentralizados y concentrados en ciudades lejanas se contradicen, salvo que hablés de servicios distintos.",
+        "en": "Decentralised services and services concentrated in distant cities contradict each other, unless you mean different services."
+      }
+    },
+    {
+      "id": "mineria-poca",
+      "type": "exclusive",
+      "level": "soft",
+      "items": [
+        "eco06_1",
+        "eco06_2"
+      ],
+      "reason": {
+        "es": "Hay explotación del subsuelo pero también «poca» explotación minera: confirmá que ambas son ciertas.",
+        "en": "There is subsoil exploitation but also 'little' mining: confirm both are true."
+      }
+    },
+    {
+      "id": "seguridad-delincuencia",
+      "type": "exclusive",
+      "level": "soft",
+      "items": [
+        "soc06_3",
+        "soc09_3"
+      ],
+      "reason": {
+        "es": "«Seguridad» parece contradecir una «tasa alta de delincuencia».",
+        "en": "'Security' seems to contradict a 'high crime rate'."
+      }
+    },
+    {
+      "id": "seguridad-homicidios",
+      "type": "exclusive",
+      "level": "soft",
+      "items": [
+        "soc06_3",
+        "soc06_5"
+      ],
+      "reason": {
+        "es": "«Seguridad» parece contradecir «homicidios frecuentes».",
+        "en": "'Security' seems to contradict 'frequent homicides'."
+      }
+    }
   ]
 }

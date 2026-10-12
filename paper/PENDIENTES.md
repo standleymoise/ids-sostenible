@@ -29,9 +29,15 @@ Cosas que no pude verificar con el material de la carpeta y que debe confirmar l
 17. **Conseguir los datos externos** (IDS distrital 2023, Atlas cantonal, IPS) y **hacer el estudio de seguimiento** siguiendo `docs/VALIDACION.md`: ≥ 29 zonas, 3+ evaluadores por zona. Hasta entonces el artículo no puede afirmar resultados.
 18. **Fijar las hipótesis H1–H4** antes de ver los datos (idealmente registrarlas en OSF).
 
+## Dimensión política 1.1 (v1.5)
+
+23. **Revisar la dimensión política ampliada** (`docs/DIMENSION-POLITICA.md`, `data/src/political-1.1.json`): afirmaciones, pesos provisionales y si se reconsidera el 10 % de la dimensión. Verificar la base legal de las instituciones mencionadas (concejos de distrito, comités cantonales de la persona joven, planes reguladores, comisiones de emergencia).
+24. **Elegir la versión para el estudio de campo** (1.0 para reproducir la tesis o 1.1 con la política ampliada) y usar solo una en todas las zonas.
+25. **Obtener el nivel del IGSM de la Contraloría** por municipalidad para validar la dimensión política (H6).
+
 ## Con los datos de MIDEPLAN (v1.4)
 
 19. ✅ IDS 2023 de MIDEPLAN integrado (distritos y cantones, 5 dimensiones). Falta el **estudio de campo**: evaluar distritos reales (≥ 29, idealmente cubriendo los 5 quintiles) con 3+ evaluadores cada uno.
-20. Decidir si la tesis comparó con el IDS **2017** o el de **2023**: no son comparables entre sí; el artículo debe decir cuál.
+20. ✅ La autora indicó que en la tesis se usó el IDS **2017** de MIDEPLAN; los datos incluidos son del **2023** (no comparables). Conseguir las tablas 2017 si se quiere reproducir la comparación original, o redactar el artículo diciendo que el contraste actual usa 2023.
 21. **Atlas del PNUD (IDHc) e IPS cantonal**: siguen sin datos tabulares; pedirlos a la Escuela de Estadística (UCR)/Sinirube e INCAE-CLACDS. Con MIDEPLAN solo ya se puede hacer la validación principal.
 22. Citar la fuente de MIDEPLAN con el documento oficial (el repositorio reproduce solo valores numéricos; ver `data/external/README.md`).
