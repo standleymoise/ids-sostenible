@@ -47,3 +47,21 @@ test('los ids son únicos', () => {
   const ids = model.dimensions.flatMap((d) => d.indicators.flatMap((i) => [i.id, ...i.items.map((it) => it.id)]));
   assert.equal(new Set(ids).size, ids.length);
 });
+
+test('mapeo a ODS: todo indicador está mapeado a ODS válidos (1–17)', () => {
+  const sdg = load('../data/sdg-map.json');
+  const ids = model.dimensions.flatMap((d) => d.indicators.map((i) => i.id));
+  assert.deepEqual(Object.keys(sdg.map).sort(), [...ids].sort());
+  for (const goals of Object.values(sdg.map)) {
+    assert.ok(goals.length >= 1 && goals.every((g) => Number.isInteger(g) && g >= 1 && g <= 17));
+  }
+  assert.ok(sdg.context_only.every((id) => ids.includes(id)));
+});
+
+test('cantones de Costa Rica: 7 provincias y 84 cantones únicos', () => {
+  const cr = load('../data/cr-cantones.json');
+  assert.equal(cr.provinces.length, 7);
+  const all = cr.provinces.flatMap((p) => p.cantons.map((c) => `${p.name}/${c}`));
+  assert.equal(all.length, 84);
+  assert.equal(new Set(all).size, 84);
+});

@@ -1,0 +1,124 @@
+{
+ "source": "84 cantones (ADM2) y provincias (ADM1) de Costa Rica; geometrías de geoBoundaries.org, agrupados por provincia con point-in-polygon.",
+ "provinces": [
+  {
+   "name": "San José",
+   "cantons": [
+    "Acosta",
+    "Alajuelita",
+    "Aserrí",
+    "Curridabat",
+    "Desamparados",
+    "Dota",
+    "Escazú",
+    "Goicoechea",
+    "León Cortés Castro",
+    "Montes de Oca",
+    "Mora",
+    "Moravia",
+    "Puriscal",
+    "Pérez Zeledón",
+    "San José",
+    "Santa Ana",
+    "Tarrazú",
+    "Tibás",
+    "Turrubares",
+    "Vázquez de Coronado"
+   ]
+  },
+  {
+   "name": "Alajuela",
+   "cantons": [
+    "Alajuela",
+    "Atenas",
+    "Grecia",
+    "Guatuso",
+    "Los Chiles",
+    "Naranjo",
+    "Orotina",
+    "Palmares",
+    "Poás",
+    "Río Cuarto",
+    "San Carlos",
+    "San Mateo",
+    "San Ramón",
+    "Sarchí",
+    "Upala",
+    "Zarcero"
+   ]
+  },
+  {
+   "name": "Cartago",
+   "cantons": [
+    "Alvarado",
+    "Cartago",
+    "El Guarco",
+    "Jiménez",
+    "La Unión",
+    "Oreamuno",
+    "Paraíso",
+    "Turrialba"
+   ]
+  },
+  {
+   "name": "Heredia",
+   "cantons": [
+    "Barva",
+    "Belén",
+    "Flores",
+    "Heredia",
+    "San Isidro",
+    "San Pablo",
+    "San Rafael",
+    "Santa Bárbara",
+    "Santo Domingo",
+    "Sarapiquí"
+   ]
+  },
+  {
+   "name": "Guanacaste",
+   "cantons": [
+    "Abangares",
+    "Bagaces",
+    "Carrillo",
+    "Cañas",
+    "Hojancha",
+    "La Cruz",
+    "Liberia",
+    "Nandayure",
+    "Nicoya",
+    "Santa Cruz",
+    "Tilarán"
+   ]
+  },
+  {
+   "name": "Puntarenas",
+   "cantons": [
+    "Buenos Aires",
+    "Corredores",
+    "Coto Brus",
+    "Esparza",
+    "Garabito",
+    "Golfito",
+    "Montes de Oro",
+    "Monteverde",
+    "Osa",
+    "Parrita",
+    "Puerto Jiménez",
+    "Puntarenas",
+    "Quepos"
+   ]
+  },
+  {
+   "name": "Limón",
+   "cantons": [
+    "Guácimo",
+    "Limón",
+    "Matina",
+    "Pococí",
+    "Siquirres",
+    "Talamanca"
+   ]
+  }
+ ]
+}

@@ -15,6 +15,9 @@ asesorado por MSc. Victor Hugo Morales Peña.
 
 - 41 indicadores y 180 afirmaciones Sí/No en cuatro dimensiones: **ambiental (40 %)**, **social (30 %)**, **económica (20 %)** y **política (10 %)**.
 - IDS por indicador, por dimensión y global, en la **escala original** de la tesis y en una **escala normalizada 0–1**.
+- **Rigor metodológico** (v1.1): análisis de sensibilidad de los pesos (Monte Carlo ±20 %), equilibrio entre dimensiones (la dimensión más débil), y contribución por ODS (mapeo propuesto).
+- **Fiabilidad**: compara evaluaciones de varias personas sobre la misma zona (κ de Fleiss, acuerdo por afirmación, consenso por mayoría) o de fechas distintas.
+- Contexto geográfico: provincia y cantón de Costa Rica (84 cantones), rol de quien responde y fecha, para contrastar luego con otros índices.
 - Varias evaluaciones guardadas en el dispositivo; exportar a JSON/CSV, importar, e imprimir a PDF.
 - Español e inglés. Sin servidor, sin cuentas, sin rastreo: los datos no salen del dispositivo.
 
@@ -34,7 +37,9 @@ dependencias, y se verifica contra el Excel en [`tests/`](tests/).
 
 Al portar el modelo se encontraron y corrigieron errores (una fórmula de Excel, una pregunta
 omitida y tres pesos en cero en la app) y queda una duda abierta sobre el signo de «Inflación».
-Detalle en [`docs/CORRECCIONES.md`](docs/CORRECCIONES.md).
+Detalle en [`docs/CORRECCIONES.md`](docs/CORRECCIONES.md). La revisión frente a otros índices
+(IDH cantonal, IPS, IDS de MIDEPLAN, IDSC-BR, CPI…) está en [`docs/INVESTIGACION-INDICES.md`](docs/INVESTIGACION-INDICES.md),
+las dudas de contenido del instrumento en [`docs/AUDITORIA-CONTENIDO.md`](docs/AUDITORIA-CONTENIDO.md) y los próximos pasos en [`docs/HOJA-DE-RUTA.md`](docs/HOJA-DE-RUTA.md).
 
 ## Desarrollo
 
@@ -50,7 +55,7 @@ Para regenerar los datos desde el Excel: `pip install openpyxl && python tools/b
 ## Estructura
 
 ```
-index.html · css/ · js/ (app, engine, i18n) · data/ · icons/ · sw.js · manifest.webmanifest
+index.html · css/ · js/ (app, engine, sensitivity, stats, i18n) · data/ · icons/ · sw.js · manifest.webmanifest
 tests/        pruebas automáticas (node:test)
 tools/        generador de datos y servidor local
 reference/    material original: Excel 1.0, strings.xml y modelo Kotlin de la app Android
@@ -65,5 +70,6 @@ una muestra pequeña (ver el artículo); se recomienda un uso responsable.
 
 ## Licencia y cita
 
+Datos de cantones: geometrías de [geoBoundaries](https://www.geoboundaries.org/) (CC BY 4.0).
 Código: [MIT](LICENSE). Artículo y documentación en `paper/` y `docs/`: [CC BY 4.0](paper/LICENSE).
 Para citar, usa [`CITATION.cff`](CITATION.cff) (botón «Cite this repository» de GitHub).

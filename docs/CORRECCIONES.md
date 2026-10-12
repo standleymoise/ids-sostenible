@@ -25,6 +25,8 @@ conserva **tal como está en la tesis** (`data/indicators.json`, indicador `eco0
 alterar el modelo que se validó. Cambiarlo es una línea; hay una prueba
 (`tests/data.test.js`) que documenta el valor actual y habría que actualizarla.
 
+Otras dudas de contenido (Clima, Minería, especies exóticas, etc.) están en [AUDITORIA-CONTENIDO.md](AUDITORIA-CONTENIDO.md).
+
 ## Observaciones menores (no cambian el cálculo)
 
 - La política tiene un solo indicador con peso interno 1,0; su peso en el IDS es 0,1.

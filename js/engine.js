@@ -101,8 +101,28 @@ export function compute(model, answers) {
     const gb = globalBounds(model);
     result.global = { raw: round(globalRaw), norm: round(scale(globalRaw, gb)) };
     result.complete = true;
+    result.balance = balance(model, result);
   }
   return result;
+}
+
+/**
+ * Equilibrio entre dimensiones. El promedio ponderado es totalmente compensatorio (una
+ * dimensión muy buena tapa una muy mala). Como contrapeso se informa:
+ *  - weakest: la dimensión con menor índice normalizado,
+ *  - balanced: promedio entre el IDS normalizado y la dimensión más débil
+ *    («co-limitación»: (mín + media) / 2; ver docs/INVESTIGACION-INDICES.md),
+ *  - low: dimensiones por debajo de `threshold` (0,4 = «deficiente» o peor).
+ */
+export function balance(model, result, threshold = 0.4) {
+  const norms = model.dimensions.map((d) => [d.id, result.dimensions[d.id].norm]);
+  const [weakest, min] = norms.reduce((a, b) => (b[1] < a[1] ? b : a));
+  return {
+    weakest,
+    weakestNorm: min,
+    balanced: round((min + result.global.norm) / 2),
+    low: norms.filter(([, n]) => n < threshold).map(([id]) => id),
+  };
 }
 
 /** Categoría cualitativa según el índice normalizado (rangos 0–0,2 … 0,8–1 de la app original). */
